@@ -44,9 +44,7 @@
             this.high = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.low = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.learnOutcomeNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.learningOutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewLO = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objectiveDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +52,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
+            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,26 +200,17 @@
             this.low.HeaderText = "Low";
             this.low.Name = "low";
             // 
-            // dataGridView2
+            // dataGridViewLO
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.learnOutcomeNum,
-            this.learningOutcomeDesc});
-            this.dataGridView2.Location = new System.Drawing.Point(271, 84);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(243, 150);
-            this.dataGridView2.TabIndex = 28;
-            // 
-            // learnOutcomeNum
-            // 
-            this.learnOutcomeNum.HeaderText = "Outcome #";
-            this.learnOutcomeNum.Name = "learnOutcomeNum";
-            // 
-            // learningOutcomeDesc
-            // 
-            this.learningOutcomeDesc.HeaderText = "Outcome Description";
-            this.learningOutcomeDesc.Name = "learningOutcomeDesc";
+            this.dataGridViewLO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OutcomeNumber,
+            this.OutcomeDesc});
+            this.dataGridViewLO.Location = new System.Drawing.Point(271, 84);
+            this.dataGridViewLO.Name = "dataGridViewLO";
+            this.dataGridViewLO.Size = new System.Drawing.Size(243, 150);
+            this.dataGridViewLO.TabIndex = 28;
+            this.dataGridViewLO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLO_CellContentClick_1);
             // 
             // dataGridView3
             // 
@@ -275,13 +266,24 @@
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // OutcomeDesc_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(701, 84);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 150);
-            this.textBox1.TabIndex = 33;
+            this.OutcomeDesc_txt.Location = new System.Drawing.Point(701, 84);
+            this.OutcomeDesc_txt.Multiline = true;
+            this.OutcomeDesc_txt.Name = "OutcomeDesc_txt";
+            this.OutcomeDesc_txt.ReadOnly = true;
+            this.OutcomeDesc_txt.Size = new System.Drawing.Size(280, 150);
+            this.OutcomeDesc_txt.TabIndex = 33;
+            // 
+            // OutcomeNumber
+            // 
+            this.OutcomeNumber.HeaderText = "Outcome #";
+            this.OutcomeNumber.Name = "OutcomeNumber";
+            // 
+            // OutcomeDesc
+            // 
+            this.OutcomeDesc.HeaderText = "Outcome Description";
+            this.OutcomeDesc.Name = "OutcomeDesc";
             // 
             // Class
             // 
@@ -290,12 +292,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1044, 1062);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.OutcomeDesc_txt);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewLO);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button8);
@@ -311,7 +313,7 @@
             this.Name = "Class";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -335,9 +337,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn high;
         private System.Windows.Forms.DataGridViewTextBoxColumn medium;
         private System.Windows.Forms.DataGridViewTextBoxColumn low;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn learnOutcomeNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn learningOutcomeDesc;
+        private System.Windows.Forms.DataGridView dataGridViewLO;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn objectiveNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn objectiveDesc;
@@ -345,6 +345,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox OutcomeDesc_txt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeDesc;
     }
 }

@@ -52,5 +52,14 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void dataGridViewLO_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridViewLO.Rows[e.RowIndex];
+                OutcomeDesc_txt.Text = row.Cells["OutcomeDesc"].Value.ToString();
+            }
+        }
     }
 }
