@@ -107,6 +107,7 @@
             this.button5.Text = "Remove Class";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // logoutButton
             // 
