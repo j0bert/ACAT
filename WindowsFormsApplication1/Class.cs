@@ -61,5 +61,15 @@ namespace WindowsFormsApplication1
                 OutcomeDesc_txt.Text = row.Cells["OutcomeDesc"].Value.ToString();
             }
         }
+
+        private void dataGridViewMissionObj_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridViewMissionObj.Rows[e.RowIndex];
+                ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
+                ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
+            }
+        }
     }
 }
