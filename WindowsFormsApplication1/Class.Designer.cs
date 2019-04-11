@@ -98,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(135, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(251, 25);
@@ -427,7 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1395, 930);
+            this.ClientSize = new System.Drawing.Size(1394, 930);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Class";
             this.Text = "Form3";
