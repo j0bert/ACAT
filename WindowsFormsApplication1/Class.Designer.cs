@@ -48,22 +48,23 @@
             this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewMissionObj = new System.Windows.Forms.DataGridView();
+            this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridViewABET = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abetLearningObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ABETLearningObjDesc_txt = new System.Windows.Forms.TextBox();
             this.ObjDesc_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abetLearningObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -241,6 +242,16 @@
             this.dataGridViewMissionObj.TabIndex = 29;
             this.dataGridViewMissionObj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMissionObj_CellContentClick);
             // 
+            // objectiveNumber
+            // 
+            this.objectiveNumber.HeaderText = "Objective #";
+            this.objectiveNumber.Name = "objectiveNumber";
+            // 
+            // objDesc
+            // 
+            this.objDesc.HeaderText = "Objective Description";
+            this.objDesc.Name = "objDesc";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(520, 864);
@@ -298,6 +309,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button5);
             this.splitContainer1.Panel2.Controls.Add(this.HomeButton);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
@@ -328,6 +340,16 @@
             this.dataGridViewABET.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewABET.TabIndex = 39;
             this.dataGridViewABET.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewABET_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Outcome #";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // abetLearningObj
+            // 
+            this.abetLearningObj.HeaderText = "ABET Learning Objective";
+            this.abetLearningObj.Name = "abetLearningObj";
             // 
             // ABETLearningObjDesc_txt
             // 
@@ -389,25 +411,15 @@
             this.label6.Text = "Objective\r\nDescription";
             this.label6.UseWaitCursor = true;
             // 
-            // objectiveNumber
+            // button5
             // 
-            this.objectiveNumber.HeaderText = "Objective #";
-            this.objectiveNumber.Name = "objectiveNumber";
-            // 
-            // objDesc
-            // 
-            this.objDesc.HeaderText = "Objective Description";
-            this.objDesc.Name = "objDesc";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Outcome #";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // abetLearningObj
-            // 
-            this.abetLearningObj.HeaderText = "ABET Learning Objective";
-            this.abetLearningObj.Name = "abetLearningObj";
+            this.button5.Location = new System.Drawing.Point(506, 8);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 28;
+            this.button5.Text = "Home";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Class
             // 
@@ -470,5 +482,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn objDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn abetLearningObj;
+        private System.Windows.Forms.Button button5;
     }
 }

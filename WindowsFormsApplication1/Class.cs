@@ -81,5 +81,11 @@ namespace WindowsFormsApplication1
                 ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Home().Show();
+        }
     }
 }
