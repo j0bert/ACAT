@@ -13,9 +13,44 @@ namespace WindowsFormsApplication1
 {
     public partial class Class : Form
     {
+        List<LearningOutcomeModel> outcome = new List<LearningOutcomeModel>();
+        List<MissionObjectiveModel> objective = new List<MissionObjectiveModel>();
+        List<AssessmentModel> assessment = new List<AssessmentModel>();
+        List<ABETModel> Abet = new List<ABETModel>();
+
         public Class()
         {
             InitializeComponent();
+            LoadLearningOutcomesList();
+            LoadMissionObjectivesList();
+            LoadAssessmentList();
+        }
+
+        //Methods to load the information from the database into a form that can be shown and changed by the app.
+        private void LoadLearningOutcomesList()
+        {
+            outcome = SqliteDataAccess.LoadLearningOutcome();
+            for(int i = 0; i < outcome.Count; i++)
+            {
+                dataGridViewLO.Rows.Add(outcome[i].OutcomeID, outcome[i].outcome);
+            }
+        }
+        private void LoadMissionObjectivesList()
+        {
+            objective = SqliteDataAccess.LoadMissionObjective();
+            Abet = SqliteDataAccess.LoadABET();
+            for(int i = 0; i < objective.Count; i++)
+            {
+                dataGridViewMissionObj.Rows.Add(objective[i].missionObjectiveID, objective[i].missionObjective);
+            }
+        }
+        private void LoadAssessmentList()
+        {
+            assessment = SqliteDataAccess.LoadAssessment();
+            for (int i = 0; i < assessment.Count; i++)
+            {
+                dataGridView1.Rows.Add(assessment[i].AssessmentID, assessment[i].assessmentName, "", "", assessment[i].average, assessment[i].standardDeviation);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
