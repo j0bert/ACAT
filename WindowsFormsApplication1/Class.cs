@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         public Class()
         {
             InitializeComponent();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -100,5 +101,6 @@ namespace WindowsFormsApplication1
                 ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
         }
+
     }
 }
