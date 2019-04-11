@@ -25,21 +25,20 @@ namespace WindowsFormsApplication1
             ClassesView.View = View.Details;
             ClassesView.FullRowSelect = true;
 
-            ClassesView.Columns.Add("ID",30);
-            ClassesView.Columns.Add("Class Name", 150);
-            ClassesView.Columns.Add("Semester", 75);
-            ClassesView.Columns.Add("Year", 75);
+            ClassesView.Columns.Add("CRN",73);
+            ClassesView.Columns.Add("Class Name", 248);
+            ClassesView.Columns.Add("Semester/Year", 123);
+            
 
            
         }
 
-        int id = 0;
 
-        private void addClass( String className, String semester, String year)
+        private void addClass( String crn, String className, String semesterYear)
         {
            
-            id++;
-            String[] rowClass = {id.ToString(), className, semester, year };
+            
+            String[] rowClass = {crn, className, semesterYear };
             ListViewItem course = new ListViewItem(rowClass);
             ClassesView.Items.Add(course);
 
@@ -54,19 +53,19 @@ namespace WindowsFormsApplication1
             }
 
             ClassText.Text = "";
-            SemesterText.Text = "";
-            YearText.Text = "";
+            CRNText.Text = "";
+            SemesterYearText.Text = "";
 
         }
 
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            addClass(ClassText.Text,SemesterText.Text,YearText.Text);
+            addClass(CRNText.Text, ClassText.Text,SemesterYearText.Text);
 
             ClassText.Text = "";
-            SemesterText.Text = "";
-            YearText.Text = "";
+            CRNText.Text = "";
+            SemesterYearText.Text = "";
         }
 
         private void Remove_Button_Click(object sender, EventArgs e)
@@ -76,9 +75,9 @@ namespace WindowsFormsApplication1
 
         private void ClassesView_MouseClick(object sender, MouseEventArgs e)
         {
-            ClassText.Text = ClassesView.SelectedItems[0].SubItems[0].Text;
-            SemesterText.Text = ClassesView.SelectedItems[0].SubItems[1].Text;
-            YearText.Text = ClassesView.SelectedItems[0].SubItems[2].Text;
+            CRNText.Text = ClassesView.SelectedItems[0].SubItems[0].Text;
+            ClassText.Text = ClassesView.SelectedItems[0].SubItems[1].Text;
+            SemesterYearText.Text = ClassesView.SelectedItems[0].SubItems[2].Text;
 
         }
     
@@ -92,6 +91,15 @@ namespace WindowsFormsApplication1
         {
             this.Hide();
             new Class().Show();
+
+            //CRNText.Text = ClassesView.SelectedItems[0].SubItems[0].Text;
+            //ClassText.Text = ClassesView.SelectedItems[0].SubItems[1].Text;
+            //SemesterYearText.Text = ClassesView.SelectedItems[0].SubItems[2].Text;
+        }
+
+        private void ClassesView_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+
         }
     }
 }
