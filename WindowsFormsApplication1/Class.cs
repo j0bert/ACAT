@@ -80,16 +80,76 @@ namespace WindowsFormsApplication1
             // changing the name of active sheet  
             worksheet.Name = "Exported from gridview";
             // storing header part in Excel  
-            for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+            for (int i = 1; i <= 7; i++)
             {
-                worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
-            }
-            // storing Each row and column value to excel sheet  
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-            {
-                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                switch (i)
                 {
-                    worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    case 1:
+                        worksheet.Cells[1, i] = "Learning Outcomes";
+                        break;
+                    case 2:
+                        worksheet.Cells[1, i] = "Misssion Objective(s)";
+                        break;
+                    case 3:
+                        worksheet.Cells[1, i] = "ABET learning Outcomes";
+                        break;
+                    case 4:
+                        worksheet.Cells[1, i] = "Evaluation Instrument";
+                        break;
+                    case 5:
+                        worksheet.Cells[1, i] = "Avg (%)";
+                        break;
+                    case 6:
+                        worksheet.Cells[1, i] = "Program Outcome";
+                        break;
+                    case 7:
+                        worksheet.Cells[1, i] = "Avg";
+                        break;
+                    default:
+                        worksheet.Cells[1, i] = "Opps!";
+                        break;
+                }
+            }
+            for (int i = 1; i <= 4; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        worksheet.Cells[i + 17, 1] = "Mission Objectives";
+                        break;
+                    case 2:
+                        worksheet.Cells[i + 24, 1] = "ABET Learning Outcomes";
+                        worksheet.Cells[i + 25, 1] = "The program enables students to achieve, by the time of graduation:";
+                        break;
+                    case 3:
+                        worksheet.Cells[i + 26, 1] = "1. General:";
+                        break;
+                    case 4:
+                        worksheet.Cells[i + 37, 1] = "2. CS Specific:";
+                        break;
+                    default:
+                        worksheet.Cells[1 + 50, 1] = "Opps!";
+                        break;
+                }
+            }
+            //i is x axis j is y axis
+            // storing Each row and column value in Mission Objectives
+            for (int i = 0; i < dataGridViewMissionObj.Rows.Count - 1; i++)
+            {
+                for (int j = 1; j < dataGridViewMissionObj.Columns.Count - 1; j++)
+                {
+                    worksheet.Cells[i + 20, j] = objective[i].missionObjectiveID.ToString()+ ". " + objective[i].missionObjective.ToString();
+
+
+                }
+            }
+            for (int i = 0; i < dataGridViewLO.Rows.Count - 1; i++)
+            {
+                for (int j = 1; j < dataGridViewLO.Columns.Count - 1; j++)
+                {
+                    worksheet.Cells[i + 15, j] = i + 1 + ". " + dataGridViewLO.Rows[i].Cells[j].Value.ToString();
+
+
                 }
             }
             // save the application  
