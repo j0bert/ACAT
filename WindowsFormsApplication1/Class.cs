@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         //Change default typeface (look into how package handles fonts)
         //Google Fonts may work; if not use Segue UI
         public Class()
-        {
+        { 
             InitializeComponent();
             //string hexColorBack = "#9EB3B3";
             string hexColorBack = "#FFFFFF";
