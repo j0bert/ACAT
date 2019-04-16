@@ -96,20 +96,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(135, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 25);
+            this.label2.Size = new System.Drawing.Size(254, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Dashboard (Specific Class)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
             this.label3.Location = new System.Drawing.Point(4, 689);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Comments";
             // 
@@ -124,10 +124,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(275, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 25);
+            this.label4.Size = new System.Drawing.Size(130, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "Assessments";
             // 
@@ -154,15 +154,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
             this.label8.Location = new System.Drawing.Point(4, 277);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(151, 20);
+            this.label8.Size = new System.Drawing.Size(148, 23);
             this.label8.TabIndex = 25;
             this.label8.Text = "Mission Objectives";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.assessmentName,
@@ -208,6 +209,7 @@
             // 
             // dataGridViewLO
             // 
+            this.dataGridViewLO.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewLO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OutcomeNumber,
@@ -230,6 +232,7 @@
             // 
             // dataGridViewMissionObj
             // 
+            this.dataGridViewMissionObj.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewMissionObj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMissionObj.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.objectiveNumber,
@@ -279,13 +282,13 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.Silver;
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Location = new System.Drawing.Point(0, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel1.Controls.Add(this.label9);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridViewABET);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
@@ -305,6 +308,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel2.Controls.Add(this.button5);
             this.splitContainer1.Panel2.Controls.Add(this.HomeButton);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
@@ -318,15 +322,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
             this.label9.Location = new System.Drawing.Point(4, 481);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(205, 20);
+            this.label9.Size = new System.Drawing.Size(197, 23);
             this.label9.TabIndex = 40;
             this.label9.Text = "ABET Learning Outcomes";
             // 
             // dataGridViewABET
             // 
+            this.dataGridViewABET.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewABET.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewABET.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -368,10 +373,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
             this.label5.Location = new System.Drawing.Point(272, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 20);
+            this.label5.Size = new System.Drawing.Size(94, 23);
             this.label5.TabIndex = 36;
             this.label5.Text = "Description";
             this.label5.UseWaitCursor = true;
@@ -430,7 +435,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridViewLO;
         private System.Windows.Forms.DataGridView dataGridViewMissionObj;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -455,5 +459,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn abetLearningObj;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridViewLO;
     }
 }

@@ -19,9 +19,9 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             //string hexColorBack = "#9EB3B3";
-            string hexColorBack = "#011E41";
-            string hexColorText = "#FFDC8C";// #D9AC84 or #002121 or 87714D or FFDC8C
-            string hexColorTextBox = "#D9D9D9";//D9D9D9 or A3AAAE
+            string hexColorBack = "#FFFFFF";
+            string hexColorText = "#FFFFFF";// #D9AC84 or #002121 or 87714D or FFDC8C
+            string hexColorTextBox = "#FFFFFF";
 
             Color colorBack = System.Drawing.ColorTranslator.FromHtml(hexColorBack);
             Color colorText = System.Drawing.ColorTranslator.FromHtml(hexColorText);
