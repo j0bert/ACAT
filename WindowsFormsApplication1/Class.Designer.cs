@@ -62,8 +62,6 @@
             this.ObjDesc_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
@@ -78,10 +76,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(10, 76);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 25);
+            this.label1.Size = new System.Drawing.Size(154, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Learning Outcomes";
             // 
@@ -108,10 +106,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(10, 684);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 689);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 25);
+            this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Comments";
             // 
@@ -120,7 +118,7 @@
             this.textBox2.Location = new System.Drawing.Point(8, 712);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(506, 175);
+            this.textBox2.Size = new System.Drawing.Size(585, 175);
             this.textBox2.TabIndex = 6;
             // 
             // label4
@@ -135,7 +133,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(668, 231);
+            this.button4.Location = new System.Drawing.Point(587, 891);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(73, 23);
             this.button4.TabIndex = 17;
@@ -145,7 +143,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(19, 266);
+            this.button6.Location = new System.Drawing.Point(19, 823);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(168, 91);
             this.button6.TabIndex = 19;
@@ -156,10 +154,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label8.Location = new System.Drawing.Point(10, 266);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(4, 277);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(176, 25);
+            this.label8.Size = new System.Drawing.Size(151, 20);
             this.label8.TabIndex = 25;
             this.label8.Text = "Mission Objectives";
             // 
@@ -175,7 +173,7 @@
             this.StandardDeviation});
             this.dataGridView1.Location = new System.Drawing.Point(19, 106);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 711);
             this.dataGridView1.TabIndex = 27;
             // 
             // assessmentName
@@ -236,7 +234,7 @@
             this.dataGridViewMissionObj.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.objectiveNumber,
             this.objDesc});
-            this.dataGridViewMissionObj.Location = new System.Drawing.Point(8, 294);
+            this.dataGridViewMissionObj.Location = new System.Drawing.Point(8, 300);
             this.dataGridViewMissionObj.Name = "dataGridViewMissionObj";
             this.dataGridViewMissionObj.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewMissionObj.TabIndex = 29;
@@ -254,7 +252,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(520, 864);
+            this.button1.Location = new System.Drawing.Point(520, 891);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 23);
             this.button1.TabIndex = 30;
@@ -263,7 +261,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(257, 294);
+            this.button2.Location = new System.Drawing.Point(178, 274);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 23);
             this.button2.TabIndex = 31;
@@ -272,7 +270,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(257, 104);
+            this.button3.Location = new System.Drawing.Point(178, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(73, 23);
             this.button3.TabIndex = 32;
@@ -304,8 +302,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.OutcomeDesc_txt);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
             // 
             // splitContainer1.Panel2
             // 
@@ -322,10 +318,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.Location = new System.Drawing.Point(10, 460);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(4, 481);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(241, 25);
+            this.label9.Size = new System.Drawing.Size(205, 20);
             this.label9.TabIndex = 40;
             this.label9.Text = "ABET Learning Outcomes";
             // 
@@ -335,7 +331,7 @@
             this.dataGridViewABET.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.abetLearningObj});
-            this.dataGridViewABET.Location = new System.Drawing.Point(8, 488);
+            this.dataGridViewABET.Location = new System.Drawing.Point(8, 504);
             this.dataGridViewABET.Name = "dataGridViewABET";
             this.dataGridViewABET.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewABET.TabIndex = 39;
@@ -353,63 +349,41 @@
             // 
             // ABETLearningObjDesc_txt
             // 
-            this.ABETLearningObjDesc_txt.Location = new System.Drawing.Point(346, 488);
+            this.ABETLearningObjDesc_txt.Location = new System.Drawing.Point(276, 504);
             this.ABETLearningObjDesc_txt.Multiline = true;
             this.ABETLearningObjDesc_txt.Name = "ABETLearningObjDesc_txt";
             this.ABETLearningObjDesc_txt.ReadOnly = true;
-            this.ABETLearningObjDesc_txt.Size = new System.Drawing.Size(168, 156);
+            this.ABETLearningObjDesc_txt.Size = new System.Drawing.Size(317, 150);
             this.ABETLearningObjDesc_txt.TabIndex = 35;
             // 
             // ObjDesc_txt
             // 
-            this.ObjDesc_txt.Location = new System.Drawing.Point(346, 294);
+            this.ObjDesc_txt.Location = new System.Drawing.Point(276, 300);
             this.ObjDesc_txt.Multiline = true;
             this.ObjDesc_txt.Name = "ObjDesc_txt";
             this.ObjDesc_txt.ReadOnly = true;
-            this.ObjDesc_txt.Size = new System.Drawing.Size(168, 150);
+            this.ObjDesc_txt.Size = new System.Drawing.Size(317, 150);
             this.ObjDesc_txt.TabIndex = 34;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(520, 218);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(272, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 36);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 36;
-            this.label5.Text = "Outcome\r\nDescription";
+            this.label5.Text = "Description";
             this.label5.UseWaitCursor = true;
             // 
             // OutcomeDesc_txt
             // 
-            this.OutcomeDesc_txt.Location = new System.Drawing.Point(346, 106);
+            this.OutcomeDesc_txt.Location = new System.Drawing.Point(276, 106);
             this.OutcomeDesc_txt.Multiline = true;
             this.OutcomeDesc_txt.Name = "OutcomeDesc_txt";
             this.OutcomeDesc_txt.ReadOnly = true;
-            this.OutcomeDesc_txt.Size = new System.Drawing.Size(168, 148);
+            this.OutcomeDesc_txt.Size = new System.Drawing.Size(317, 148);
             this.OutcomeDesc_txt.TabIndex = 33;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(520, 572);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 72);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "ABET \r\nLearning\r\nObjective\r\nDescription";
-            this.label7.UseWaitCursor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(520, 408);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 36);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Objective\r\nDescription";
-            this.label6.UseWaitCursor = true;
             // 
             // button5
             // 
@@ -427,7 +401,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1394, 930);
+            this.ClientSize = new System.Drawing.Size(1326, 930);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Class";
             this.Text = "Form3";
@@ -470,9 +444,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Average;
         private System.Windows.Forms.DataGridViewTextBoxColumn StandardDeviation;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ABETLearningObjDesc_txt;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox ObjDesc_txt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox OutcomeDesc_txt;

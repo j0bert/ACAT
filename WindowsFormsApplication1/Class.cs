@@ -12,7 +12,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Class : Form
     {
-        
+        //Chnage update button to be an image so its more efficient
+        //Change default typeface (look into how package handles fonts)
+        //Google Fonts may work; if not use Segue UI
         public Class()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace WindowsFormsApplication1
 
             splitContainer1.BackColor = colorBack;
 
-            Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9 };
+            Label[] labels = { label1, label2, label3, label4, label5, label8, label9 };
             for (int i = 0; i < labels.Count(); i++)
             {
                 labels[i].ForeColor = colorText;
@@ -43,10 +45,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -79,6 +78,7 @@ namespace WindowsFormsApplication1
             {
                 DataGridViewRow row = this.dataGridViewLO.Rows[e.RowIndex];
                 OutcomeDesc_txt.Text = row.Cells["OutcomeDesc"].Value.ToString();
+                //Try and set up so that user can input sentences and change them through the description box
             }
         }
 
