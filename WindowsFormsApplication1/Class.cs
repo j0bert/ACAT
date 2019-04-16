@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
         public Class()
         { 
             InitializeComponent();
-            //Test comment
+            //Test comment for GitHub bullshit
             //string hexColorBack = "#9EB3B3";
             string hexColorBack = "#FFFFFF";
             string hexColorSplitContainerHalves = "#57A0BC";
