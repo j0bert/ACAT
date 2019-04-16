@@ -19,10 +19,6 @@ namespace WindowsFormsApplication1
         public Class()
         {
             InitializeComponent();
-
-
-        }
-
             //string hexColorBack = "#9EB3B3";
             string hexColorBack = "#FFFFFF";
             string hexColorSplitContainerHalves = "#57A0BC";
@@ -43,7 +39,6 @@ namespace WindowsFormsApplication1
             {
                 labels[i].ForeColor = colorText;
             }
-
 
             TextBox[] boxes = { OutcomeDesc_txt, ObjDesc_txt, ABETLearningObjDesc_txt, textBox2 };
             for (int i = 0; i < boxes.Count(); i++)
@@ -140,12 +135,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
             new Home().Show();
         }
-
     }
 }
