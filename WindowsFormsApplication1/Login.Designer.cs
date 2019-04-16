@@ -87,6 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(182, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1081, 181);
