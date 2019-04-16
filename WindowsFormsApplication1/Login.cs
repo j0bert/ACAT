@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
 
             this.BackColor = colorBack;
 
-            Label[] labels = { label1, username, password};
+            Label[] labels = {  username, password};
             for (int i = 0; i < labels.Count(); i++)
             {
                 labels[i].ForeColor = colorText;

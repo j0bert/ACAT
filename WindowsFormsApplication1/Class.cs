@@ -20,14 +20,18 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             //string hexColorBack = "#9EB3B3";
             string hexColorBack = "#FFFFFF";
+            string hexColorSplitContainerHalves = "#57A0BC";
             string hexColorText = "#FFFFFF";// #D9AC84 or #002121 or 87714D or FFDC8C
             string hexColorTextBox = "#FFFFFF";
 
             Color colorBack = System.Drawing.ColorTranslator.FromHtml(hexColorBack);
+            Color colorSplitHalves = System.Drawing.ColorTranslator.FromHtml(hexColorSplitContainerHalves);
             Color colorText = System.Drawing.ColorTranslator.FromHtml(hexColorText);
             Color colorTextBox = System.Drawing.ColorTranslator.FromHtml(hexColorTextBox);
 
             splitContainer1.BackColor = colorBack;
+            splitContainer1.Panel1.BackColor = colorSplitHalves;
+            splitContainer1.Panel2.BackColor = colorSplitHalves;
 
             Label[] labels = { label1, label2, label3, label4, label5, label8, label9 };
             for (int i = 0; i < labels.Count(); i++)
