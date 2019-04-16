@@ -56,20 +56,20 @@
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.username.Location = new System.Drawing.Point(480, 451);
+            this.username.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(484, 453);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(83, 20);
+            this.username.Size = new System.Drawing.Size(79, 21);
             this.username.TabIndex = 2;
             this.username.Text = "Username";
             // 
             // password
             // 
             this.password.AutoSize = true;
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.password.Location = new System.Drawing.Point(485, 492);
+            this.password.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(489, 492);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(78, 20);
+            this.password.Size = new System.Drawing.Size(74, 21);
             this.password.TabIndex = 3;
             this.password.Text = "Password";
             // 
@@ -86,11 +86,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 120F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(182, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1081, 181);
+            this.label1.Size = new System.Drawing.Size(991, 212);
             this.label1.TabIndex = 5;
             this.label1.Text = "ACAT System";
             // 
