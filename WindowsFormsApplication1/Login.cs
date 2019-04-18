@@ -16,7 +16,9 @@ namespace WindowsFormsApplication1
 
         public loginscreen()
         {
+            
             InitializeComponent();
+
 
             string hexColorBack = "#57A0BC";
             string hexColorText = "#FFFFFF";// #D9AC84 or #002121 or 87714D or FFDC8C
@@ -39,6 +41,7 @@ namespace WindowsFormsApplication1
             {
                 boxes[i].BackColor = colorTextBox;
             }
+
         }
 
         private void login_Click(object sender, EventArgs e)
