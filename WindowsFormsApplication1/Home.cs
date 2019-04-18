@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,19 +18,40 @@ namespace WindowsFormsApplication1
     public partial class Home : Form
     {
 
+        private ListViewColumnSorter lvwColumnSorter;
+
         public Home()
         {
             InitializeComponent();
 
-            ClassesView.View = View.Details;
-            ClassesView.FullRowSelect = true;
+            lvwColumnSorter = new ListViewColumnSorter();
+            this.ClassesView.ListViewItemSorter = lvwColumnSorter;
 
-            ClassesView.Columns.Add("CRN",73);
-            ClassesView.Columns.Add("Class Name", 248);
-            ClassesView.Columns.Add("Semester/Year", 123);
-            
+         
 
-           
+            string hexColorBack = "#57A0BC";
+            string hexColorText = "#FFFFFF";// #D9AC84 or #002121 or 87714D or FFDC8C
+            string hexColorTextBox = "#FFFFFF";
+
+            Color colorBack = System.Drawing.ColorTranslator.FromHtml(hexColorBack);
+            Color colorText = System.Drawing.ColorTranslator.FromHtml(hexColorText);
+            Color colorTextBox = System.Drawing.ColorTranslator.FromHtml(hexColorTextBox);
+
+            this.BackColor = colorBack;
+
+            Label[] labels = { label1, label2, label3, ClassLabel, SemesterLabel };
+            for (int i = 0; i < labels.Count(); i++)
+            {
+                labels[i].ForeColor = colorText;
+            }
+
+            TextBox[] boxes = {CRNText, ClassText, SemesterYearText};
+            for (int i = 0; i < boxes.Count(); i++)
+            {
+                boxes[i].BackColor = colorTextBox;
+            }
+
+
         }
 
 
@@ -100,6 +121,35 @@ namespace WindowsFormsApplication1
         private void ClassesView_ColumnClick(object sender, ColumnClickEventArgs e)
         {
 
+            if (e.Column == lvwColumnSorter.SortColumn)
+            {
+
+                if (lvwColumnSorter.Order == SortOrder.Ascending)
+                {
+                    lvwColumnSorter.Order = SortOrder.Descending;
+                }
+                else
+                {
+                    lvwColumnSorter.Order = SortOrder.Ascending;
+                }
+            }
+            else
+            {
+                lvwColumnSorter.SortColumn = e.Column;
+                lvwColumnSorter.Order = SortOrder.Ascending;
+            }
+
+            this.ClassesView.Sort();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            ClassesView.View = View.Details;
+            ClassesView.FullRowSelect = true;
+
+            ClassesView.Columns.Add("CRN", 73);
+            ClassesView.Columns.Add("Class Name", 248);
+            ClassesView.Columns.Add("Semester/Year", 123);
         }
     }
 }
