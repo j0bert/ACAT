@@ -13,16 +13,11 @@ namespace WindowsFormsApplication1
 {
     public partial class Class : Form
     {
-        //Chnage update button to be an image so its more efficient
-        //Change default typeface (look into how package handles fonts)
-        //Google Fonts may work; if not use Segue UI
         public Class()
-        {
+        { 
             InitializeComponent();
-
-
-        }
-
+<<<
+            //Test comment for GitHub bullshit part 2
             //string hexColorBack = "#9EB3B3";
             string hexColorBack = "#FFFFFF";
             string hexColorSplitContainerHalves = "#57A0BC";
@@ -44,20 +39,24 @@ namespace WindowsFormsApplication1
                 labels[i].ForeColor = colorText;
             }
 
-
             TextBox[] boxes = { OutcomeDesc_txt, ObjDesc_txt, ABETLearningObjDesc_txt, textBox2 };
             for (int i = 0; i < boxes.Count(); i++)
             {
                 boxes[i].BackColor = colorTextBox;
             }
 
+        }
 
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        
+        private void button8_Click(object sender, EventArgs e)
+        {
 
-
+        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -92,7 +91,10 @@ namespace WindowsFormsApplication1
             workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
 
+        }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
@@ -116,7 +118,6 @@ namespace WindowsFormsApplication1
             {
                 DataGridViewRow row = this.dataGridViewLO.Rows[e.RowIndex];
                 OutcomeDesc_txt.Text = row.Cells["OutcomeDesc"].Value.ToString();
-                //Try and set up so that user can input sentences and change them through the description box
             }
         }
 
@@ -126,26 +127,8 @@ namespace WindowsFormsApplication1
             {
                 DataGridViewRow row = this.dataGridViewMissionObj.Rows[e.RowIndex];
                 ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
-                
-            }
-        }
-
-        private void dataGridViewABET_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridViewABET.Rows[e.RowIndex];
-                
                 ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
         }
-
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Home().Show();
-        }
-
     }
 }
