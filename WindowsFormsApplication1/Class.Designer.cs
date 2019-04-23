@@ -60,9 +60,9 @@
             this.ABETLearningObjDesc_txt = new System.Windows.Forms.TextBox();
             this.ObjDesc_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -331,7 +331,6 @@
             this.dataGridViewABET.Name = "dataGridViewABET";
             this.dataGridViewABET.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewABET.TabIndex = 39;
-            this.dataGridViewABET.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewABET_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -372,6 +371,16 @@
             this.label5.Text = "Description";
             this.label5.UseWaitCursor = true;
             // 
+            // button3
+            // 
+            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.reload;
+            this.button3.Location = new System.Drawing.Point(520, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(73, 23);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Update";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // OutcomeDesc_txt
             // 
             this.OutcomeDesc_txt.Location = new System.Drawing.Point(276, 106);
@@ -390,16 +399,6 @@
             this.button5.Text = "Home";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.reload;
-            this.button3.Location = new System.Drawing.Point(520, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // Class
             // 

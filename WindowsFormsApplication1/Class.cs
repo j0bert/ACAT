@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         public Class()
         { 
             InitializeComponent();
-<<<
+
             //Test comment for GitHub bullshit part 2
             //string hexColorBack = "#9EB3B3";
             string hexColorBack = "#FFFFFF"; 
@@ -129,6 +129,12 @@ namespace WindowsFormsApplication1
                 ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
                 ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Home().Show();
         }
     }
 }
