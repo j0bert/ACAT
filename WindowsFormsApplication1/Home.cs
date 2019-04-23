@@ -87,11 +87,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void logoutButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new loginscreen().Show();
-        }
+        
 
         private void ClassesView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -124,6 +120,12 @@ namespace WindowsFormsApplication1
             }
 
             this.ClassesView.Sort();
+        }
+
+        private void logoutButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new loginscreen().Show();
         }
     }
 }

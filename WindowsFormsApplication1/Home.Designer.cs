@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logoutButton = new System.Windows.Forms.Button();
             this.ClassesView = new System.Windows.Forms.ListView();
             this.ClassText = new System.Windows.Forms.TextBox();
             this.CRNText = new System.Windows.Forms.TextBox();
@@ -42,21 +41,8 @@
             this.yearLaber = new System.Windows.Forms.Label();
             this.yearText = new System.Windows.Forms.TextBox();
             this.Add_Button = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.BackColor = System.Drawing.Color.Transparent;
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(679, 1);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(75, 31);
-            this.logoutButton.TabIndex = 9;
-            this.logoutButton.Text = "Logout";
-            this.logoutButton.UseVisualStyleBackColor = false;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // ClassesView
             // 
@@ -191,12 +177,27 @@
             this.Add_Button.UseVisualStyleBackColor = false;
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Location = new System.Drawing.Point(682, 0);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(73, 31);
+            this.logoutButton.TabIndex = 26;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click_1);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(755, 471);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.yearText);
             this.Controls.Add(this.yearLaber);
             this.Controls.Add(this.SemesterText);
@@ -210,7 +211,6 @@
             this.Controls.Add(this.CRNText);
             this.Controls.Add(this.ClassText);
             this.Controls.Add(this.ClassesView);
-            this.Controls.Add(this.logoutButton);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
@@ -220,7 +220,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.ListView ClassesView;
         private System.Windows.Forms.TextBox ClassText;
         private System.Windows.Forms.TextBox CRNText;
@@ -234,5 +233,6 @@
         private System.Windows.Forms.TextBox SemesterText;
         private System.Windows.Forms.Label yearLaber;
         private System.Windows.Forms.TextBox yearText;
+        private System.Windows.Forms.Button logoutButton;
     }
 }
