@@ -17,10 +17,14 @@ namespace WindowsFormsApplication1
     // using Microsoft.VisualBasic;
     public partial class Home : Form
     {
+        private ListViewColumnSorter lvwColumnSorter;
 
         public Home()
         {
             InitializeComponent();
+
+            lvwColumnSorter = new ListViewColumnSorter();
+            this.ClassesView.ListViewItemSorter = lvwColumnSorter;
 
             ClassesView.View = View.Details;
             ClassesView.FullRowSelect = true;
@@ -99,7 +103,25 @@ namespace WindowsFormsApplication1
 
         private void ClassesView_ColumnClick(object sender, ColumnClickEventArgs e)
         {
+            if (e.Column == lvwColumnSorter.SortColumn)
+            {
 
+                if (lvwColumnSorter.Order == SortOrder.Ascending)
+                {
+                    lvwColumnSorter.Order = SortOrder.Descending;
+                }
+                else
+                {
+                    lvwColumnSorter.Order = SortOrder.Ascending;
+                }
+            }
+            else
+            {
+                lvwColumnSorter.SortColumn = e.Column;
+                lvwColumnSorter.Order = SortOrder.Ascending;
+            }
+
+            this.ClassesView.Sort();
         }
     }
 }
