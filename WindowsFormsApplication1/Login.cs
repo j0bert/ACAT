@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
 
             string hexColorBack = "#57A0BC";
             string hexColorText = "#FFFFFF";// #D9AC84 or #002121 or 87714D or FFDC8C
-            string hexColorTextBox = "#D9D9D9";//D9D9D9 or A3AAAE
+            string hexColorTextBox = "#FFFFFF";//D9D9D9 or A3AAAE
 
             Color colorBack = System.Drawing.ColorTranslator.FromHtml(hexColorBack);
             Color colorText = System.Drawing.ColorTranslator.FromHtml(hexColorText);

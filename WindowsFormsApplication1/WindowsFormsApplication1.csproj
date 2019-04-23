@@ -94,6 +94,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\icons8-subtract-filled-50.png" />
+    <None Include="Resources\icons8-plus-math-filled-100.png" />
+    <None Include="Resources\icons8-plus-math-filled-50 %281%29.png" />
+    <None Include="Resources\Webp.net-resizeimage %285%29.png" />
+    <None Include="Resources\icons8-plus-math-filled-50.png" />
+    <None Include="Resources\Webp.net-resizeimage %284%29.png" />
+    <None Include="Resources\icons8-long-arrow-left-24.png" />
+    <None Include="Resources\leftcorrect.png" />
     <None Include="Resources\Webp.net-resizeimage %283%291.png" />
     <None Include="Resources\Webp.net-resizeimage %283%29.png" />
     <None Include="Resources\Webp.net-resizeimage %282%29.png" />

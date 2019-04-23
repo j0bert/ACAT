@@ -34,7 +34,6 @@
             this.CRNText = new System.Windows.Forms.TextBox();
             this.SemesterLabel = new System.Windows.Forms.Label();
             this.ClassLabel = new System.Windows.Forms.Label();
-            this.Add_Button = new System.Windows.Forms.Button();
             this.Remove_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,23 +41,28 @@
             this.SemesterText = new System.Windows.Forms.TextBox();
             this.yearLaber = new System.Windows.Forms.Label();
             this.yearText = new System.Windows.Forms.TextBox();
+            this.Add_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(657, 12);
+            this.logoutButton.BackColor = System.Drawing.Color.Transparent;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Location = new System.Drawing.Point(679, 1);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(75, 23);
+            this.logoutButton.Size = new System.Drawing.Size(75, 31);
             this.logoutButton.TabIndex = 9;
             this.logoutButton.Text = "Logout";
-            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // ClassesView
             // 
             this.ClassesView.Location = new System.Drawing.Point(12, 165);
             this.ClassesView.Name = "ClassesView";
-            this.ClassesView.Size = new System.Drawing.Size(450, 162);
+            this.ClassesView.Size = new System.Drawing.Size(450, 176);
             this.ClassesView.TabIndex = 10;
             this.ClassesView.UseCompatibleStateImageBehavior = false;
             this.ClassesView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.ClassesView_ColumnClick);
@@ -67,14 +71,14 @@
             // 
             // ClassText
             // 
-            this.ClassText.Location = new System.Drawing.Point(588, 194);
+            this.ClassText.Location = new System.Drawing.Point(588, 201);
             this.ClassText.Name = "ClassText";
             this.ClassText.Size = new System.Drawing.Size(144, 20);
             this.ClassText.TabIndex = 11;
             // 
             // CRNText
             // 
-            this.CRNText.Location = new System.Drawing.Point(588, 172);
+            this.CRNText.Location = new System.Drawing.Point(588, 179);
             this.CRNText.Name = "CRNText";
             this.CRNText.Size = new System.Drawing.Size(144, 20);
             this.CRNText.TabIndex = 13;
@@ -82,81 +86,75 @@
             // SemesterLabel
             // 
             this.SemesterLabel.AutoSize = true;
-            this.SemesterLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SemesterLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SemesterLabel.ForeColor = System.Drawing.Color.White;
-            this.SemesterLabel.Location = new System.Drawing.Point(501, 220);
+            this.SemesterLabel.Location = new System.Drawing.Point(505, 221);
             this.SemesterLabel.Name = "SemesterLabel";
-            this.SemesterLabel.Size = new System.Drawing.Size(53, 13);
+            this.SemesterLabel.Size = new System.Drawing.Size(77, 21);
             this.SemesterLabel.TabIndex = 15;
             this.SemesterLabel.Text = "Semester:";
             // 
             // ClassLabel
             // 
             this.ClassLabel.AutoSize = true;
-            this.ClassLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClassLabel.ForeColor = System.Drawing.Color.White;
-            this.ClassLabel.Location = new System.Drawing.Point(501, 197);
+            this.ClassLabel.Location = new System.Drawing.Point(487, 201);
             this.ClassLabel.Name = "ClassLabel";
-            this.ClassLabel.Size = new System.Drawing.Size(64, 13);
+            this.ClassLabel.Size = new System.Drawing.Size(95, 21);
             this.ClassLabel.TabIndex = 17;
             this.ClassLabel.Text = "Class Name:";
             // 
-            // Add_Button
-            // 
-            this.Add_Button.Location = new System.Drawing.Point(43, 372);
-            this.Add_Button.Name = "Add_Button";
-            this.Add_Button.Size = new System.Drawing.Size(75, 23);
-            this.Add_Button.TabIndex = 18;
-            this.Add_Button.Text = "Add";
-            this.Add_Button.UseVisualStyleBackColor = true;
-            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
-            // 
             // Remove_Button
             // 
-            this.Remove_Button.Location = new System.Drawing.Point(203, 372);
+            this.Remove_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Remove_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Remove_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove_Button.ForeColor = System.Drawing.Color.White;
+            this.Remove_Button.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_subtract_filled_50;
+            this.Remove_Button.Location = new System.Drawing.Point(256, 347);
             this.Remove_Button.Name = "Remove_Button";
-            this.Remove_Button.Size = new System.Drawing.Size(75, 23);
+            this.Remove_Button.Size = new System.Drawing.Size(82, 76);
             this.Remove_Button.TabIndex = 19;
-            this.Remove_Button.Text = "Remove";
-            this.Remove_Button.UseVisualStyleBackColor = true;
+            this.Remove_Button.UseVisualStyleBackColor = false;
             this.Remove_Button.Click += new System.EventHandler(this.Remove_Button_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 30);
+            this.label1.Location = new System.Drawing.Point(5, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 28);
+            this.label1.Size = new System.Drawing.Size(184, 37);
             this.label1.TabIndex = 20;
             this.label1.Text = "Teacher Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(7, 134);
+            this.label2.Location = new System.Drawing.Point(5, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 28);
+            this.label2.Size = new System.Drawing.Size(109, 37);
             this.label2.TabIndex = 21;
             this.label2.Text = "Courses";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(501, 175);
+            this.label3.Location = new System.Drawing.Point(476, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(106, 21);
             this.label3.TabIndex = 22;
             this.label3.Text = "CRN Number:";
             // 
             // SemesterText
             // 
-            this.SemesterText.Location = new System.Drawing.Point(588, 217);
+            this.SemesterText.Location = new System.Drawing.Point(588, 224);
             this.SemesterText.Name = "SemesterText";
             this.SemesterText.Size = new System.Drawing.Size(144, 20);
             this.SemesterText.TabIndex = 23;
@@ -164,20 +162,34 @@
             // yearLaber
             // 
             this.yearLaber.AutoSize = true;
-            this.yearLaber.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLaber.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearLaber.ForeColor = System.Drawing.Color.White;
-            this.yearLaber.Location = new System.Drawing.Point(501, 242);
+            this.yearLaber.Location = new System.Drawing.Point(538, 244);
             this.yearLaber.Name = "yearLaber";
-            this.yearLaber.Size = new System.Drawing.Size(30, 13);
+            this.yearLaber.Size = new System.Drawing.Size(44, 21);
             this.yearLaber.TabIndex = 24;
             this.yearLaber.Text = "Year:";
             // 
             // yearText
             // 
-            this.yearText.Location = new System.Drawing.Point(588, 239);
+            this.yearText.Location = new System.Drawing.Point(588, 247);
             this.yearText.Name = "yearText";
             this.yearText.Size = new System.Drawing.Size(144, 20);
             this.yearText.TabIndex = 25;
+            // 
+            // Add_Button
+            // 
+            this.Add_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Button.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_plus_math_filled_50__1_;
+            this.Add_Button.Location = new System.Drawing.Point(144, 347);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.Size = new System.Drawing.Size(82, 76);
+            this.Add_Button.TabIndex = 18;
+            this.Add_Button.UseVisualStyleBackColor = false;
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // Home
             // 
