@@ -80,18 +80,22 @@
             // SemesterLabel
             // 
             this.SemesterLabel.AutoSize = true;
+            this.SemesterLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SemesterLabel.ForeColor = System.Drawing.Color.White;
             this.SemesterLabel.Location = new System.Drawing.Point(501, 220);
             this.SemesterLabel.Name = "SemesterLabel";
-            this.SemesterLabel.Size = new System.Drawing.Size(81, 13);
+            this.SemesterLabel.Size = new System.Drawing.Size(78, 13);
             this.SemesterLabel.TabIndex = 15;
             this.SemesterLabel.Text = "Semester/Year:";
             // 
             // ClassLabel
             // 
             this.ClassLabel.AutoSize = true;
+            this.ClassLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassLabel.ForeColor = System.Drawing.Color.White;
             this.ClassLabel.Location = new System.Drawing.Point(501, 197);
             this.ClassLabel.Name = "ClassLabel";
-            this.ClassLabel.Size = new System.Drawing.Size(66, 13);
+            this.ClassLabel.Size = new System.Drawing.Size(64, 13);
             this.ClassLabel.TabIndex = 17;
             this.ClassLabel.Text = "Class Name:";
             // 
@@ -118,29 +122,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 25);
+            this.label1.Size = new System.Drawing.Size(134, 28);
             this.label1.TabIndex = 20;
             this.label1.Text = "Teacher Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 91);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(7, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 25);
+            this.label2.Size = new System.Drawing.Size(79, 28);
             this.label2.TabIndex = 21;
             this.label2.Text = "Courses";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(501, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 22;
             this.label3.Text = "CRN Number:";
             // 
@@ -155,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(755, 471);
             this.Controls.Add(this.SemesterYearText);
             this.Controls.Add(this.label3);

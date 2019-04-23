@@ -52,7 +52,6 @@
             this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridViewABET = new System.Windows.Forms.DataGridView();
@@ -63,6 +62,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -145,7 +145,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(19, 823);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(168, 91);
+            this.button6.Size = new System.Drawing.Size(168, 64);
             this.button6.TabIndex = 19;
             this.button6.Text = "Export";
             this.button6.UseVisualStyleBackColor = true;
@@ -271,15 +271,6 @@
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(520, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
@@ -315,8 +306,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Size = new System.Drawing.Size(1389, 927);
-            this.splitContainer1.SplitterDistance = 627;
+            this.splitContainer1.Size = new System.Drawing.Size(1307, 927);
+            this.splitContainer1.SplitterDistance = 606;
             this.splitContainer1.TabIndex = 39;
             // 
             // label9
@@ -400,13 +391,23 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button3
+            // 
+            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.reload;
+            this.button3.Location = new System.Drawing.Point(520, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(73, 23);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Update";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1326, 930);
+            this.ClientSize = new System.Drawing.Size(1293, 930);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Class";
             this.Text = "Form3";
