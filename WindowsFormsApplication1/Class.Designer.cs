@@ -60,9 +60,9 @@
             this.ABETLearningObjDesc_txt = new System.Windows.Forms.TextBox();
             this.ObjDesc_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -372,19 +372,6 @@
             this.label5.Text = "Description";
             this.label5.UseWaitCursor = true;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.reload;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.reload;
-            this.button3.Location = new System.Drawing.Point(520, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // OutcomeDesc_txt
             // 
             this.OutcomeDesc_txt.Location = new System.Drawing.Point(276, 106);
@@ -403,6 +390,18 @@
             this.button5.Text = "Home";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.Webp1;
+            this.button3.Location = new System.Drawing.Point(551, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(42, 23);
+            this.button3.TabIndex = 32;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Class
             // 

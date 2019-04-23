@@ -94,6 +94,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\Webp.net-resizeimage %283%291.png" />
+    <None Include="Resources\Webp.net-resizeimage %283%29.png" />
+    <None Include="Resources\Webp.net-resizeimage %282%29.png" />
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
     <None Include="Resources\house1.png" />
     <None Include="Resources\reload.png" />
     <EmbeddedResource Include="Login.resx">

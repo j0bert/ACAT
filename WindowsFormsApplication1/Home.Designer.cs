@@ -39,7 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.SemesterYearText = new System.Windows.Forms.TextBox();
+            this.SemesterText = new System.Windows.Forms.TextBox();
+            this.yearLaber = new System.Windows.Forms.Label();
+            this.yearText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // logoutButton
@@ -84,9 +86,9 @@
             this.SemesterLabel.ForeColor = System.Drawing.Color.White;
             this.SemesterLabel.Location = new System.Drawing.Point(501, 220);
             this.SemesterLabel.Name = "SemesterLabel";
-            this.SemesterLabel.Size = new System.Drawing.Size(78, 13);
+            this.SemesterLabel.Size = new System.Drawing.Size(53, 13);
             this.SemesterLabel.TabIndex = 15;
-            this.SemesterLabel.Text = "Semester/Year:";
+            this.SemesterLabel.Text = "Semester:";
             // 
             // ClassLabel
             // 
@@ -152,12 +154,30 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "CRN Number:";
             // 
-            // SemesterYearText
+            // SemesterText
             // 
-            this.SemesterYearText.Location = new System.Drawing.Point(588, 217);
-            this.SemesterYearText.Name = "SemesterYearText";
-            this.SemesterYearText.Size = new System.Drawing.Size(144, 20);
-            this.SemesterYearText.TabIndex = 23;
+            this.SemesterText.Location = new System.Drawing.Point(588, 217);
+            this.SemesterText.Name = "SemesterText";
+            this.SemesterText.Size = new System.Drawing.Size(144, 20);
+            this.SemesterText.TabIndex = 23;
+            // 
+            // yearLaber
+            // 
+            this.yearLaber.AutoSize = true;
+            this.yearLaber.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLaber.ForeColor = System.Drawing.Color.White;
+            this.yearLaber.Location = new System.Drawing.Point(501, 242);
+            this.yearLaber.Name = "yearLaber";
+            this.yearLaber.Size = new System.Drawing.Size(30, 13);
+            this.yearLaber.TabIndex = 24;
+            this.yearLaber.Text = "Year:";
+            // 
+            // yearText
+            // 
+            this.yearText.Location = new System.Drawing.Point(588, 239);
+            this.yearText.Name = "yearText";
+            this.yearText.Size = new System.Drawing.Size(144, 20);
+            this.yearText.TabIndex = 25;
             // 
             // Home
             // 
@@ -165,7 +185,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(755, 471);
-            this.Controls.Add(this.SemesterYearText);
+            this.Controls.Add(this.yearText);
+            this.Controls.Add(this.yearLaber);
+            this.Controls.Add(this.SemesterText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -197,6 +219,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox SemesterYearText;
+        private System.Windows.Forms.TextBox SemesterText;
+        private System.Windows.Forms.Label yearLaber;
+        private System.Windows.Forms.TextBox yearText;
     }
 }
