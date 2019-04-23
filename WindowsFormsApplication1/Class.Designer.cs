@@ -331,6 +331,7 @@
             this.dataGridViewABET.Name = "dataGridViewABET";
             this.dataGridViewABET.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewABET.TabIndex = 39;
+            this.dataGridViewABET.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewABET_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -373,13 +374,16 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.reload;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.reload;
             this.button3.Location = new System.Drawing.Point(520, 77);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(73, 23);
             this.button3.TabIndex = 32;
             this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // OutcomeDesc_txt
             // 

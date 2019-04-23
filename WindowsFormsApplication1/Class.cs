@@ -127,7 +127,7 @@ namespace WindowsFormsApplication1
             {
                 DataGridViewRow row = this.dataGridViewMissionObj.Rows[e.RowIndex];
                 ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
-                ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
+                //ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
         }
 
@@ -135,6 +135,16 @@ namespace WindowsFormsApplication1
         {
             this.Hide();
             new Home().Show();
+        }
+
+        private void dataGridViewABET_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridViewABET.Rows[e.RowIndex];
+
+                ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
+            }
         }
     }
 }
