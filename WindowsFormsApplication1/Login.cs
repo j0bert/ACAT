@@ -55,5 +55,10 @@ namespace WindowsFormsApplication1
             this.Hide();
             new Class().Show();
         }
+
+        private void abtButton_Click(object sender, EventArgs e)
+        {
+            new About().Show();
+        }
     }
 }
