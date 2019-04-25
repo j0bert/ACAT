@@ -174,6 +174,8 @@ namespace WindowsFormsApplication1
             {
                 worksheet.Cells[i + 2, 1] = outcome[i].outcome.ToString();
             }
+            this.Hide();
+            new LearningOutcome().Show();
         }
             //
             // save the application  
