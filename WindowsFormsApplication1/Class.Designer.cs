@@ -38,10 +38,19 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.assessmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.high = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medium = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.low = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Average = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StandardDeviation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewLO = new System.Windows.Forms.DataGridView();
             this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewMissionObj = new System.Windows.Forms.DataGridView();
+            this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abetLearningObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,15 +60,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.assessmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.high = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medium = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.low = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Average = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StandardDeviation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abetLearningObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -131,6 +131,7 @@
             this.button4.TabIndex = 17;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -168,6 +169,36 @@
             this.dataGridView1.Size = new System.Drawing.Size(643, 150);
             this.dataGridView1.TabIndex = 27;
             // 
+            // assessmentName
+            // 
+            this.assessmentName.HeaderText = "Assessment Name";
+            this.assessmentName.Name = "assessmentName";
+            // 
+            // high
+            // 
+            this.high.HeaderText = "High";
+            this.high.Name = "high";
+            // 
+            // medium
+            // 
+            this.medium.HeaderText = "Medium";
+            this.medium.Name = "medium";
+            // 
+            // low
+            // 
+            this.low.HeaderText = "Low";
+            this.low.Name = "low";
+            // 
+            // Average
+            // 
+            this.Average.HeaderText = "Average";
+            this.Average.Name = "Average";
+            // 
+            // StandardDeviation
+            // 
+            this.StandardDeviation.HeaderText = "Standard Deviation";
+            this.StandardDeviation.Name = "StandardDeviation";
+            // 
             // dataGridViewLO
             // 
             this.dataGridViewLO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -203,6 +234,21 @@
             this.dataGridViewMissionObj.TabIndex = 29;
             this.dataGridViewMissionObj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMissionObj_CellContentClick);
             // 
+            // objectiveNumber
+            // 
+            this.objectiveNumber.HeaderText = "Objective #";
+            this.objectiveNumber.Name = "objectiveNumber";
+            // 
+            // objDesc
+            // 
+            this.objDesc.HeaderText = "Objective Description";
+            this.objDesc.Name = "objDesc";
+            // 
+            // abetLearningObj
+            // 
+            this.abetLearningObj.HeaderText = "ABET Learning Objective";
+            this.abetLearningObj.Name = "abetLearningObj";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(735, 787);
@@ -220,6 +266,7 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -229,6 +276,7 @@
             this.button3.TabIndex = 32;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // OutcomeDesc_txt
             // 
@@ -287,51 +335,6 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "ABET \r\nLearning\r\nObjective\r\nDescription";
             this.label7.UseWaitCursor = true;
-            // 
-            // assessmentName
-            // 
-            this.assessmentName.HeaderText = "Assessment Name";
-            this.assessmentName.Name = "assessmentName";
-            // 
-            // high
-            // 
-            this.high.HeaderText = "High";
-            this.high.Name = "high";
-            // 
-            // medium
-            // 
-            this.medium.HeaderText = "Medium";
-            this.medium.Name = "medium";
-            // 
-            // low
-            // 
-            this.low.HeaderText = "Low";
-            this.low.Name = "low";
-            // 
-            // Average
-            // 
-            this.Average.HeaderText = "Average";
-            this.Average.Name = "Average";
-            // 
-            // StandardDeviation
-            // 
-            this.StandardDeviation.HeaderText = "Standard Deviation";
-            this.StandardDeviation.Name = "StandardDeviation";
-            // 
-            // objectiveNumber
-            // 
-            this.objectiveNumber.HeaderText = "Objective #";
-            this.objectiveNumber.Name = "objectiveNumber";
-            // 
-            // objDesc
-            // 
-            this.objDesc.HeaderText = "Objective Description";
-            this.objDesc.Name = "objDesc";
-            // 
-            // abetLearningObj
-            // 
-            this.abetLearningObj.HeaderText = "ABET Learning Objective";
-            this.abetLearningObj.Name = "abetLearningObj";
             // 
             // Class
             // 
