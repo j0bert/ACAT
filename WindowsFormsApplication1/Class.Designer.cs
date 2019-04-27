@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Class));
             this.label1 = new System.Windows.Forms.Label();
-            this.HomeButton = new System.Windows.Forms.Button();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -64,7 +65,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -85,19 +86,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Learning Outcomes";
             // 
-            // HomeButton
+            // LogoutButton
             // 
-            this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeButton.ForeColor = System.Drawing.Color.White;
-            this.HomeButton.Location = new System.Drawing.Point(606, 0);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(73, 31);
-            this.HomeButton.TabIndex = 3;
-            this.HomeButton.Text = "Logout";
-            this.HomeButton.UseVisualStyleBackColor = false;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            this.LogoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
+            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutButton.ForeColor = System.Drawing.Color.White;
+            this.LogoutButton.Location = new System.Drawing.Point(606, 0);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(73, 31);
+            this.LogoutButton.TabIndex = 3;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // label2
             // 
@@ -210,6 +211,7 @@
             // 
             // dataGridViewLO
             // 
+            this.dataGridViewLO.AllowUserToResizeColumns = false;
             this.dataGridViewLO.AllowUserToResizeRows = false;
             this.dataGridViewLO.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewLO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -234,6 +236,7 @@
             // 
             // dataGridViewMissionObj
             // 
+            this.dataGridViewMissionObj.AllowUserToResizeColumns = false;
             this.dataGridViewMissionObj.AllowUserToResizeRows = false;
             this.dataGridViewMissionObj.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewMissionObj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -288,8 +291,8 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel2.Controls.Add(this.button4);
-            this.splitContainer1.Panel2.Controls.Add(this.button5);
             this.splitContainer1.Panel2.Controls.Add(this.HomeButton);
+            this.splitContainer1.Panel2.Controls.Add(this.LogoutButton);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
@@ -303,12 +306,13 @@
             this.pushObjDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pushObjDesc.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pushObjDesc.ForeColor = System.Drawing.Color.Transparent;
-            this.pushObjDesc.Image = global::WindowsFormsApplication1.Properties.Resources.Webp_net_resizeimage__4_;
+            this.pushObjDesc.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
             this.pushObjDesc.Location = new System.Drawing.Point(551, 271);
             this.pushObjDesc.Name = "pushObjDesc";
             this.pushObjDesc.Size = new System.Drawing.Size(42, 23);
             this.pushObjDesc.TabIndex = 44;
             this.pushObjDesc.UseVisualStyleBackColor = false;
+            this.pushObjDesc.Click += new System.EventHandler(this.pushObjDesc_Click);
             // 
             // pushOutcomeDesc
             // 
@@ -316,12 +320,13 @@
             this.pushOutcomeDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pushOutcomeDesc.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pushOutcomeDesc.ForeColor = System.Drawing.Color.Transparent;
-            this.pushOutcomeDesc.Image = global::WindowsFormsApplication1.Properties.Resources.Webp_net_resizeimage__4_;
+            this.pushOutcomeDesc.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
             this.pushOutcomeDesc.Location = new System.Drawing.Point(551, 75);
             this.pushOutcomeDesc.Name = "pushOutcomeDesc";
             this.pushOutcomeDesc.Size = new System.Drawing.Size(42, 23);
             this.pushOutcomeDesc.TabIndex = 43;
             this.pushOutcomeDesc.UseVisualStyleBackColor = false;
+            this.pushOutcomeDesc.Click += new System.EventHandler(this.pushOutcomeDesc_Click);
             // 
             // button1
             // 
@@ -329,7 +334,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Webp1;
+            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
             this.button1.Location = new System.Drawing.Point(551, 683);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(42, 23);
@@ -342,7 +347,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::WindowsFormsApplication1.Properties.Resources.Webp1;
+            this.button2.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
             this.button2.Location = new System.Drawing.Point(209, 271);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(42, 23);
@@ -361,6 +366,7 @@
             // 
             // dataGridViewABET
             // 
+            this.dataGridViewABET.AllowUserToResizeColumns = false;
             this.dataGridViewABET.AllowUserToResizeRows = false;
             this.dataGridViewABET.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridViewABET.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -397,7 +403,6 @@
             this.ObjDesc_txt.Location = new System.Drawing.Point(276, 300);
             this.ObjDesc_txt.Multiline = true;
             this.ObjDesc_txt.Name = "ObjDesc_txt";
-            this.ObjDesc_txt.ReadOnly = true;
             this.ObjDesc_txt.Size = new System.Drawing.Size(317, 150);
             this.ObjDesc_txt.TabIndex = 34;
             // 
@@ -418,7 +423,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.Webp1;
+            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
             this.button3.Location = new System.Drawing.Point(209, 75);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(42, 23);
@@ -430,7 +435,6 @@
             this.OutcomeDesc_txt.Location = new System.Drawing.Point(276, 106);
             this.OutcomeDesc_txt.Multiline = true;
             this.OutcomeDesc_txt.Name = "OutcomeDesc_txt";
-            this.OutcomeDesc_txt.ReadOnly = true;
             this.OutcomeDesc_txt.Size = new System.Drawing.Size(317, 148);
             this.OutcomeDesc_txt.TabIndex = 33;
             // 
@@ -440,35 +444,36 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::WindowsFormsApplication1.Properties.Resources.Webp1;
+            this.button4.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
             this.button4.Location = new System.Drawing.Point(620, 77);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(42, 23);
             this.button4.TabIndex = 33;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // HomeButton
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(534, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 31);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Home";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.HomeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.White;
+            this.HomeButton.Location = new System.Drawing.Point(534, 0);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(75, 31);
+            this.HomeButton.TabIndex = 28;
+            this.HomeButton.Text = "Home";
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // Class
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(1291, 930);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Class";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -487,7 +492,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button HomeButton;
+        private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
@@ -516,7 +521,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn objDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn abetLearningObj;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.DataGridView dataGridViewLO;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

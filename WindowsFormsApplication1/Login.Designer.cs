@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginscreen));
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.passTxt = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.Label();
@@ -137,6 +138,7 @@
             this.Controls.Add(this.username);
             this.Controls.Add(this.passTxt);
             this.Controls.Add(this.usernameTxt);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loginscreen";
             this.Text = "Form1";
             this.ResumeLayout(false);

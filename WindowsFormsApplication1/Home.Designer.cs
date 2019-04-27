@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.ClassesView = new System.Windows.Forms.ListView();
             this.ClassText = new System.Windows.Forms.TextBox();
             this.CRNText = new System.Windows.Forms.TextBox();
@@ -97,7 +98,7 @@
             this.Remove_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Remove_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remove_Button.ForeColor = System.Drawing.Color.White;
-            this.Remove_Button.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_subtract_filled_50;
+            this.Remove_Button.Image = global::WindowsFormsApplication1.Properties.Resources.Subtract;
             this.Remove_Button.Location = new System.Drawing.Point(256, 347);
             this.Remove_Button.Name = "Remove_Button";
             this.Remove_Button.Size = new System.Drawing.Size(82, 76);
@@ -169,7 +170,7 @@
             this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Button.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_plus_math_filled_50__1_;
+            this.Add_Button.Image = global::WindowsFormsApplication1.Properties.Resources.Add;
             this.Add_Button.Location = new System.Drawing.Point(144, 347);
             this.Add_Button.Name = "Add_Button";
             this.Add_Button.Size = new System.Drawing.Size(82, 76);
@@ -211,6 +212,7 @@
             this.Controls.Add(this.CRNText);
             this.Controls.Add(this.ClassText);
             this.Controls.Add(this.ClassesView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";

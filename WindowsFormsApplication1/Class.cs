@@ -16,46 +16,37 @@ namespace WindowsFormsApplication1
         public Class()
         { 
             InitializeComponent();
-
-            //Test comment for GitHub bullshit part 2
-            //string hexColorBack = "#9EB3B3";
+            
+            //Strings to allow user to change all colors of something at once. More efficient than Visual Studio's way of doing it individually
             string hexColorBack = "#FFFFFF"; 
             string hexColorSplitContainerHalves = "#57A0BC";
             string hexColorText = "#FFFFFF";// #D9AC84 or #002121 or 87714D or FFDC8C
             string hexColorTextBox = "#FFFFFF";
 
+            //Convert given strings to Color
             Color colorBack = System.Drawing.ColorTranslator.FromHtml(hexColorBack);
             Color colorSplitHalves = System.Drawing.ColorTranslator.FromHtml(hexColorSplitContainerHalves);
             Color colorText = System.Drawing.ColorTranslator.FromHtml(hexColorText);
             Color colorTextBox = System.Drawing.ColorTranslator.FromHtml(hexColorTextBox);
 
+            //Edit splitContainer halves as well as background bar in the middle splitting the two panels
             splitContainer1.BackColor = colorBack;
             splitContainer1.Panel1.BackColor = colorSplitHalves;
             splitContainer1.Panel2.BackColor = colorSplitHalves;
 
+            //Array of labels to change all text color at once
             Label[] labels = { label1, label2, label3, label4, label5, label8, label9 };
             for (int i = 0; i < labels.Count(); i++)
             {
                 labels[i].ForeColor = colorText;
             }
 
+            //Array of textboxes to change color of all text boxes at once
             TextBox[] boxes = { OutcomeDesc_txt, ObjDesc_txt, ABETLearningObjDesc_txt, textBox2 };
             for (int i = 0; i < boxes.Count(); i++)
             {
                 boxes[i].BackColor = colorTextBox;
             }
-
-        }
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -91,27 +82,21 @@ namespace WindowsFormsApplication1
             workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HomeButton_Click(object sender, EventArgs e)
+        //Logs user out
+        private void LogoutButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             new loginscreen().Show();
         }
 
-        private void addAssesment_Click(object sender, EventArgs e)
+        //Goes to Home Page
+        private void HomeButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Home().Show();
         }
 
-        private void AssesmentName1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //Displays content of Learning Objective selected in text box
         private void dataGridViewLO_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -121,30 +106,37 @@ namespace WindowsFormsApplication1
             }
         }
 
+        //Displays content of Mission Objective selected in text box
         private void dataGridViewMissionObj_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridViewMissionObj.Rows[e.RowIndex];
                 ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
-                //ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Home().Show();
-        }
-
+        //Displays content of ABET Learning Objective selected in text box
         private void dataGridViewABET_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridViewABET.Rows[e.RowIndex];
-
                 ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
             }
         }
+
+        //Push user written/edited Outcome Description to DataGridView's current cell
+        private void pushOutcomeDesc_Click(object sender, EventArgs e)
+        {
+            dataGridViewLO.CurrentRow.Cells[1].Value = OutcomeDesc_txt.Text;
+        }
+
+        //Push user written/edited Objective Description to DataGridView's current cell
+        private void pushObjDesc_Click(object sender, EventArgs e)
+        {
+            dataGridViewMissionObj.CurrentRow.Cells[1].Value = ObjDesc_txt.Text;
+        }
     }
 }
+//dataGridViewLO.Columns.Add("OutcomeDesc", OutcomeDesc_txt.Text); adds a new column altogether. could be useful later
