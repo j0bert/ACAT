@@ -164,5 +164,12 @@ namespace WindowsFormsApplication1
             this.Hide();
             new loginscreen().Show();
         }
+
+        private void Sync_Button_Click(object sender, EventArgs e)
+        {
+            var sync = new DatabaseSync.Desktop.Sync();
+
+            sync.Show();
+        }
     }
 }

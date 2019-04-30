@@ -43,6 +43,7 @@
             this.yearText = new System.Windows.Forms.TextBox();
             this.Add_Button = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.Sync_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ClassesView
@@ -192,12 +193,23 @@
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click_1);
             // 
+            // Sync_Button
+            // 
+            this.Sync_Button.Location = new System.Drawing.Point(602, 347);
+            this.Sync_Button.Name = "Sync_Button";
+            this.Sync_Button.Size = new System.Drawing.Size(75, 23);
+            this.Sync_Button.TabIndex = 27;
+            this.Sync_Button.Text = "Sync";
+            this.Sync_Button.UseVisualStyleBackColor = true;
+            this.Sync_Button.Click += new System.EventHandler(this.Sync_Button_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(755, 471);
+            this.Controls.Add(this.Sync_Button);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.yearText);
             this.Controls.Add(this.yearLaber);
@@ -236,5 +248,6 @@
         private System.Windows.Forms.Label yearLaber;
         private System.Windows.Forms.TextBox yearText;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button Sync_Button;
     }
 }
