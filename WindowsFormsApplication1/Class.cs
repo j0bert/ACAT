@@ -150,73 +150,91 @@ namespace WindowsFormsApplication1
             worksheet.Cells[1, 1].ColumnWidth = 84.14;
             worksheet.Cells[1, 1].RowHeight = 26.25;
             // storing Each row and column value in Mission Objectives
-      /*      for (int i = 0; i <= objective.Count - 1; i++)
+            /*      for (int i = 0; i <= objective.Count - 1; i++)
+                  {
+                      worksheet.Cells[i + 18, 1] = objective[i].missionObjectiveID.ToString() + ". " + objective[i].missionObjective.ToString();
+                  }
+                  for (int i = 0; i <= outcome.Count - 1; i++)
+                  {
+                      worksheet.Cells[i + 2, 1] = outcome[i].outcome.ToString();
+                  }
+                  this.Hide();
+                  new LearningOutcome().Show();
+              */
+              for (int i = 0; i < dataGridViewLO.Rows.Count - 1; i++)
+              {
+                  for (int j = 0; j < dataGridViewLO.Columns.Count -1; j++)
+                  {
+                      worksheet.Cells[i + 2, j + 1] = dataGridViewLO.Rows[i].Cells[j+1].Value.ToString();
+                  }
+              }
+            for (int i = 0; i < dataGridViewMissionObj.Rows.Count - 1; i++)
             {
-                worksheet.Cells[i + 18, 1] = objective[i].missionObjectiveID.ToString() + ". " + objective[i].missionObjective.ToString();
+                for (int j = 0; j < dataGridViewMissionObj.Columns.Count - 1; j++)
+                {
+                    worksheet.Cells[i + 18, j + 1] =  i + "." + dataGridViewMissionObj.Rows[i].Cells[j + 1].Value.ToString();
+                }
             }
-            for (int i = 0; i <= outcome.Count - 1; i++)
-            {
-                worksheet.Cells[i + 2, 1] = outcome[i].outcome.ToString();
-            }
-            this.Hide();
-            new LearningOutcome().Show();
-        */}
+
+        }
+
 
         //Logs user out
         private void LogoutButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new loginscreen().Show();
-        }
+          {
+              this.Hide();
+              new loginscreen().Show();
+          }
 
-        //Goes to Home Page
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Home().Show();
-        }
+          //Goes to Home Page
+          private void HomeButton_Click(object sender, EventArgs e)
+          {
+              this.Hide();
+              new Home().Show();
+          }
 
-        //Displays content of Learning Objective selected in text box
-        private void dataGridViewLO_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridViewLO.Rows[e.RowIndex];
-                OutcomeDesc_txt.Text = row.Cells["OutcomeDesc"].Value.ToString();
-            }
-        }
+          //Displays content of Learning Objective selected in text box
+          private void dataGridViewLO_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+          {
+              if (e.RowIndex >= 0)
+              {
+                  DataGridViewRow row = this.dataGridViewLO.Rows[e.RowIndex];
+                  OutcomeDesc_txt.Text = row.Cells["OutcomeDesc"].Value.ToString();
+              }
+          }
 
-        //Displays content of Mission Objective selected in text box
-        private void dataGridViewMissionObj_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridViewMissionObj.Rows[e.RowIndex];
-                ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
-            }
-        }
+          //Displays content of Mission Objective selected in text box
+          private void dataGridViewMissionObj_CellContentClick(object sender, DataGridViewCellEventArgs e)
+          {
+              if (e.RowIndex >= 0)
+              {
+                  DataGridViewRow row = this.dataGridViewMissionObj.Rows[e.RowIndex];
+                  ObjDesc_txt.Text = row.Cells["objDesc"].Value.ToString();
+              }
+          }
 
-        //Displays content of ABET Learning Objective selected in text box
-        private void dataGridViewABET_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridViewABET.Rows[e.RowIndex];
-                ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
-            }
-        }
+          //Displays content of ABET Learning Objective selected in text box
+          private void dataGridViewABET_CellContentClick(object sender, DataGridViewCellEventArgs e)
+          {
+              if (e.RowIndex >= 0)
+              {
+                  DataGridViewRow row = this.dataGridViewABET.Rows[e.RowIndex];
+                  ABETLearningObjDesc_txt.Text = row.Cells["abetLearningObj"].Value.ToString();
+              }
+          }
 
-        //Push user written/edited Outcome Description to DataGridView's current cell
-        private void pushOutcomeDesc_Click(object sender, EventArgs e)
-        {
-            dataGridViewLO.CurrentRow.Cells[1].Value = OutcomeDesc_txt.Text;
-        }
+          //Push user written/edited Outcome Description to DataGridView's current cell
+          private void pushOutcomeDesc_Click(object sender, EventArgs e)
+          {
+              dataGridViewLO.CurrentRow.Cells[1].Value = OutcomeDesc_txt.Text;
+          }
 
-        //Push user written/edited Objective Description to DataGridView's current cell
-        private void pushObjDesc_Click(object sender, EventArgs e)
-        {
-            dataGridViewMissionObj.CurrentRow.Cells[1].Value = ObjDesc_txt.Text;
-        }
-    }
-}
-//dataGridViewLO.Columns.Add("OutcomeDesc", OutcomeDesc_txt.Text); adds a new column altogether. could be useful later
+          //Push user written/edited Objective Description to DataGridView's current cell
+          private void pushObjDesc_Click(object sender, EventArgs e)
+          {
+              dataGridViewMissionObj.CurrentRow.Cells[1].Value = ObjDesc_txt.Text;
+          }
+      }
+  }
+  //dataGridViewLO.Columns.Add("OutcomeDesc", OutcomeDesc_txt.Text); adds a new column altogether. could be useful later
+                                                                                                                      
