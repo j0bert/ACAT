@@ -53,6 +53,9 @@
     <ApplicationIcon>Resources\Ga Southern Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -67,6 +70,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net451\System.Data.SQLite.dll</HintPath>
@@ -80,6 +84,7 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,12 +96,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABETModel.cs" />
     <Compile Include="About.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssessmentModel.cs" />
+    <Compile Include="ClassModel.cs" />
+    <Compile Include="LearningOutcomeModel.cs" />
     <Compile Include="ListViewColumnSorter.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -116,8 +125,12 @@
     <Compile Include="Class.Designer.cs">
       <DependentUpon>Class.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="MissionObjectiveModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqliteDataAccess.cs" />
+    <Compile Include="TeacherModel.cs" />
     <Content Include="Ga Southern Icon.ico" />
     <Content Include="imageedit_5_2029032051_pSY_icon.ico" />
     <None Include="Resources\Ga Southern Icon.ico" />

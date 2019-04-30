@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace WindowsFormsApplication1
 
     public partial class loginscreen : Form
     {
+
         public loginscreen()
         {
             InitializeComponent();
@@ -48,15 +50,45 @@ namespace WindowsFormsApplication1
         //User Login
         private void login_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Home().Show();
+            List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
+            string teacher = login[0].user_ID;
+            string storedp = login[0].password;
+            string salt = login[0].salt;
+            string password = passTxt.Text;
+
+            if(compareHash(password, storedp, salt))
+            {
+                this.Hide();
+                new Home(teacher).Show();
+            } else
+            {
+                MessageBox.Show("Login inforamtion is incorrect.");
+            }
+        }
+
+        //Gets the hash of the attemped password with stored salt.
+        public static byte[] getHash(string password, string salt)
+        {
+            byte[] unhashed = Encoding.Unicode.GetBytes(String.Concat(password, salt));
+
+            SHA256Managed sha256 = new SHA256Managed();
+            byte[] hashed = sha256.ComputeHash(unhashed);
+
+            return hashed;
+        }
+
+        //Compares the stored passwored to the attempted password.
+        public static bool compareHash(string password, string hash, string salt)
+        {
+            string base64Pass = Convert.ToBase64String(getHash(password, salt));
+            return string.Equals(hash, base64Pass);
         }
 
         //ERASE LATER: TESTING PURPOSES ONLY
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Class().Show();
+            new Class("test", "test").Show();
         }
 
         //Show form for the "About Project" form

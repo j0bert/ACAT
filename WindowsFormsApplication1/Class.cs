@@ -13,9 +13,21 @@ namespace WindowsFormsApplication1
 {
     public partial class Class : Form
     {
-        public Class()
+        private string username;
+        private string CRN;
+        List<ClassModel> classes;
+        List<LearningOutcomeModel> outcomes;
+        List<MissionObjectiveModel> objectives;
+        List<AssessmentModel> assessments;
+        List<ABETModel> abet = SqliteDataAccess.LoadABET();
+
+        public Class(string CRN, string username)
         { 
             InitializeComponent();
+            this.username = username;
+            this.CRN = CRN;
+            this.classes = SqliteDataAccess.LoadClassViaCRN(CRN);
+            label2.Text = this.classes[0].className + " Dashboard";
             
             //Strings to allow user to change all colors of something at once. More efficient than Visual Studio's way of doing it individually
             string hexColorBack = "#FFFFFF"; 
@@ -47,6 +59,35 @@ namespace WindowsFormsApplication1
             {
                 boxes[i].BackColor = colorTextBox;
             }
+
+            //Initialize the Lists
+            outcomes = SqliteDataAccess.LoadLearningOutcome(CRN);
+            objectives = SqliteDataAccess.LoadMissionObjective(CRN);
+            assessments = SqliteDataAccess.LoadAssessment(CRN);
+
+            //Fill the DataGrids with any information pertaining to the class.
+            foreach (LearningOutcomeModel model in outcomes)
+            {
+                dataGridViewLO.Rows.Add(model.outcome_ID, model.description_LO);
+            }
+
+            foreach(MissionObjectiveModel model in objectives)
+            {
+                dataGridViewMissionObj.Rows.Add(model.objective_ID, model.description_MO);
+            }
+
+            foreach (AssessmentModel model in assessments)
+            {
+                dataGridView1.Rows.Add(model.title, model.high, model.mid, model.low, model.average, model.standardDeviation);
+            }
+
+            foreach(ABETModel model in abet)
+            {
+                dataGridViewABET.Rows.Add(model.abet_ID, model.description_ABET);
+            }
+
+            textBox2.Text = classes[0].comments;
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -93,7 +134,7 @@ namespace WindowsFormsApplication1
         private void HomeButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Home().Show();
+            new Home(username).Show();
         }
 
         //Displays content of Learning Objective selected in text box
@@ -136,6 +177,83 @@ namespace WindowsFormsApplication1
         private void pushObjDesc_Click(object sender, EventArgs e)
         {
             dataGridViewMissionObj.CurrentRow.Cells[1].Value = ObjDesc_txt.Text;
+        }
+
+        private void ButtonOutcomeUpdate_Click(object sender, EventArgs e)
+        {
+            outcomes.Clear();
+            foreach(DataGridViewRow row in dataGridViewLO.Rows)
+            {
+                if(row.Cells[0].Value != null)
+                {
+                    LearningOutcomeModel model = new LearningOutcomeModel();
+                    model.outcome_ID = row.Cells[0].Value.ToString();
+                    model.description_LO = row.Cells[1].Value.ToString();
+                    model.CRN = this.CRN;
+                    outcomes.Add(model);
+                }
+            }
+
+            SqliteDataAccess.DeleteLearningOutcome(CRN);
+            foreach(LearningOutcomeModel model in outcomes)
+            {
+                SqliteDataAccess.SaveLearningOutcome(model);
+            }
+        }
+
+        private void ButtonObjectiveUpdate_Click(object sender, EventArgs e)
+        {
+            objectives.Clear();
+            foreach (DataGridViewRow row in dataGridViewMissionObj.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    MissionObjectiveModel model = new MissionObjectiveModel();
+                    model.objective_ID = row.Cells[0].Value.ToString();
+                    model.description_MO = row.Cells[1].Value.ToString();
+                    model.CRN = this.CRN;
+                    objectives.Add(model);
+                }
+            }
+
+            SqliteDataAccess.DeleteMissionObjective(CRN);
+            foreach (MissionObjectiveModel model in objectives)
+            {
+                SqliteDataAccess.SaveMissionObjective(model);
+            }
+        }
+
+        private void ButtonAssessmentUpdate_Click(object sender, EventArgs e)
+        {
+            assessments.Clear();
+            int i = 1;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if(row.Cells[0].Value.ToString() != "")
+                {
+                    AssessmentModel model = new AssessmentModel();
+                    model.assessment_ID = i.ToString();
+                    model.title = row.Cells[0].Value.ToString();
+                    model.high = row.Cells[1].Value.ToString();
+                    model.mid = row.Cells[2].Value.ToString();
+                    model.low = row.Cells[3].Value.ToString();
+                    model.average = row.Cells[4].Value.ToString();
+                    model.standardDeviation = row.Cells[5].Value.ToString();
+                    model.CRN = this.CRN;
+                    assessments.Add(model);
+                }
+            }
+
+            SqliteDataAccess.DeleteAssessment(CRN);
+            foreach (AssessmentModel model in assessments)
+            {
+                SqliteDataAccess.SaveAssessment(model);
+            }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            SqliteDataAccess.updateComments(CRN, textBox2.Text);
         }
     }
 }

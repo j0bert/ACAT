@@ -18,10 +18,19 @@ namespace WindowsFormsApplication1
     public partial class Home : Form
     {
         private ListViewColumnSorter lvwColumnSorter;
+        private List<TeacherModel> teacher;
+        private List<ClassModel> classes;
+        private string CRN;
+        private string username;
 
-        public Home()
+        public Home(string username)
         {
             InitializeComponent();
+            this.teacher = SqliteDataAccess.LoadTeacher(username);
+            this.classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
+            this.username = username;
+
+            label1.Text = teacher[0].firstName + " " + teacher[0].lastName;
 
             lvwColumnSorter = new ListViewColumnSorter();
             this.ClassesView.ListViewItemSorter = lvwColumnSorter;
@@ -34,17 +43,37 @@ namespace WindowsFormsApplication1
             ClassesView.Columns.Add("Semester", 80);
             ClassesView.Columns.Add("Year", 43);
 
+            foreach (ClassModel course in classes)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = course.CRN;
+                lvi.SubItems.Add(course.className);
+                lvi.SubItems.Add(course.semester);
+                lvi.SubItems.Add(course.year);
+
+                ClassesView.Items.Add(lvi);
+            }
+
         }
 
 
         private void addClass(String crn, String className, String semester, string year)
         {
 
-
             String[] rowClass = { crn, className, semester, year };
             ListViewItem course = new ListViewItem(rowClass);
-            ClassesView.Items.Add(course);
+            ClassModel item = new ClassModel();
 
+            item.CRN = crn;
+            item.className = className;
+            item.semester = semester;
+            item.year = year;
+            item.comments = "";
+            item.teacher_ID = teacher[0].techer_ID;
+            SqliteDataAccess.SaveClass(item);
+            classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
+
+            ClassesView.Items.Add(course);
         }
 
         private void removeClass()
@@ -52,6 +81,13 @@ namespace WindowsFormsApplication1
 
             if (MessageBox.Show("Are You Sure?", "REMOVE", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                ListViewItem item = ClassesView.SelectedItems[0];
+                SqliteDataAccess.DeleteAssessment(item.Text);
+                SqliteDataAccess.DeleteLearningOutcome(item.Text);
+                SqliteDataAccess.DeleteMissionObjective(item.Text);
+                SqliteDataAccess.DeleteClass(item.Text);
+                classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
+
                 ClassesView.Items.RemoveAt(ClassesView.SelectedIndices[0]);
             }
 
@@ -91,8 +127,9 @@ namespace WindowsFormsApplication1
 
         private void ClassesView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            CRN = ClassesView.SelectedItems[0].Text;
             this.Hide();
-            new Class().Show();
+            new Class(CRN, username).Show();
 
             //CRNText.Text = ClassesView.SelectedItems[0].SubItems[0].Text;
             //ClassText.Text = ClassesView.SelectedItems[0].SubItems[1].Text;
