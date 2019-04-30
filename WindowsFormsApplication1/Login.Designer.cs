@@ -58,20 +58,20 @@
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(422, 403);
+            this.username.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(389, 393);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(79, 21);
+            this.username.Size = new System.Drawing.Size(106, 30);
             this.username.TabIndex = 2;
             this.username.Text = "Username";
             // 
             // password
             // 
             this.password.AutoSize = true;
-            this.password.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(427, 442);
+            this.password.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(389, 435);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(74, 21);
+            this.password.Size = new System.Drawing.Size(99, 30);
             this.password.TabIndex = 3;
             this.password.Text = "Password";
             // 
@@ -81,7 +81,7 @@
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login.ForeColor = System.Drawing.Color.White;
-            this.login.Location = new System.Drawing.Point(747, 477);
+            this.login.Location = new System.Drawing.Point(747, 486);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(75, 34);
             this.login.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.abtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abtButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abtButton.ForeColor = System.Drawing.Color.White;
-            this.abtButton.Location = new System.Drawing.Point(426, 477);
+            this.abtButton.Location = new System.Drawing.Point(394, 486);
             this.abtButton.Name = "abtButton";
             this.abtButton.Size = new System.Drawing.Size(75, 34);
             this.abtButton.TabIndex = 7;

@@ -375,6 +375,7 @@
             this.abetLearningObj});
             this.dataGridViewABET.Location = new System.Drawing.Point(8, 504);
             this.dataGridViewABET.Name = "dataGridViewABET";
+            this.dataGridViewABET.ReadOnly = true;
             this.dataGridViewABET.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewABET.TabIndex = 39;
             this.dataGridViewABET.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewABET_CellContentClick);
@@ -383,14 +384,17 @@
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Outcome #";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // abetLearningObj
             // 
             this.abetLearningObj.HeaderText = "ABET Learning Objective";
             this.abetLearningObj.Name = "abetLearningObj";
+            this.abetLearningObj.ReadOnly = true;
             // 
             // ABETLearningObjDesc_txt
             // 
+            this.ABETLearningObjDesc_txt.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ABETLearningObjDesc_txt.Location = new System.Drawing.Point(276, 504);
             this.ABETLearningObjDesc_txt.Multiline = true;
             this.ABETLearningObjDesc_txt.Name = "ABETLearningObjDesc_txt";
@@ -400,6 +404,7 @@
             // 
             // ObjDesc_txt
             // 
+            this.ObjDesc_txt.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ObjDesc_txt.Location = new System.Drawing.Point(276, 300);
             this.ObjDesc_txt.Multiline = true;
             this.ObjDesc_txt.Name = "ObjDesc_txt";
@@ -432,6 +437,7 @@
             // 
             // OutcomeDesc_txt
             // 
+            this.OutcomeDesc_txt.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutcomeDesc_txt.Location = new System.Drawing.Point(276, 106);
             this.OutcomeDesc_txt.Multiline = true;
             this.OutcomeDesc_txt.Name = "OutcomeDesc_txt";
