@@ -20,6 +20,11 @@ namespace WindowsFormsApplication1
         ArrayList ObjectiveNames = new ArrayList(50);
         ArrayList ABETnames = new ArrayList(50);
         ArrayList Assessments = new ArrayList(50);
+        Dictionary<int, string> MOmap = new Dictionary<int, string>();
+        Dictionary<int, string> ABTmap = new Dictionary<int, string>();
+        Dictionary<int, string> Assmap = new Dictionary<int, string>();
+
+
         public LearningOutcome()
         {
             InitializeComponent();
@@ -40,10 +45,11 @@ namespace WindowsFormsApplication1
         private void LoadLearningOutcomesList()
         {
             outcome = SqliteDataAccess.LoadLearningOutcome();
-            for (int i = 0; i < outcome.Count; i++)
-            {
+            int i = 0;
                 LearningOutcomeGrid.Rows.Add(outcome[i].OutcomeID, outcome[i].outcome);
-            }
+       
+
+
         }
         private void LoadMissionObjectivesList()
         {
@@ -76,6 +82,46 @@ namespace WindowsFormsApplication1
                 DataGridViewRow row = this.LearningOutcomeGrid.Rows[e.RowIndex];
    
             }
+
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            int sizeOfList;
+            int i = 0;
+            MOmap.Add(i, MissionOBBox.ToString());
+            ABTmap.Add(i, ABETLearningBox.ToString());
+            Assmap.Add(i, AssessmentBox.ToString());
+            LoadLearningOutcomesList();
+            i++;
+            sizeOfList = outcome.Count;
+            if (outcome[i-1] == outcome[sizeOfList-1])
+            {
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            // creating new WorkBook within Excel application  
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            // creating new Excelsheet in workbook  
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            // see the excel sheet behind the program  
+            app.Visible = true;
+            // get the reference of first sheet. By default its name is Sheet1.  
+            // store its reference to worksheet  
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            // changing the name of active sheet  
+            worksheet.Name = "Exported from gridview";
+                foreach (KeyValuePair<int, string> kvp in MOmap)
+                {
+                    worksheet.Cells[i + 1, i + 1] = kvp.Value;
+                }
+                
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
