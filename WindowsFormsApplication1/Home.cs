@@ -167,9 +167,9 @@ namespace WindowsFormsApplication1
 
         private void Sync_Button_Click(object sender, EventArgs e)
         {
-            var sync = new DatabaseSync.Desktop.Sync();
+           // var sync = new DatabaseSync.Desktop.Sync();
 
-            sync.Show();
+           // sync.Show();
         }
     }
 }
