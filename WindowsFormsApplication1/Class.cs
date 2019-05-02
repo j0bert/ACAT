@@ -200,7 +200,7 @@ namespace WindowsFormsApplication1
                    worksheet.Cells[i + 2, 1] = outcomes[i].description_LO.ToString();
                }
              */
-            this.Hide();
+            
             new LearningOutcome(CRN, username).Show();
         }
     
@@ -311,7 +311,8 @@ namespace WindowsFormsApplication1
             int i = 1;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if(row.Cells[0].Value.ToString() != "")
+                if(row.Cells[0].Value != null)
+                //if (!string.Equals(row.Cells[0].Value.ToString(), ""))
                 {
                     AssessmentModel model = new AssessmentModel();
                     model.assessment_ID = i.ToString();
@@ -323,6 +324,8 @@ namespace WindowsFormsApplication1
                     model.standardDeviation = row.Cells[5].Value.ToString();
                     model.CRN = this.CRN;
                     assessments.Add(model);
+                } else {
+                    System.Diagnostics.Debug.WriteLine("Error");
                 }
             }
 
