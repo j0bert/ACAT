@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
                 new Home(teacher).Show();
             } else
             {
-                MessageBox.Show("Login inforamtion is incorrect.");
+                MessageBox.Show("Incomplete Login Information.");
             }
         }
         private void passTxt_KeyDown(object sender, KeyEventArgs e)
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    MessageBox.Show("Login inforamtion is incorrect.");
+                    MessageBox.Show("Incomplete Login Information.");
                 }
             }
         }
