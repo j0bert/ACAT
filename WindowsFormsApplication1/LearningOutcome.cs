@@ -34,6 +34,7 @@ namespace WindowsFormsApplication1
         ArrayList ABarray = new ArrayList(20);
         ArrayList Assarray = new ArrayList(20);
         int outcomecount = 0;
+        int[] averageArray;
 
         public LearningOutcome(string CRN, string username)
         {
@@ -169,6 +170,10 @@ namespace WindowsFormsApplication1
             MissionUncheckAllItems();
             ABETUncheckAllItems();
             AssUncheckAllItems();
+            if (outcomes.Count - 1 == outcomecount )
+            {
+                NextButton.Text = "Final Change";
+            }
             if (outcomes.Count == outcomecount)
             {
                 NextButton.Enabled = false;
@@ -186,6 +191,7 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
+           
             if (outcomecount != outcomes.Count) {
                 MessageBox.Show("You must input all of the fields before exporting", " Warning",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -305,6 +311,10 @@ namespace WindowsFormsApplication1
                 for (int j = 0; j <= abet.Count - 1; j++)
                 {
                     worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
+                }
+                for (int i = 0; i < AssessmentBox.CheckedIndices.Count; i++)
+                {
+                    averageArray[i] = MissionOBBox.CheckedIndices[i];
                 }
             }
           
