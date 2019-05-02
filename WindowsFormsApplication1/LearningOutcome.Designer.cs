@@ -36,11 +36,17 @@
             this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +55,7 @@
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(675, 222);
+            this.NextButton.Location = new System.Drawing.Point(675, 259);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(159, 36);
             this.NextButton.TabIndex = 0;
@@ -110,24 +116,12 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(893, 222);
+            this.button1.Location = new System.Drawing.Point(893, 259);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 36);
             this.button1.TabIndex = 30;
             this.button1.Text = "Previous Objective";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1114, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 36);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Export";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -173,17 +167,91 @@
             this.label4.TabIndex = 35;
             this.label4.Text = "Assessments";
             // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1127, 127);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(78, 36);
+            this.button3.TabIndex = 36;
+            this.button3.Text = "Export";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(700, 196);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(67, 24);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Select All";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(700, 229);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(67, 24);
+            this.button4.TabIndex = 38;
+            this.button4.Text = "Deselect ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(848, 226);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(66, 24);
+            this.button5.TabIndex = 40;
+            this.button5.Text = "Deselect ";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(848, 196);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(66, 24);
+            this.button6.TabIndex = 39;
+            this.button6.Text = "Select All";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(984, 226);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(64, 24);
+            this.button7.TabIndex = 42;
+            this.button7.Text = "Deselect ";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(984, 196);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(64, 24);
+            this.button8.TabIndex = 41;
+            this.button8.Text = "Select All";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // LearningOutcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(1249, 321);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewLO);
             this.Controls.Add(this.AssessmentBox);
@@ -208,10 +276,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeDesc;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

@@ -135,7 +135,6 @@ namespace WindowsFormsApplication1
             string MOresult = string.Join(",", MOmap.ToArray());
             string ABTresult = string.Join(",", ABTmap.ToArray());
             string Assmresult = string.Join(",", Assmap.ToArray());
-            //ik
             MOarray.Add(MOresult);
             ABarray.Add(ABTresult);
             Assarray.Add(Assmresult);
@@ -159,122 +158,138 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
 
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (outcomecount != outcomes.Count) {
+                MessageBox.Show("You must input all of the fields before exporting", " Warning",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-            // creating new WorkBook within Excel application  
-            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-            // creating new Excelsheet in workbook  
-            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            // see the excel sheet behind the program  
-            app.Visible = true;
-            // get the reference of first sheet. By default its name is Sheet1.  
-            // store its reference to worksheet  
-            worksheet = workbook.Sheets["Sheet1"];
-            worksheet = workbook.ActiveSheet;
-            // changing the name of active sheet  
-            worksheet.Name = "Exported from gridview";
-            for (int j = 1; j <= 9; j++)
+            }
+            else
             {
-                switch (j)
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                // creating new WorkBook within Excel application  
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                // creating new Excelsheet in workbook  
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                // see the excel sheet behind the program  
+                app.Visible = true;
+                // get the reference of first sheet. By default its name is Sheet1.  
+                // store its reference to worksheet  
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                // changing the name of active sheet  
+                worksheet.Name = "Exported from gridview";
+                for (int j = 1; j <= 9; j++)
                 {
-                    case 1:
-                        worksheet.Cells[1, j] = "Learning Outcomes";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        worksheet.Cells[1, j].EntireRow.Style.WrapText = false;
+                    switch (j)
+                    {
+                        case 1:
+                            worksheet.Cells[1, j] = "Learning Outcomes";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].EntireRow.Style.WrapText = false;
 
-                        break;
-                    case 2:
-                        worksheet.Cells[1, j] = "Misssion Objective(s)";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 3:
-                        worksheet.Cells[1, j] = "ABET learning Outcomes";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 4:
-                        worksheet.Cells[1, j] = "Evaluation Instrument";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 5:
-                        worksheet.Cells[1, j] = "Avg (%)";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 6:
-                        worksheet.Cells[1, j] = "Standard Deviation";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 7:
-                        worksheet.Cells[1, j] = "Program Outcome";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 8:
-                        worksheet.Cells[1, j] = "Avg";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    case 9:
-                        worksheet.Cells[1, j] = "Standard Deviation";
-                        worksheet.Cells[1, j].EntireRow.Font.Bold = true;
-                        break;
-                    default:
-                        worksheet.Cells[1, j] = "Opps!";
-                        break;
+                            break;
+                        case 2:
+                            worksheet.Cells[1, j] = "Misssion Objective(s)";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 3:
+                            worksheet.Cells[1, j] = "ABET learning Outcomes";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 4:
+                            worksheet.Cells[1, j] = "Evaluation Instrument";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 5:
+                            worksheet.Cells[1, j] = "Avg (%)";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 6:
+                            worksheet.Cells[1, j] = "Standard Deviation";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 7:
+                            worksheet.Cells[1, j] = "Program Outcome";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 8:
+                            worksheet.Cells[1, j] = "Avg";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 9:
+                            worksheet.Cells[1, j] = "Standard Deviation";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        default:
+                            worksheet.Cells[1, j] = "Opps!";
+                            break;
+                    }
+                }
+                for (int j = 0; j <= 2; j++)
+                {
+                    switch (j)
+                    {
+                        case 0:
+                            worksheet.Cells[j + 17, 1] = "Mission Objectives";
+                            worksheet.Cells[j + 17, 1].EntireRow.Font.Bold = true;
+                            break;
+                        case 1:
+                            worksheet.Cells[j + 24, 1] = "ABET Learning Outcomes";
+                            worksheet.Cells[j + 24, 1].EntireRow.Font.Bold = true;
+                            worksheet.Cells[j + 25, 1] = "The program enables students to achieve, by the time of graduation:";
+                            break;
+                        case 2:
+                            worksheet.Cells[j + 27, 1] = "1. General:";
+                            worksheet.Cells[j + 27, 1].EntireRow.Font.Bold = true;
+                            worksheet.Cells[j + 38, 1] = "2. CS Specific:";
+                            worksheet.Cells[j + 38, 1].EntireRow.Font.Bold = true;
+                            worksheet.Cells[j + 39, 1] = "(a) An ability to apply mathematical foundations, algorithmic principles, and computer science theory in the modeling and design of computer-based systems in a way that demonstrates comprehension of the tradeoffs involved in design choices;";
+                            worksheet.Cells[j + 40, 1] = "(b) An ability to apply design and development principles in the construction of software systems of varying complexity.";
+                            break;
+                        default:
+                            worksheet.Cells[1 + 37, 1] = "Opps!";
+                            break;
+
+                    }
+
+                }
+
+
+
+                for (int j = 2; j <= 7; j++)
+                {
+                    worksheet.Cells[1, j].WrapText = true;
+                }
+                worksheet.Cells[1, 1].ColumnWidth = 84.14;
+                worksheet.Cells[1, 1].RowHeight = 26.25;
+                // storing Each row and column value in Mission Objectives
+                for (int j = 0; j <= objectives.Count - 1; j++)
+                {
+                    worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
+                }
+                for (int j = 0; j <= outcomes.Count - 1; j++)
+                {
+                    worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
+                    worksheet.Cells[j + 2, 2] = MOarray[j].ToString();
+                    worksheet.Cells[j + 2, 3] = ABarray[j].ToString();
+                    worksheet.Cells[j + 2, 4] = Assarray[j].ToString();
+                }
+                for (int j = 0; j <= abet.Count - 1; j++)
+                {
+                    worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
                 }
             }
-            for (int j = 0; j <= 2; j++)
-            {
-                switch (j)
-                {
-                    case 0:
-                        worksheet.Cells[j + 17, 1] = "Mission Objectives";
-                        worksheet.Cells[j + 17, 1].EntireRow.Font.Bold = true;
-                        break;
-                    case 1:
-                        worksheet.Cells[j + 24, 1] = "ABET Learning Outcomes";
-                        worksheet.Cells[j + 24, 1].EntireRow.Font.Bold = true;
-                        worksheet.Cells[j + 25, 1] = "The program enables students to achieve, by the time of graduation:";
-                        break;
-                    case 2:
-                        worksheet.Cells[j + 27, 1] = "1. General:";
-                        worksheet.Cells[j + 27, 1].EntireRow.Font.Bold = true;
-                        worksheet.Cells[j + 38, 1] = "2. CS Specific:";
-                        worksheet.Cells[j + 38, 1].EntireRow.Font.Bold = true;
-                        worksheet.Cells[j + 39, 1] = "(a) An ability to apply mathematical foundations, algorithmic principles, and computer science theory in the modeling and design of computer-based systems in a way that demonstrates comprehension of the tradeoffs involved in design choices;";
-                        worksheet.Cells[j + 40, 1] = "(b) An ability to apply design and development principles in the construction of software systems of varying complexity.";
-                        break;
-                    default:
-                        worksheet.Cells[1 + 37, 1] = "Opps!";
-                        break;
+          
+        }
 
-                }
-
-            }
-
-
-
-            for (int j = 2; j <= 7; j++)
-            {
-                worksheet.Cells[1, j].WrapText = true;
-            }
-            worksheet.Cells[1, 1].ColumnWidth = 84.14;
-            worksheet.Cells[1, 1].RowHeight = 26.25;
-            // storing Each row and column value in Mission Objectives
-            for (int j = 0; j <= objectives.Count - 1; j++)
-            {
-                worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
-            }
-            for (int j = 0; j <= outcomes.Count - 1; j++)
-            {
-                worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
-                worksheet.Cells[j + 2, 2] = MOarray[j].ToString();
-                worksheet.Cells[j + 2, 3] = ABarray[j].ToString();
-                worksheet.Cells[j + 2, 4] = Assarray[j].ToString();
-            }
-            for (int j = 0; j <= abet.Count - 1; j++)
-            {
-                worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
-            }
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
     }
