@@ -11,10 +11,7 @@ using Microsoft.VisualBasic;
 
 namespace WindowsFormsApplication1
 {
-    // right-click WindowsFormsApplication1
-    // click Add --> Reference
-    // search Microsoft.VisualBasic
-    // using Microsoft.VisualBasic;
+   
     public partial class Home : Form
     {
         private ListViewColumnSorter lvwColumnSorter;
