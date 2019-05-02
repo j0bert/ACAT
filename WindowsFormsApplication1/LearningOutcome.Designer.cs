@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LearningOutcome));
             this.NextButton = new System.Windows.Forms.Button();
             this.MissionOBBox = new System.Windows.Forms.CheckedListBox();
             this.ABETLearningBox = new System.Windows.Forms.CheckedListBox();
@@ -190,6 +191,7 @@
             this.Controls.Add(this.ABETLearningBox);
             this.Controls.Add(this.MissionOBBox);
             this.Controls.Add(this.NextButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LearningOutcome";
             this.Text = "LearningOutcome";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).EndInit();
