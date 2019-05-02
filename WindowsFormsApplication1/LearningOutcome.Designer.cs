@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LearningOutcome));
             this.NextButton = new System.Windows.Forms.Button();
             this.MissionOBBox = new System.Windows.Forms.CheckedListBox();
             this.ABETLearningBox = new System.Windows.Forms.CheckedListBox();
@@ -42,12 +41,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.MissionSelect = new System.Windows.Forms.Button();
+            this.MissionDeselect = new System.Windows.Forms.Button();
+            this.ABETDeselect = new System.Windows.Forms.Button();
+            this.AbetSelect = new System.Windows.Forms.Button();
+            this.AssDeselect = new System.Windows.Forms.Button();
+            this.AssSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,60 +180,65 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // MissionSelect
             // 
-            this.button2.Location = new System.Drawing.Point(700, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 24);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Select All";
-            this.button2.UseVisualStyleBackColor = true;
+            this.MissionSelect.Location = new System.Drawing.Point(700, 196);
+            this.MissionSelect.Name = "MissionSelect";
+            this.MissionSelect.Size = new System.Drawing.Size(67, 24);
+            this.MissionSelect.TabIndex = 37;
+            this.MissionSelect.Text = "Select All";
+            this.MissionSelect.UseVisualStyleBackColor = true;
+            this.MissionSelect.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button4
+            // MissionDeselect
             // 
-            this.button4.Location = new System.Drawing.Point(700, 229);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(67, 24);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "Deselect ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.MissionDeselect.Location = new System.Drawing.Point(700, 229);
+            this.MissionDeselect.Name = "MissionDeselect";
+            this.MissionDeselect.Size = new System.Drawing.Size(67, 24);
+            this.MissionDeselect.TabIndex = 38;
+            this.MissionDeselect.Text = "Deselect ";
+            this.MissionDeselect.UseVisualStyleBackColor = true;
+            this.MissionDeselect.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // ABETDeselect
             // 
-            this.button5.Location = new System.Drawing.Point(848, 226);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(66, 24);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "Deselect ";
-            this.button5.UseVisualStyleBackColor = true;
+            this.ABETDeselect.Location = new System.Drawing.Point(848, 226);
+            this.ABETDeselect.Name = "ABETDeselect";
+            this.ABETDeselect.Size = new System.Drawing.Size(66, 24);
+            this.ABETDeselect.TabIndex = 40;
+            this.ABETDeselect.Text = "Deselect ";
+            this.ABETDeselect.UseVisualStyleBackColor = true;
+            this.ABETDeselect.Click += new System.EventHandler(this.ABETDeselect_Click);
             // 
-            // button6
+            // AbetSelect
             // 
-            this.button6.Location = new System.Drawing.Point(848, 196);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(66, 24);
-            this.button6.TabIndex = 39;
-            this.button6.Text = "Select All";
-            this.button6.UseVisualStyleBackColor = true;
+            this.AbetSelect.Location = new System.Drawing.Point(848, 196);
+            this.AbetSelect.Name = "AbetSelect";
+            this.AbetSelect.Size = new System.Drawing.Size(66, 24);
+            this.AbetSelect.TabIndex = 39;
+            this.AbetSelect.Text = "Select All";
+            this.AbetSelect.UseVisualStyleBackColor = true;
+            this.AbetSelect.Click += new System.EventHandler(this.AbetSelect_Click);
             // 
-            // button7
+            // AssDeselect
             // 
-            this.button7.Location = new System.Drawing.Point(984, 226);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(64, 24);
-            this.button7.TabIndex = 42;
-            this.button7.Text = "Deselect ";
-            this.button7.UseVisualStyleBackColor = true;
+            this.AssDeselect.Location = new System.Drawing.Point(984, 226);
+            this.AssDeselect.Name = "AssDeselect";
+            this.AssDeselect.Size = new System.Drawing.Size(64, 24);
+            this.AssDeselect.TabIndex = 42;
+            this.AssDeselect.Text = "Deselect ";
+            this.AssDeselect.UseVisualStyleBackColor = true;
+            this.AssDeselect.Click += new System.EventHandler(this.AssDeselect_Click);
             // 
-            // button8
+            // AssSelect
             // 
-            this.button8.Location = new System.Drawing.Point(984, 196);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(64, 24);
-            this.button8.TabIndex = 41;
-            this.button8.Text = "Select All";
-            this.button8.UseVisualStyleBackColor = true;
+            this.AssSelect.Location = new System.Drawing.Point(984, 196);
+            this.AssSelect.Name = "AssSelect";
+            this.AssSelect.Size = new System.Drawing.Size(64, 24);
+            this.AssSelect.TabIndex = 41;
+            this.AssSelect.Text = "Select All";
+            this.AssSelect.UseVisualStyleBackColor = true;
+            this.AssSelect.Click += new System.EventHandler(this.AssSelect_Click);
             // 
             // LearningOutcome
             // 
@@ -242,12 +246,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(1249, 321);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.AssDeselect);
+            this.Controls.Add(this.AssSelect);
+            this.Controls.Add(this.ABETDeselect);
+            this.Controls.Add(this.AbetSelect);
+            this.Controls.Add(this.MissionDeselect);
+            this.Controls.Add(this.MissionSelect);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -259,7 +263,6 @@
             this.Controls.Add(this.ABETLearningBox);
             this.Controls.Add(this.MissionOBBox);
             this.Controls.Add(this.NextButton);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LearningOutcome";
             this.Text = "LearningOutcome";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).EndInit();
@@ -283,11 +286,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button MissionSelect;
+        private System.Windows.Forms.Button MissionDeselect;
+        private System.Windows.Forms.Button ABETDeselect;
+        private System.Windows.Forms.Button AbetSelect;
+        private System.Windows.Forms.Button AssDeselect;
+        private System.Windows.Forms.Button AssSelect;
     }
 }

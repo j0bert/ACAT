@@ -114,6 +114,28 @@ namespace WindowsFormsApplication1
             while (AssessmentBox.CheckedIndices.Count > 0)
                 AssessmentBox.SetItemChecked(AssessmentBox.CheckedIndices[0], false);
         }
+        private void MissioncheckAllItems()
+        {
+            for (int i = 0; i < MissionOBBox.Items.Count; i++)
+            {
+                MissionOBBox.SetItemChecked(i, true);
+            }
+        }
+        private void ABETcheckAllItems()
+        {
+           
+            for (int i = 0; i < ABETLearningBox.Items.Count; i++)
+            {
+                ABETLearningBox.SetItemChecked(i, true);
+            }
+        }
+        private void AsscheckAllItems()
+        {
+            for (int i = 0; i < AssessmentBox.Items.Count; i++)
+            {
+                AssessmentBox.SetItemChecked(i, true);
+            }
+        }
 
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -290,7 +312,32 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            MissionUncheckAllItems();
+        }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            MissioncheckAllItems();
+        }
+
+        private void AbetSelect_Click(object sender, EventArgs e)
+        {
+            ABETcheckAllItems();
+        }
+
+        private void AssSelect_Click(object sender, EventArgs e)
+        {
+            AsscheckAllItems();
+        }
+
+        private void ABETDeselect_Click(object sender, EventArgs e)
+        {
+            ABETUncheckAllItems();
+        }
+
+        private void AssDeselect_Click(object sender, EventArgs e)
+        {
+            AssUncheckAllItems();
         }
     }
 }
