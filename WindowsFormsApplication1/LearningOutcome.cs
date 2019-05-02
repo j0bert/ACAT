@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
             LoadAbetList();
 
             dataGridViewLO.Columns["OutcomeNumber"].ReadOnly = true;
-            dataGridViewLO.Columns["OutcomeDesc"].ReadOnly = true;
+            dataGridViewLO.Columns["OutcomeDesc"].ReadOnly = true; 
 
         }
         private void LoadAbetList()
