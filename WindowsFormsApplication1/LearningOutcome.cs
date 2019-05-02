@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
 {
     public partial class LearningOutcome : Form
     {
+
         private string username;
         private string CRN;
         ArrayList ObjectiveNames = new ArrayList(50);
@@ -44,8 +45,6 @@ namespace WindowsFormsApplication1
             outcomes = SqliteDataAccess.LoadLearningOutcome(CRN);
             objectives = SqliteDataAccess.LoadMissionObjective(CRN);
             assessments = SqliteDataAccess.LoadAssessment(CRN);
-            
-
 
             foreach (LearningOutcomeModel model in outcomes)
             {
@@ -54,7 +53,10 @@ namespace WindowsFormsApplication1
             LoadMissionObjectivesList();
             LoadAssessmentList();
             LoadAbetList();
-           
+
+            dataGridViewLO.Columns["OutcomeNumber"].ReadOnly = true;
+            dataGridViewLO.Columns["OutcomeDesc"].ReadOnly = true;
+
         }
         private void LoadAbetList()
         {
