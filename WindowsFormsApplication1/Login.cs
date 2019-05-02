@@ -67,7 +67,30 @@ namespace WindowsFormsApplication1
         }
         private void passTxt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            
+            if (e.KeyCode == Keys.Enter && passTxt.Text != null && usernameTxt.Text != null)
+            {
+                List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
+                string teacher = login[0].user_ID;
+                string storedp = login[0].password;
+                string salt = login[0].salt;
+                string password = passTxt.Text;
+
+                if (compareHash(password, storedp, salt))
+                {
+                    this.Hide();
+                    new Home(teacher).Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login inforamtion is incorrect.");
+                }
+            }
+        }
+        private void usernameTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter && passTxt.Text != null && usernameTxt.Text != null)
             {
                 List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
                 string teacher = login[0].user_ID;
