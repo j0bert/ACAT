@@ -65,7 +65,27 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Login inforamtion is incorrect.");
             }
         }
+        private void passTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
+                string teacher = login[0].user_ID;
+                string storedp = login[0].password;
+                string salt = login[0].salt;
+                string password = passTxt.Text;
 
+                if (compareHash(password, storedp, salt))
+                {
+                    this.Hide();
+                    new Home(teacher).Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login inforamtion is incorrect.");
+                }
+            }
+        }
         //Gets the hash of the attemped password with stored salt.
         public static byte[] getHash(string password, string salt)
         {
@@ -84,12 +104,6 @@ namespace WindowsFormsApplication1
             return string.Equals(hash, base64Pass);
         }
 
-        //ERASE LATER: TESTING PURPOSES ONLY
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Class("test", "test").Show();
-        }
 
         //Show form for the "About Project" form
         private void abtButton_Click(object sender, EventArgs e)
