@@ -308,14 +308,14 @@ namespace WindowsFormsApplication1
         private void ButtonAssessmentUpdate_Click(object sender, EventArgs e)
         {
             assessments.Clear();
-            int i = 1;
+            //int i = 1;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if(row.Cells[0].Value != null)
                 //if (!string.Equals(row.Cells[0].Value.ToString(), ""))
                 {
                     AssessmentModel model = new AssessmentModel();
-                    model.assessment_ID = i.ToString();
+                    model.assessment_ID = row.Index.ToString();
                     model.title = row.Cells[0].Value.ToString();
                     model.high = row.Cells[1].Value.ToString();
                     model.mid = row.Cells[2].Value.ToString();
