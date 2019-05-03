@@ -50,25 +50,7 @@ namespace WindowsFormsApplication1
         //User Login
         private void login_Click(object sender, EventArgs e)
         {
-            List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
-            string teacher = login[0].user_ID;
-            string storedp = login[0].password;
-            string salt = login[0].salt;
-            string password = passTxt.Text;
-
-            if(compareHash(password, storedp, salt))
-            {
-                this.Hide();
-                new Home(teacher).Show();
-            } else
-            {
-                MessageBox.Show("Incomplete Login Information.");
-            }
-        }
-        private void passTxt_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-            if (e.KeyCode == Keys.Enter && passTxt.Text != null && usernameTxt.Text != null)
+            try
             {
                 List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
                 string teacher = login[0].user_ID;
@@ -85,6 +67,36 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("Incomplete Login Information.");
                 }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Incomplete Login Information");
+            }
+        }
+        private void passTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter && passTxt.Text != null && usernameTxt.Text != null)
+                {
+                    List<LoginModel> login = SqliteDataAccess.passwordFetch(usernameTxt.Text);
+                    string teacher = login[0].user_ID;
+                    string storedp = login[0].password;
+                    string salt = login[0].salt;
+                    string password = passTxt.Text;
+
+                    if (compareHash(password, storedp, salt))
+                    {
+                        this.Hide();
+                        new Home(teacher).Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incomplete Login Information.");
+                    }
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Incomplete Login Information");
             }
         }
         private void usernameTxt_KeyDown(object sender, KeyEventArgs e)
