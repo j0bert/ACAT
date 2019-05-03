@@ -11,10 +11,7 @@ using Microsoft.VisualBasic;
 
 namespace WindowsFormsApplication1
 {
-    // right-click WindowsFormsApplication1
-    // click Add --> Reference
-    // search Microsoft.VisualBasic
-    // using Microsoft.VisualBasic;
+   
     public partial class Home : Form
     {
         private ListViewColumnSorter lvwColumnSorter;
@@ -169,7 +166,15 @@ namespace WindowsFormsApplication1
         {
            // var sync = new DatabaseSync.Desktop.Sync();
 
-           // sync.Show();
+           // sync.Show(); 
+        }
+
+        private void refreshTextBoxes_Click(object sender, EventArgs e)
+        {
+            ClassText.Text = "";
+            CRNText.Text = "";
+            SemesterText.Text = "";
+            yearText.Text = "";
         }
     }
 }
