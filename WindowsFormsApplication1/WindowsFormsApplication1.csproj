@@ -139,6 +139,8 @@
     <Compile Include="TeacherModel.cs" />
     <Content Include="Ga Southern Icon.ico" />
     <Content Include="imageedit_5_2029032051_pSY_icon.ico" />
+    <None Include="Resources\Webp.net-resizeimage %282%291.png" />
+    <None Include="Resources\reload1.png" />
     <None Include="Resources\Ga Southern Icon.ico" />
     <None Include="Resources\Ga Southern Icon.bmp" />
     <None Include="Resources\icons8-subtract-filled-50.png" />
