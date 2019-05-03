@@ -598,7 +598,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Class";
-            this.Text = "Form3";
+            this.Text = "Course Page";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).EndInit();

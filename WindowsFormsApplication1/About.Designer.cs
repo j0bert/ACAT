@@ -78,7 +78,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
-            this.Text = "Form1";
+            this.Text = "About Page";
             this.ResumeLayout(false);
             this.PerformLayout();
 
