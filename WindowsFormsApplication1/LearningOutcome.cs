@@ -41,6 +41,7 @@ namespace WindowsFormsApplication1
         List<double> squareroot = new List<double>();
         int outcomecount = 0;
         int[] averageArray;
+        int pagelength;
 
         public LearningOutcome(string CRN, string username)
         {
@@ -269,51 +270,52 @@ namespace WindowsFormsApplication1
                     {
                         case 1:
                             worksheet.Cells[1, j] = CRN + " " + "Learning Outcomes";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             worksheet.Cells[1, j].EntireRow.Style.WrapText = false;
 
                             break;
                         case 2:
                             worksheet.Cells[1, j] = "Misssion Objective(s)";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 3:
                             worksheet.Cells[1, j] = "ABET learning Outcomes";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 4:
                             worksheet.Cells[1, j] = "Evaluation Instrument";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 5:
                             worksheet.Cells[1, j] = "Avg (%)";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 6:
                             worksheet.Cells[1, j] = "Standard Deviation";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 7:
                             worksheet.Cells[1, j] = " ";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 8:
                             worksheet.Cells[1, j] = "Program Outcome";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 9:
                             worksheet.Cells[1, j] = "Avg";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         case 10:
                             worksheet.Cells[1, j] = "Standard Deviation";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j].Font.Bold = true;
                             break;
                         default:
                             worksheet.Cells[1, j] = "Opps!";
                             break;
                     }
                 }
+                /*
                 for (int j = 0; j <= 2; j++)
                 {
                     switch (j)
@@ -343,7 +345,7 @@ namespace WindowsFormsApplication1
 
                 }
 
-
+    */
 
                 for (int j = 2; j <= 7; j++)
                 {
@@ -354,13 +356,13 @@ namespace WindowsFormsApplication1
                 // storing Each row and column value in Mission Objectives
                 for (int j = 0; j <= objectives.Count - 1; j++)
                 {
-                    worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
+                   // worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
 
                 }
 
                 for (int j = 0; j <= outcomes.Count - 1; j++)
                 {
-                    worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
+                  //  worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
                     worksheet.Cells[j + 2, 2] = MOarray[j].ToString();
                     worksheet.Cells[j + 2, 3] = ABarray[j].ToString();
                     worksheet.Cells[j + 2, 3].ColumnWidth = 8.43;
@@ -375,16 +377,54 @@ namespace WindowsFormsApplication1
                 }
                 for (int j = 0; j <= abet.Count - 1; j++)
                 {
-                    worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
+                 //   worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
                     worksheet.Cells[j + 2, 8] = abet[j].abet_ID.ToString();
                 }
+                
+                for (int j = 0; j <= outcomes.Count - 1; j++)
+                {
+                    worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
+                    if (j == outcomes.Count - 1)
+                    {
+                        worksheet.Cells[j + 3, 1] = " ";
+                        worksheet.Cells[j + 4, 1] = "Mission Objectives";
+                        worksheet.Cells[j + 4, 1].Font.Bold = true;
+                        for (int k = 0; k <= objectives.Count - 1; k++)
+                        {
+                            worksheet.Cells[j + k + 5, 1] = objectives[k].objective_ID.ToString() + ". " + objectives[k].description_MO.ToString();
+                            if (k == objectives.Count - 1)
+                            {
+                                worksheet.Cells[j + k + 6, 1] = " ";
+                                worksheet.Cells[j + k + 7, 1] = "ABET Learning Outcomes";
+                                worksheet.Cells[j + k + 7, 1].Font.Bold = true;
+                                worksheet.Cells[j + k + 8, 1] = "The program enables students to achieve, by the time of graduation:";
+                                worksheet.Cells[j + k + 9, 1] = " ";
+                                worksheet.Cells[j + k + 10, 1] = "1. General:";
+                                worksheet.Cells[j + k + 10, 1].Font.Bold = true;
+                                worksheet.Cells[j + k + 11, 1] = " ";
+                                for (int l = 0; l <= abet.Count - 1; l++)
+                                {
+                                    worksheet.Cells[j + k + l + 12, 1] = "(" + abet[l].abet_ID.ToString() + ") " + abet[l].description_ABET.ToString();
+                                    if (l == abet.Count - 1)
+                                    {
+                                        worksheet.Cells[j + k + l + 13, 1] = " ";
+                                        worksheet.Cells[j + k + l + 14, 1] =  " ";
+                                        worksheet.Cells[j + k + l + 15, 1] = "2. CS Specific:";
+                                        worksheet.Cells[j + k + l + 15, 1].Font.Bold = true;
+                                        worksheet.Cells[j + k + l + 16, 1] = "(a) An ability to apply mathematical foundations, algorithmic principles, and computer science theory in the modeling and design of computer-based systems in a way that demonstrates comprehension of the tradeoffs involved in design choices;";
+                                        worksheet.Cells[j + k + l + 17, 1] = "(b) An ability to apply design and development principles in the construction of software systems of varying complexity.";
+                                    }
+                                }
+                            }
 
 
 
 
+                        }
 
+                    }
+                }
             }
-
         }
 
         private void button4_Click(object sender, EventArgs e)
