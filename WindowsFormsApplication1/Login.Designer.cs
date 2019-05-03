@@ -130,7 +130,7 @@
             this.Controls.Add(this.usernameTxt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loginscreen";
-            this.Text = "Form1";
+            this.Text = "Login Page";
             this.ResumeLayout(false);
             this.PerformLayout();
 
