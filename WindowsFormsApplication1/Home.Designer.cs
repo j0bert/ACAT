@@ -39,10 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SemesterText = new System.Windows.Forms.TextBox();
-            this.yearLaber = new System.Windows.Forms.Label();
+            this.yearLabel = new System.Windows.Forms.Label();
             this.yearText = new System.Windows.Forms.TextBox();
             this.Add_Button = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Sync_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -134,11 +135,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(476, 179);
+            this.label3.Location = new System.Drawing.Point(537, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 21);
+            this.label3.Size = new System.Drawing.Size(45, 21);
             this.label3.TabIndex = 22;
-            this.label3.Text = "CRN Number:";
+            this.label3.Text = "CRN:";
             // 
             // SemesterText
             // 
@@ -147,16 +148,16 @@
             this.SemesterText.Size = new System.Drawing.Size(144, 20);
             this.SemesterText.TabIndex = 23;
             // 
-            // yearLaber
+            // yearLabel
             // 
-            this.yearLaber.AutoSize = true;
-            this.yearLaber.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearLaber.ForeColor = System.Drawing.Color.White;
-            this.yearLaber.Location = new System.Drawing.Point(538, 244);
-            this.yearLaber.Name = "yearLaber";
-            this.yearLaber.Size = new System.Drawing.Size(44, 21);
-            this.yearLaber.TabIndex = 24;
-            this.yearLaber.Text = "Year:";
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLabel.ForeColor = System.Drawing.Color.White;
+            this.yearLabel.Location = new System.Drawing.Point(538, 244);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(44, 21);
+            this.yearLabel.TabIndex = 24;
+            this.yearLabel.Text = "Year:";
             // 
             // yearText
             // 
@@ -193,15 +194,31 @@
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click_1);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(659, 273);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 31);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Sync_Button
             // 
-            this.Sync_Button.Location = new System.Drawing.Point(602, 347);
+            this.Sync_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Sync_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sync_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sync_Button.ForeColor = System.Drawing.Color.White;
+            this.Sync_Button.Image = global::WindowsFormsApplication1.Properties.Resources.Webp_net_resizeimage__2_;
+            this.Sync_Button.Location = new System.Drawing.Point(563, 365);
             this.Sync_Button.Name = "Sync_Button";
-            this.Sync_Button.Size = new System.Drawing.Size(75, 23);
-            this.Sync_Button.TabIndex = 27;
-            this.Sync_Button.Text = "Sync";
-            this.Sync_Button.UseVisualStyleBackColor = true;
-            this.Sync_Button.Click += new System.EventHandler(this.Sync_Button_Click);
+            this.Sync_Button.Size = new System.Drawing.Size(82, 76);
+            this.Sync_Button.TabIndex = 29;
+            this.Sync_Button.UseVisualStyleBackColor = false;
             // 
             // Home
             // 
@@ -210,9 +227,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(755, 471);
             this.Controls.Add(this.Sync_Button);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.yearText);
-            this.Controls.Add(this.yearLaber);
+            this.Controls.Add(this.yearLabel);
             this.Controls.Add(this.SemesterText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -245,9 +263,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox SemesterText;
-        private System.Windows.Forms.Label yearLaber;
+        private System.Windows.Forms.Label yearLabel;
         private System.Windows.Forms.TextBox yearText;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Sync_Button;
     }
 }
