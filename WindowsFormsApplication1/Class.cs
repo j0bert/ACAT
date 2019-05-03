@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -412,7 +413,12 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    if (e.ColumnIndex == 1)
+                    if(e.ColumnIndex == 0)
+                    {
+                        string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "\\PDF";
+                        Process.Start(@directory);
+                    }
+                    else if (e.ColumnIndex == 1)
                     {
                         if (assessments[rowVal].highPDF == null || assessments[rowVal].highPDF == "")
                         {
@@ -440,6 +446,7 @@ namespace WindowsFormsApplication1
                         else
                         {
                             string pdf = assessments[rowVal].highPDF;
+                            
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
