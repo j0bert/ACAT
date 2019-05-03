@@ -166,7 +166,7 @@ namespace WindowsFormsApplication1
         {
            // var sync = new DatabaseSync.Desktop.Sync();
 
-           // sync.Show();
+           // sync.Show(); 
         }
 
         private void refreshTextBoxes_Click(object sender, EventArgs e)
