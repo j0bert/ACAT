@@ -59,6 +59,8 @@
             this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ButtonObjectiveUpdate = new System.Windows.Forms.Button();
+            this.ButtonOutcomeUpdate = new System.Windows.Forms.Button();
             this.pushABETLO = new System.Windows.Forms.Button();
             this.ABETLOUpdate = new System.Windows.Forms.Button();
             this.pushObjDesc = new System.Windows.Forms.Button();
@@ -74,8 +76,6 @@
             this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
             this.buttonAssessmentUpdate = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
-            this.ButtonOutcomeUpdate = new System.Windows.Forms.Button();
-            this.ButtonObjectiveUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -103,7 +103,7 @@
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ForeColor = System.Drawing.Color.White;
-            this.LogoutButton.Location = new System.Drawing.Point(591, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(592, 0);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(88, 34);
             this.LogoutButton.TabIndex = 3;
@@ -126,7 +126,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
-            this.label3.Location = new System.Drawing.Point(4, 665);
+            this.label3.Location = new System.Drawing.Point(4, 666);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 5;
@@ -335,15 +335,14 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 2);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel1.Controls.Add(this.ButtonObjectiveUpdate);
             this.splitContainer1.Panel1.Controls.Add(this.ButtonOutcomeUpdate);
@@ -368,6 +367,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel2.Controls.Add(this.buttonAssessmentUpdate);
             this.splitContainer1.Panel2.Controls.Add(this.HomeButton);
@@ -375,9 +375,37 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Size = new System.Drawing.Size(1289, 927);
+            this.splitContainer1.Size = new System.Drawing.Size(1290, 929);
             this.splitContainer1.SplitterDistance = 605;
             this.splitContainer1.TabIndex = 39;
+            // 
+            // ButtonObjectiveUpdate
+            // 
+            this.ButtonObjectiveUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonObjectiveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonObjectiveUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonObjectiveUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.ButtonObjectiveUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
+            this.ButtonObjectiveUpdate.Location = new System.Drawing.Point(209, 271);
+            this.ButtonObjectiveUpdate.Name = "ButtonObjectiveUpdate";
+            this.ButtonObjectiveUpdate.Size = new System.Drawing.Size(42, 23);
+            this.ButtonObjectiveUpdate.TabIndex = 48;
+            this.ButtonObjectiveUpdate.UseVisualStyleBackColor = false;
+            this.ButtonObjectiveUpdate.Click += new System.EventHandler(this.ButtonObjectiveUpdate_Click);
+            // 
+            // ButtonOutcomeUpdate
+            // 
+            this.ButtonOutcomeUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonOutcomeUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonOutcomeUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonOutcomeUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.ButtonOutcomeUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
+            this.ButtonOutcomeUpdate.Location = new System.Drawing.Point(209, 75);
+            this.ButtonOutcomeUpdate.Name = "ButtonOutcomeUpdate";
+            this.ButtonOutcomeUpdate.Size = new System.Drawing.Size(42, 23);
+            this.ButtonOutcomeUpdate.TabIndex = 47;
+            this.ButtonOutcomeUpdate.UseVisualStyleBackColor = false;
+            this.ButtonOutcomeUpdate.Click += new System.EventHandler(this.ButtonOutcomeUpdate_Click);
             // 
             // pushABETLO
             // 
@@ -562,41 +590,13 @@
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
-            this.HomeButton.Location = new System.Drawing.Point(514, 0);
+            this.HomeButton.Location = new System.Drawing.Point(515, 0);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(77, 34);
             this.HomeButton.TabIndex = 28;
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
-            // 
-            // ButtonOutcomeUpdate
-            // 
-            this.ButtonOutcomeUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonOutcomeUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonOutcomeUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonOutcomeUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.ButtonOutcomeUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.ButtonOutcomeUpdate.Location = new System.Drawing.Point(209, 75);
-            this.ButtonOutcomeUpdate.Name = "ButtonOutcomeUpdate";
-            this.ButtonOutcomeUpdate.Size = new System.Drawing.Size(42, 23);
-            this.ButtonOutcomeUpdate.TabIndex = 47;
-            this.ButtonOutcomeUpdate.UseVisualStyleBackColor = false;
-            this.ButtonOutcomeUpdate.Click += new System.EventHandler(this.ButtonOutcomeUpdate_Click);
-            // 
-            // ButtonObjectiveUpdate
-            // 
-            this.ButtonObjectiveUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.ButtonObjectiveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonObjectiveUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonObjectiveUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.ButtonObjectiveUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.ButtonObjectiveUpdate.Location = new System.Drawing.Point(209, 271);
-            this.ButtonObjectiveUpdate.Name = "ButtonObjectiveUpdate";
-            this.ButtonObjectiveUpdate.Size = new System.Drawing.Size(42, 23);
-            this.ButtonObjectiveUpdate.TabIndex = 48;
-            this.ButtonObjectiveUpdate.UseVisualStyleBackColor = false;
-            this.ButtonObjectiveUpdate.Click += new System.EventHandler(this.ButtonObjectiveUpdate_Click);
             // 
             // Class
             // 
