@@ -46,36 +46,34 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewLO = new System.Windows.Forms.DataGridView();
-            this.dataGridViewMissionObj = new System.Windows.Forms.DataGridView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pushObjDesc = new System.Windows.Forms.Button();
-            this.pushOutcomeDesc = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonObjectiveUpdate = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dataGridViewABET = new System.Windows.Forms.DataGridView();
-            this.ABETLearningObjDesc_txt = new System.Windows.Forms.TextBox();
-            this.ObjDesc_txt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.buttonOutcomeUpdate = new System.Windows.Forms.Button();
-            this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
-            this.buttonAssessmentUpdate = new System.Windows.Forms.Button();
-            this.HomeButton = new System.Windows.Forms.Button();
-            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abetLearningObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assessmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.high = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medium = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.low = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Average = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StandardDeviation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ABETLOUpdate = new System.Windows.Forms.Button();
+            this.dataGridViewLO = new System.Windows.Forms.DataGridView();
+            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewMissionObj = new System.Windows.Forms.DataGridView();
+            this.objectiveNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pushABETLO = new System.Windows.Forms.Button();
+            this.ABETLOUpdate = new System.Windows.Forms.Button();
+            this.pushObjDesc = new System.Windows.Forms.Button();
+            this.pushOutcomeDesc = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dataGridViewABET = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abetLearningObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ABETLearningObjDesc_txt = new System.Windows.Forms.TextBox();
+            this.ObjDesc_txt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.OutcomeDesc_txt = new System.Windows.Forms.TextBox();
+            this.buttonAssessmentUpdate = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).BeginInit();
@@ -157,7 +155,7 @@
             // 
             // button6
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,7 +182,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -215,6 +213,42 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(643, 758);
             this.dataGridView1.TabIndex = 27;
+            // 
+            // assessmentName
+            // 
+            this.assessmentName.FillWeight = 76.78324F;
+            this.assessmentName.HeaderText = "Assessment Name";
+            this.assessmentName.Name = "assessmentName";
+            // 
+            // high
+            // 
+            this.high.FillWeight = 17.88006F;
+            this.high.HeaderText = "High";
+            this.high.Name = "high";
+            // 
+            // medium
+            // 
+            this.medium.FillWeight = 17.88006F;
+            this.medium.HeaderText = "Medium";
+            this.medium.Name = "medium";
+            // 
+            // low
+            // 
+            this.low.FillWeight = 17.88006F;
+            this.low.HeaderText = "Low";
+            this.low.Name = "low";
+            // 
+            // Average
+            // 
+            this.Average.FillWeight = 17.88006F;
+            this.Average.HeaderText = "Average";
+            this.Average.Name = "Average";
+            // 
+            // StandardDeviation
+            // 
+            this.StandardDeviation.FillWeight = 21.55574F;
+            this.StandardDeviation.HeaderText = "Standard Deviation";
+            this.StandardDeviation.Name = "StandardDeviation";
             // 
             // dataGridViewLO
             // 
@@ -249,6 +283,18 @@
             this.dataGridViewLO.TabIndex = 28;
             this.dataGridViewLO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLO_CellContentClick_1);
             // 
+            // OutcomeNumber
+            // 
+            this.OutcomeNumber.FillWeight = 71.06599F;
+            this.OutcomeNumber.HeaderText = "Outcome #";
+            this.OutcomeNumber.Name = "OutcomeNumber";
+            // 
+            // OutcomeDesc
+            // 
+            this.OutcomeDesc.FillWeight = 128.934F;
+            this.OutcomeDesc.HeaderText = "Outcome Description";
+            this.OutcomeDesc.Name = "OutcomeDesc";
+            // 
             // dataGridViewMissionObj
             // 
             this.dataGridViewMissionObj.AllowUserToResizeColumns = false;
@@ -282,6 +328,18 @@
             this.dataGridViewMissionObj.TabIndex = 29;
             this.dataGridViewMissionObj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMissionObj_CellContentClick);
             // 
+            // objectiveNumber
+            // 
+            this.objectiveNumber.FillWeight = 71.06599F;
+            this.objectiveNumber.HeaderText = "Objective #";
+            this.objectiveNumber.Name = "objectiveNumber";
+            // 
+            // objDesc
+            // 
+            this.objDesc.FillWeight = 128.934F;
+            this.objDesc.HeaderText = "Objective Description";
+            this.objDesc.Name = "objDesc";
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -299,7 +357,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.pushObjDesc);
             this.splitContainer1.Panel1.Controls.Add(this.pushOutcomeDesc);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonObjectiveUpdate);
             this.splitContainer1.Panel1.Controls.Add(this.label9);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridViewABET);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
@@ -311,7 +368,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.dataGridViewMissionObj);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonOutcomeUpdate);
             this.splitContainer1.Panel1.Controls.Add(this.OutcomeDesc_txt);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             // 
@@ -327,6 +383,36 @@
             this.splitContainer1.Size = new System.Drawing.Size(1289, 927);
             this.splitContainer1.SplitterDistance = 605;
             this.splitContainer1.TabIndex = 39;
+            // 
+            // pushABETLO
+            // 
+            this.pushABETLO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pushABETLO.BackColor = System.Drawing.Color.Transparent;
+            this.pushABETLO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pushABETLO.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pushABETLO.ForeColor = System.Drawing.Color.Transparent;
+            this.pushABETLO.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
+            this.pushABETLO.Location = new System.Drawing.Point(551, 475);
+            this.pushABETLO.Name = "pushABETLO";
+            this.pushABETLO.Size = new System.Drawing.Size(42, 23);
+            this.pushABETLO.TabIndex = 46;
+            this.pushABETLO.UseVisualStyleBackColor = false;
+            this.pushABETLO.Click += new System.EventHandler(this.pushABETLO_Click);
+            // 
+            // ABETLOUpdate
+            // 
+            this.ABETLOUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ABETLOUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.ABETLOUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ABETLOUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ABETLOUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.ABETLOUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
+            this.ABETLOUpdate.Location = new System.Drawing.Point(209, 475);
+            this.ABETLOUpdate.Name = "ABETLOUpdate";
+            this.ABETLOUpdate.Size = new System.Drawing.Size(42, 23);
+            this.ABETLOUpdate.TabIndex = 45;
+            this.ABETLOUpdate.UseVisualStyleBackColor = false;
+            this.ABETLOUpdate.Click += new System.EventHandler(this.ABETLOUpdate_Click);
             // 
             // pushObjDesc
             // 
@@ -373,21 +459,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // buttonObjectiveUpdate
-            // 
-            this.buttonObjectiveUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonObjectiveUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.buttonObjectiveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonObjectiveUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonObjectiveUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonObjectiveUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.buttonObjectiveUpdate.Location = new System.Drawing.Point(209, 271);
-            this.buttonObjectiveUpdate.Name = "buttonObjectiveUpdate";
-            this.buttonObjectiveUpdate.Size = new System.Drawing.Size(42, 23);
-            this.buttonObjectiveUpdate.TabIndex = 41;
-            this.buttonObjectiveUpdate.UseVisualStyleBackColor = false;
-            this.buttonObjectiveUpdate.Click += new System.EventHandler(this.ButtonObjectiveUpdate_Click);
-            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -432,6 +503,18 @@
             this.dataGridViewABET.TabIndex = 39;
             this.dataGridViewABET.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewABET_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 71.06599F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Outcome #";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // abetLearningObj
+            // 
+            this.abetLearningObj.FillWeight = 128.934F;
+            this.abetLearningObj.HeaderText = "ABET Learning Objective";
+            this.abetLearningObj.Name = "abetLearningObj";
+            // 
             // ABETLearningObjDesc_txt
             // 
             this.ABETLearningObjDesc_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -465,21 +548,6 @@
             this.label5.Text = "Description";
             this.label5.UseWaitCursor = true;
             // 
-            // buttonOutcomeUpdate
-            // 
-            this.buttonOutcomeUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonOutcomeUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.buttonOutcomeUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOutcomeUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOutcomeUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonOutcomeUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.buttonOutcomeUpdate.Location = new System.Drawing.Point(209, 75);
-            this.buttonOutcomeUpdate.Name = "buttonOutcomeUpdate";
-            this.buttonOutcomeUpdate.Size = new System.Drawing.Size(42, 23);
-            this.buttonOutcomeUpdate.TabIndex = 32;
-            this.buttonOutcomeUpdate.UseVisualStyleBackColor = false;
-            this.buttonOutcomeUpdate.Click += new System.EventHandler(this.ButtonOutcomeUpdate_Click);
-            // 
             // OutcomeDesc_txt
             // 
             this.OutcomeDesc_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -492,7 +560,7 @@
             // 
             // buttonAssessmentUpdate
             // 
-            this.buttonAssessmentUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonAssessmentUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAssessmentUpdate.BackColor = System.Drawing.Color.Transparent;
             this.buttonAssessmentUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAssessmentUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -519,108 +587,6 @@
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
-            // 
-            // OutcomeNumber
-            // 
-            this.OutcomeNumber.FillWeight = 71.06599F;
-            this.OutcomeNumber.HeaderText = "Outcome #";
-            this.OutcomeNumber.Name = "OutcomeNumber";
-            // 
-            // OutcomeDesc
-            // 
-            this.OutcomeDesc.FillWeight = 128.934F;
-            this.OutcomeDesc.HeaderText = "Outcome Description";
-            this.OutcomeDesc.Name = "OutcomeDesc";
-            // 
-            // objectiveNumber
-            // 
-            this.objectiveNumber.FillWeight = 71.06599F;
-            this.objectiveNumber.HeaderText = "Objective #";
-            this.objectiveNumber.Name = "objectiveNumber";
-            // 
-            // objDesc
-            // 
-            this.objDesc.FillWeight = 128.934F;
-            this.objDesc.HeaderText = "Objective Description";
-            this.objDesc.Name = "objDesc";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 71.06599F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Outcome #";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // abetLearningObj
-            // 
-            this.abetLearningObj.FillWeight = 128.934F;
-            this.abetLearningObj.HeaderText = "ABET Learning Objective";
-            this.abetLearningObj.Name = "abetLearningObj";
-            // 
-            // assessmentName
-            // 
-            this.assessmentName.FillWeight = 76.78324F;
-            this.assessmentName.HeaderText = "Assessment Name";
-            this.assessmentName.Name = "assessmentName";
-            // 
-            // high
-            // 
-            this.high.FillWeight = 17.88006F;
-            this.high.HeaderText = "High";
-            this.high.Name = "high";
-            // 
-            // medium
-            // 
-            this.medium.FillWeight = 17.88006F;
-            this.medium.HeaderText = "Medium";
-            this.medium.Name = "medium";
-            // 
-            // low
-            // 
-            this.low.FillWeight = 17.88006F;
-            this.low.HeaderText = "Low";
-            this.low.Name = "low";
-            // 
-            // Average
-            // 
-            this.Average.FillWeight = 17.88006F;
-            this.Average.HeaderText = "Average";
-            this.Average.Name = "Average";
-            // 
-            // StandardDeviation
-            // 
-            this.StandardDeviation.FillWeight = 21.55574F;
-            this.StandardDeviation.HeaderText = "Standard Deviation";
-            this.StandardDeviation.Name = "StandardDeviation";
-            // 
-            // ABETLOUpdate
-            // 
-            this.ABETLOUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ABETLOUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.ABETLOUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ABETLOUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ABETLOUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.ABETLOUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.ABETLOUpdate.Location = new System.Drawing.Point(209, 475);
-            this.ABETLOUpdate.Name = "ABETLOUpdate";
-            this.ABETLOUpdate.Size = new System.Drawing.Size(42, 23);
-            this.ABETLOUpdate.TabIndex = 45;
-            this.ABETLOUpdate.UseVisualStyleBackColor = false;
-            this.ABETLOUpdate.Click += new System.EventHandler(this.ABETLOUpdate_Click);
-            // 
-            // pushABETLO
-            // 
-            this.pushABETLO.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pushABETLO.BackColor = System.Drawing.Color.Transparent;
-            this.pushABETLO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pushABETLO.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pushABETLO.ForeColor = System.Drawing.Color.Transparent;
-            this.pushABETLO.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
-            this.pushABETLO.Location = new System.Drawing.Point(551, 475);
-            this.pushABETLO.Name = "pushABETLO";
-            this.pushABETLO.Size = new System.Drawing.Size(42, 23);
-            this.pushABETLO.TabIndex = 46;
-            this.pushABETLO.UseVisualStyleBackColor = false;
-            this.pushABETLO.Click += new System.EventHandler(this.pushABETLO_Click);
             // 
             // Class
             // 
@@ -658,7 +624,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridViewMissionObj;
-        private System.Windows.Forms.Button buttonOutcomeUpdate;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TextBox ABETLearningObjDesc_txt;
         private System.Windows.Forms.TextBox ObjDesc_txt;
@@ -669,7 +634,6 @@
         private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.DataGridView dataGridViewLO;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonObjectiveUpdate;
         private System.Windows.Forms.Button buttonAssessmentUpdate;
         private System.Windows.Forms.Button pushObjDesc;
         private System.Windows.Forms.Button pushOutcomeDesc;

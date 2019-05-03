@@ -253,20 +253,10 @@ namespace WindowsFormsApplication1
         private void pushOutcomeDesc_Click(object sender, EventArgs e)
         {
             dataGridViewLO.CurrentRow.Cells[1].Value = OutcomeDesc_txt.Text;
-        }
-
-        //Push user written/edited Objective Description to DataGridView's current cell
-        private void pushObjDesc_Click(object sender, EventArgs e)
-        {
-            dataGridViewMissionObj.CurrentRow.Cells[1].Value = ObjDesc_txt.Text;
-        }
-
-        private void ButtonOutcomeUpdate_Click(object sender, EventArgs e)
-        {
             outcomes.Clear();
-            foreach(DataGridViewRow row in dataGridViewLO.Rows)
+            foreach (DataGridViewRow row in dataGridViewLO.Rows)
             {
-                if(row.Cells[0].Value != null)
+                if (row.Cells[0].Value != null)
                 {
                     LearningOutcomeModel model = new LearningOutcomeModel();
                     model.outcome_ID = row.Cells[0].Value.ToString();
@@ -277,14 +267,16 @@ namespace WindowsFormsApplication1
             }
 
             SqliteDataAccess.DeleteLearningOutcome(CRN);
-            foreach(LearningOutcomeModel model in outcomes)
+            foreach (LearningOutcomeModel model in outcomes)
             {
                 SqliteDataAccess.SaveLearningOutcome(model);
             }
         }
 
-        private void ButtonObjectiveUpdate_Click(object sender, EventArgs e)
+        //Push user written/edited Objective Description to DataGridView's current cell
+        private void pushObjDesc_Click(object sender, EventArgs e)
         {
+            dataGridViewMissionObj.CurrentRow.Cells[1].Value = ObjDesc_txt.Text;
             objectives.Clear();
             foreach (DataGridViewRow row in dataGridViewMissionObj.Rows)
             {
@@ -304,6 +296,8 @@ namespace WindowsFormsApplication1
                 SqliteDataAccess.SaveMissionObjective(model);
             }
         }
+
+
 
         private void ButtonAssessmentUpdate_Click(object sender, EventArgs e)
         {
