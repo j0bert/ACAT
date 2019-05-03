@@ -8,7 +8,7 @@ namespace DatabaseSync.Core.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("objective_number")]
+        [Column("objective_ID")]
         public int MissionObjectiveId { get; set; }
 
         [Column("description_MO")]

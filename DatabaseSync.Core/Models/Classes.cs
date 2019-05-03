@@ -14,7 +14,7 @@ namespace DatabaseSync.Core.Models
 
         public string ClassName { get; set; }
 
-        public int Semester { get; set; }
+        public string Semester { get; set; }
 
         public int Year { get; set; }
 

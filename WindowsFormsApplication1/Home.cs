@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             this.teacher = SqliteDataAccess.LoadTeacher(username);
-            this.classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
+            this.classes = SqliteDataAccess.LoadClass(teacher[0].teacher_ID);
             this.username = username;
 
             label1.Text = teacher[0].firstName + " " + teacher[0].lastName;
@@ -66,9 +66,9 @@ namespace WindowsFormsApplication1
             item.semester = semester;
             item.year = year;
             item.comments = "";
-            item.teacher_ID = teacher[0].techer_ID;
+            item.teacher_ID = teacher[0].teacher_ID;
             SqliteDataAccess.SaveClass(item);
-            classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
+            classes = SqliteDataAccess.LoadClass(teacher[0].teacher_ID);
 
             ClassesView.Items.Add(course);
         }
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
                 SqliteDataAccess.DeleteLearningOutcome(item.Text);
                 SqliteDataAccess.DeleteMissionObjective(item.Text);
                 SqliteDataAccess.DeleteClass(item.Text);
-                classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
+                classes = SqliteDataAccess.LoadClass(teacher[0].teacher_ID);
 
                 ClassesView.Items.RemoveAt(ClassesView.SelectedIndices[0]);
             }
@@ -164,9 +164,9 @@ namespace WindowsFormsApplication1
 
         private void Sync_Button_Click(object sender, EventArgs e)
         {
-           // var sync = new DatabaseSync.Desktop.Sync();
+            var sync = new DatabaseSync.Desktop.Sync();
 
-           // sync.Show(); 
+            sync.Show(); 
         }
 
         private void refreshTextBoxes_Click(object sender, EventArgs e)

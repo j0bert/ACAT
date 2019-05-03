@@ -41,9 +41,7 @@ namespace DatabaseSync.Core
                 using (var transaction = remoteContext.Database.BeginTransaction())
                 {
                     SyncRemoteAbets(remoteContext, abets);
-                    remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.ABET ON");
                     await remoteContext.SaveChangesAsync();
-                    remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.ABET OFF");
 
                     SyncRemoteLogins(remoteContext, logins);
                     remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.LOGIN ON");
@@ -69,9 +67,9 @@ namespace DatabaseSync.Core
                     remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.MISSIONOBJECTIVE OFF");
 
                     SyncRemoteLearningOutcomes(remoteContext, learningOutcomes);
-                    remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.LEARNINGOUTCOMES ON");
+                    remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.LEARNINGOUTCOME ON");
                     await remoteContext.SaveChangesAsync();
-                    remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.LEARNINGOUTCOMES OFF");
+                    remoteContext.Database.ExecuteSqlCommand("SET IDENTITY_INSERT dbo.LEARNINGOUTCOME OFF");
 
                     await remoteContext.SaveChangesAsync();
 
@@ -117,19 +115,19 @@ namespace DatabaseSync.Core
                     SyncLocalLogins(localContext, logins);
                     await localContext.SaveChangesAsync();
 
-                    SyncLocalAssessments(localContext, assessments);
+                    SyncLocalTeachers(localContext, teachers);
                     await localContext.SaveChangesAsync();
 
                     SyncLocalClasses(localContext, classes);
+                    await localContext.SaveChangesAsync();
+
+                    SyncLocalAssessments(localContext, assessments);
                     await localContext.SaveChangesAsync();
 
                     SyncLocalLearningOutcomes(localContext, learningOutcomes);
                     await localContext.SaveChangesAsync();
 
                     SyncLocalMissionObjectives(localContext, missionObjectives);
-                    await localContext.SaveChangesAsync();
-
-                    SyncLocalTeachers(localContext, teachers);
                     await localContext.SaveChangesAsync();
 
                     await localContext.SaveChangesAsync();
@@ -314,9 +312,9 @@ namespace DatabaseSync.Core
         {
             var localIds = remoteRecords.Select(a => a.AbetId).ToList();
 
-            var existingIds = localContext.Assessments
-                .Where(a => localIds.Contains(a.AssessmentId))
-                .Select(a => a.AssessmentId)
+            var existingIds = localContext.Abets
+                .Where(a => localIds.Contains(a.AbetId))
+                .Select(a => a.AbetId)
                 .ToList();
 
             foreach (var localRecord in remoteRecords)

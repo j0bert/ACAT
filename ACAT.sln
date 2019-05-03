@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACAT", "WindowsFormsApplication1\ACAT.csproj", "{60B1AB18-7471-4C30-9C25-B63464355438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSync.Core", "DatabaseSync.Core\DatabaseSync.Core.csproj", "{1E745B7F-68E4-485F-8925-84B34D70BA5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSync.Desktop", "DatabaseSync.Desktop\DatabaseSync.Desktop.csproj", "{3141E78F-9B6D-4DE0-8DF4-C4EB08CD2CF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,19 @@ Global
 		{60B1AB18-7471-4C30-9C25-B63464355438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60B1AB18-7471-4C30-9C25-B63464355438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60B1AB18-7471-4C30-9C25-B63464355438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E745B7F-68E4-485F-8925-84B34D70BA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E745B7F-68E4-485F-8925-84B34D70BA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E745B7F-68E4-485F-8925-84B34D70BA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E745B7F-68E4-485F-8925-84B34D70BA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3141E78F-9B6D-4DE0-8DF4-C4EB08CD2CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3141E78F-9B6D-4DE0-8DF4-C4EB08CD2CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3141E78F-9B6D-4DE0-8DF4-C4EB08CD2CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3141E78F-9B6D-4DE0-8DF4-C4EB08CD2CF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0126995C-7823-45A8-8DD2-AC411DEB9AEA}
 	EndGlobalSection
 EndGlobal

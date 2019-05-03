@@ -2,7 +2,7 @@
 {
     public class TeacherModel
     {
-        public int techer_ID { get; set; }
+        public int teacher_ID { get; set; }
         public int user_ID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }

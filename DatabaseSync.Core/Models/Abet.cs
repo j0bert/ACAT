@@ -7,9 +7,8 @@ namespace DatabaseSync.Core.Models
     public class Abet
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("abet_ID")]
-        public int AbetId { get; set; }
+        public string AbetId { get; set; }
 
         [Column("description_ABET")]
         public string Description { get; set; }
