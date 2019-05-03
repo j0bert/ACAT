@@ -439,8 +439,7 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
+                            string pdf = assessments[rowVal].highPDF;
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
@@ -474,8 +473,7 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
+                            string pdf = assessments[rowVal].midPDF;
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
@@ -509,8 +507,7 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
+                            string pdf = assessments[rowVal].lowPDF;
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
@@ -532,6 +529,7 @@ namespace WindowsFormsApplication1
                 return "";
             }
         }
+
 
         private void Class_FormClosed(object sender, FormClosedEventArgs e)
         {
