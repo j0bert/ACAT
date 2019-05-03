@@ -372,8 +372,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Size = new System.Drawing.Size(1301, 927);
-            this.splitContainer1.SplitterDistance = 623;
+            this.splitContainer1.Size = new System.Drawing.Size(1335, 927);
+            this.splitContainer1.SplitterDistance = 639;
             this.splitContainer1.TabIndex = 39;
             // 
             // ButtonObjectiveUpdate
@@ -600,11 +600,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(1318, 532);
+            this.ClientSize = new System.Drawing.Size(1352, 532);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Class";
             this.Text = "Course Page";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Class_FormClosed_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMissionObj)).EndInit();

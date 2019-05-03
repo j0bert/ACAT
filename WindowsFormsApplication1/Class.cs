@@ -538,8 +538,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-        private void Class_FormClosed(object sender, FormClosedEventArgs e)
+        private void Class_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);
         }
