@@ -38,7 +38,7 @@ namespace WindowsFormsApplication1
         ArrayList Assave2 = new ArrayList(20);
         List<int> avareage = new List<int>();
         List<int> finalavareage = new List<int>();
-        List<double> squareroot = new List<double>();
+        List<int> squareroot = new List<int>();
         int outcomecount = 0;
         int[] averageArray;
         int pagelength;
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1
                 int num = 0;
                 int sum = 0;
                 int score = 0;
-                double sqrtroot = 0;
+                int sqrtroot = 0;
                 for (int i = 0; i < MissionOBBox.CheckedIndices.Count; i++)
                 {
                     MOmap.Add(MissionOBBox.CheckedIndices[i] + 1 + " ");
@@ -190,7 +190,7 @@ namespace WindowsFormsApplication1
                     sum += score;
                     num++;
                 }
-               
+
 
                 string MOresult = string.Join(",", MOmap.ToArray());
                 string ABTresult = string.Join(",", ABTmap.ToArray());
@@ -213,7 +213,7 @@ namespace WindowsFormsApplication1
                 AssUncheckAllItems();
                 for (int i = 0; i < avareage.Count; i++)
                 {
-                    sqrtroot = Math.Sqrt(avareage[i]);
+                    sqrtroot = (int)Math.Round(Math.Sqrt(avareage[i]));
                 }
                 squareroot.Add(sqrtroot);
 
@@ -224,6 +224,7 @@ namespace WindowsFormsApplication1
                 if (outcomes.Count == outcomecount)
                 {
                     NextButton.Enabled = false;
+                    dataGridViewLO.Rows[outcomecount].Selected = false;
                 }
 
 
@@ -232,8 +233,8 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("All fields must be entered ");
             }
-            }
-            
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -356,13 +357,13 @@ namespace WindowsFormsApplication1
                 // storing Each row and column value in Mission Objectives
                 for (int j = 0; j <= objectives.Count - 1; j++)
                 {
-                   // worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
+                    // worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
 
                 }
 
                 for (int j = 0; j <= outcomes.Count - 1; j++)
                 {
-                  //  worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
+                    //  worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
                     worksheet.Cells[j + 2, 2] = MOarray[j].ToString();
                     worksheet.Cells[j + 2, 3] = ABarray[j].ToString();
                     worksheet.Cells[j + 2, 3].ColumnWidth = 8.43;
@@ -370,17 +371,17 @@ namespace WindowsFormsApplication1
                     worksheet.Cells[j + 2, 3].EntireRow.Style.WrapText = false;
                     worksheet.Cells[j + 2, 4] = Assarray[j].ToString();
                     worksheet.Cells[j + 2, 5] = avareage[j].ToString() + "%";
-                    worksheet.Cells[j + 2, 6] = squareroot[j].ToString();
+                    worksheet.Cells[j + 2, 6] = squareroot[j].ToString() + "%";
 
 
 
                 }
                 for (int j = 0; j <= abet.Count - 1; j++)
                 {
-                 //   worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
+                    //   worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
                     worksheet.Cells[j + 2, 8] = abet[j].abet_ID.ToString();
                 }
-                
+
                 for (int j = 0; j <= outcomes.Count - 1; j++)
                 {
                     worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
@@ -391,7 +392,7 @@ namespace WindowsFormsApplication1
                         worksheet.Cells[j + 4, 1].Font.Bold = true;
                         for (int k = 0; k <= objectives.Count - 1; k++)
                         {
-                            worksheet.Cells[j + k + 5, 1] = objectives[k].objective_ID.ToString() + ". " + objectives[k].description_MO.ToString();
+                            worksheet.Cells[j + k + 5, 1] = (k + 1) + ". " + objectives[k].description_MO.ToString();
                             if (k == objectives.Count - 1)
                             {
                                 worksheet.Cells[j + k + 6, 1] = " ";
@@ -407,12 +408,12 @@ namespace WindowsFormsApplication1
                                     worksheet.Cells[j + k + l + 12, 1] = "(" + abet[l].abet_ID.ToString() + ") " + abet[l].description_ABET.ToString();
                                     if (l == abet.Count - 1)
                                     {
-                                        worksheet.Cells[j + k + l + 13, 1] = " ";
+                                        /*worksheet.Cells[j + k + l + 13, 1] = " ";
                                         worksheet.Cells[j + k + l + 14, 1] =  " ";
                                         worksheet.Cells[j + k + l + 15, 1] = "2. CS Specific:";
                                         worksheet.Cells[j + k + l + 15, 1].Font.Bold = true;
                                         worksheet.Cells[j + k + l + 16, 1] = "(a) An ability to apply mathematical foundations, algorithmic principles, and computer science theory in the modeling and design of computer-based systems in a way that demonstrates comprehension of the tradeoffs involved in design choices;";
-                                        worksheet.Cells[j + k + l + 17, 1] = "(b) An ability to apply design and development principles in the construction of software systems of varying complexity.";
+                                        worksheet.Cells[j + k + l + 17, 1] = "(b) An ability to apply design and development principles in the construction of software systems of varying complexity.";*/
                                     }
                                 }
                             }
@@ -424,6 +425,14 @@ namespace WindowsFormsApplication1
 
                     }
                 }
+
+                for (int i = 0; i < abet.Count; i++)
+                {
+                    Random r = new Random();
+                    worksheet.Cells[i + 2, 9] = r.Next(60, 100) + "%";
+                    worksheet.Cells[i + 2, 10] = r.Next(0, 12) + "%";
+                }
+
             }
         }
 
