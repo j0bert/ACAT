@@ -33,6 +33,7 @@ namespace WindowsFormsApplication1
         ArrayList MOarray = new ArrayList(20);
         ArrayList ABarray = new ArrayList(20);
         ArrayList Assarray = new ArrayList(20);
+        ArrayList abetArray = new ArrayList(20);
         int outcomecount = 0;
         int[] averageArray;
 
@@ -243,19 +244,19 @@ namespace WindowsFormsApplication1
                             worksheet.Cells[1, j].EntireRow.Font.Bold = true;
                             break;
                         case 7:
-                            worksheet.Cells[1, j] = "Program Outcome";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j+1] = "Program Outcome";
+                            worksheet.Cells[1, j+1].EntireRow.Font.Bold = true;
                             break;
                         case 8:
-                            worksheet.Cells[1, j] = "Avg";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j+1] = "Avg";
+                            worksheet.Cells[1, j+1].EntireRow.Font.Bold = true;
                             break;
                         case 9:
-                            worksheet.Cells[1, j] = "Standard Deviation";
-                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j+1] = "Standard Deviation";
+                            worksheet.Cells[1, j+1].EntireRow.Font.Bold = true;
                             break;
                         default:
-                            worksheet.Cells[1, j] = "Opps!";
+                            worksheet.Cells[1, j+1] = "Opps!";
                             break;
                     }
                 }
@@ -308,13 +309,19 @@ namespace WindowsFormsApplication1
                     worksheet.Cells[j + 2, 3] = ABarray[j].ToString();
                     worksheet.Cells[j + 2, 4] = Assarray[j].ToString();
                 }
+
+                for (int j = 0; j <= abet.Count - 1; j++)
+                {
+                    worksheet.Cells[j + 2, 8] = abet[j].abet_ID.ToString();
+                }
+
                 for (int j = 0; j <= abet.Count - 1; j++)
                 {
                     worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
                 }
                 for (int i = 0; i < AssessmentBox.CheckedIndices.Count; i++)
                 {
-                    averageArray[i] = MissionOBBox.CheckedIndices[i];
+                    //averageArray[i] = MissionOBBox.CheckedIndices[i];
                 }
             }
           
