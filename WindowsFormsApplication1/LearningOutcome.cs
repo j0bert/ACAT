@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         List<string> MOmap = new List<string>();
         List<string> ABTmap = new List<string>();
         List<string> Assmap = new List<string>();
+        List<int> AssAverage = new List<int>();
         ArrayList MOmap2 = new ArrayList(50);
         ArrayList ABTmap2 = new ArrayList(50);
         ArrayList Assmap2 = new ArrayList(50);
@@ -33,7 +34,11 @@ namespace WindowsFormsApplication1
         ArrayList MOarray = new ArrayList(20);
         ArrayList ABarray = new ArrayList(20);
         ArrayList Assarray = new ArrayList(20);
-        ArrayList abetArray = new ArrayList(20);
+        List<int> Assave = new List<int>();
+        ArrayList Assave2 = new ArrayList(20);
+        List<int> avareage = new List<int>();
+        List<int> finalavareage = new List<int>();
+        List<double> squareroot = new List<double>();
         int outcomecount = 0;
         int[] averageArray;
 
@@ -125,7 +130,7 @@ namespace WindowsFormsApplication1
         }
         private void ABETcheckAllItems()
         {
-           
+
             for (int i = 0; i < ABETLearningBox.Items.Count; i++)
             {
                 ABETLearningBox.SetItemChecked(i, true);
@@ -142,7 +147,12 @@ namespace WindowsFormsApplication1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-
+            int x = 0;
+            int index = 1;
+            int num = 0;
+            int sum = 0;
+            int score = 0;
+            double sqrtroot = 0;
             for (int i = 0; i < MissionOBBox.CheckedIndices.Count; i++)
             {
                 MOmap.Add(MissionOBBox.CheckedIndices[i] + 1 + " ");
@@ -155,23 +165,56 @@ namespace WindowsFormsApplication1
             {
                 Assmap.Add(s);
             }
+            for (int i = 0; i < AssessmentBox.CheckedIndices.Count; i++)
+            {
+                //gets indices from assessmentbox
+                AssAverage.Add(AssessmentBox.CheckedIndices[i]);
+            }
+
+            for (int i = 0; i < AssAverage.Count; i++)
+            {
+
+
+                index = AssAverage[i];
+                Int32.TryParse(assessments[index].average.ToString(), out x);
+                Assave.Add(x);
+
+            }
+            for (int i = 0; i < Assave.Count; i++)
+            {
+
+                score = Assave[i];
+                sum += score;
+                num++;
+            }
+
 
             string MOresult = string.Join(",", MOmap.ToArray());
             string ABTresult = string.Join(",", ABTmap.ToArray());
             string Assmresult = string.Join(",", Assmap.ToArray());
+            string Assmav = string.Join(",", Assave.ToArray());
             MOarray.Add(MOresult);
             ABarray.Add(ABTresult);
             Assarray.Add(Assmresult);
+            Assave2.Add(Assmav);
+            avareage.Add(sum / num);
             MOmap.Clear();
             ABTmap.Clear();
             Assmap.Clear();
-
+            Assave.Clear();
+            AssAverage.Clear();
             outcomecount++;
             dataGridViewLO.Rows[outcomecount].Selected = true;
             MissionUncheckAllItems();
             ABETUncheckAllItems();
             AssUncheckAllItems();
-            if (outcomes.Count - 1 == outcomecount )
+            for (int i = 0; i < avareage.Count; i++)
+            {
+                sqrtroot = Math.Sqrt(avareage[i]);
+            }
+            squareroot.Add(sqrtroot);
+
+            if (outcomes.Count - 1 == outcomecount)
             {
                 NextButton.Text = "Final Change";
             }
@@ -186,14 +229,15 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
-            if (outcomecount != outcomes.Count) {
+
+            if (outcomecount != outcomes.Count)
+            {
                 MessageBox.Show("You must input all of the fields before exporting", " Warning",
     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -213,12 +257,12 @@ namespace WindowsFormsApplication1
                 worksheet = workbook.ActiveSheet;
                 // changing the name of active sheet  
                 worksheet.Name = "Exported from gridview";
-                for (int j = 1; j <= 9; j++)
+                for (int j = 1; j <= 10; j++)
                 {
                     switch (j)
                     {
                         case 1:
-                            worksheet.Cells[1, j] = "Learning Outcomes";
+                            worksheet.Cells[1, j] = CRN + " " + "Learning Outcomes";
                             worksheet.Cells[1, j].EntireRow.Font.Bold = true;
                             worksheet.Cells[1, j].EntireRow.Style.WrapText = false;
 
@@ -244,19 +288,23 @@ namespace WindowsFormsApplication1
                             worksheet.Cells[1, j].EntireRow.Font.Bold = true;
                             break;
                         case 7:
-                            worksheet.Cells[1, j+1] = "Program Outcome";
-                            worksheet.Cells[1, j+1].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j] = " ";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
                             break;
                         case 8:
-                            worksheet.Cells[1, j+1] = "Avg";
-                            worksheet.Cells[1, j+1].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j] = "Program Outcome";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
                             break;
                         case 9:
-                            worksheet.Cells[1, j+1] = "Standard Deviation";
-                            worksheet.Cells[1, j+1].EntireRow.Font.Bold = true;
+                            worksheet.Cells[1, j] = "Avg";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
+                            break;
+                        case 10:
+                            worksheet.Cells[1, j] = "Standard Deviation";
+                            worksheet.Cells[1, j].EntireRow.Font.Bold = true;
                             break;
                         default:
-                            worksheet.Cells[1, j+1] = "Opps!";
+                            worksheet.Cells[1, j] = "Opps!";
                             break;
                     }
                 }
@@ -301,30 +349,36 @@ namespace WindowsFormsApplication1
                 for (int j = 0; j <= objectives.Count - 1; j++)
                 {
                     worksheet.Cells[j + 18, 1] = objectives[j].objective_ID.ToString() + ". " + objectives[j].description_MO.ToString();
+
                 }
+
                 for (int j = 0; j <= outcomes.Count - 1; j++)
                 {
                     worksheet.Cells[j + 2, 1] = outcomes[j].description_LO.ToString();
                     worksheet.Cells[j + 2, 2] = MOarray[j].ToString();
                     worksheet.Cells[j + 2, 3] = ABarray[j].ToString();
+                    worksheet.Cells[j + 2, 3].ColumnWidth = 8.43;
+                    worksheet.Cells[j + 2, 3].RowHeight = 15;
+                    worksheet.Cells[j + 2, 3].EntireRow.Style.WrapText = false;
                     worksheet.Cells[j + 2, 4] = Assarray[j].ToString();
-                }
+                    worksheet.Cells[j + 2, 5] = avareage[j].ToString() + "%";
+                    worksheet.Cells[j + 2, 6] = squareroot[j].ToString();
 
-                for (int j = 0; j <= abet.Count - 1; j++)
-                {
-                    worksheet.Cells[j + 2, 8] = abet[j].abet_ID.ToString();
-                }
 
+
+                }
                 for (int j = 0; j <= abet.Count - 1; j++)
                 {
                     worksheet.Cells[j + 30, 1] = "(" + abet[j].abet_ID.ToString() + ") " + abet[j].description_ABET.ToString();
+                    worksheet.Cells[j + 2, 8] = abet[j].abet_ID.ToString();
                 }
-                for (int i = 0; i < AssessmentBox.CheckedIndices.Count; i++)
-                {
-                    //averageArray[i] = MissionOBBox.CheckedIndices[i];
-                }
+
+
+
+
+
             }
-          
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -356,7 +410,5 @@ namespace WindowsFormsApplication1
         {
             AssUncheckAllItems();
         }
-
-
     }
 }
