@@ -36,7 +36,8 @@
             this.ABETLearningBox = new System.Windows.Forms.CheckedListBox();
             this.AssessmentBox = new System.Windows.Forms.CheckedListBox();
             this.dataGridViewLO = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,8 +49,6 @@
             this.AbetSelect = new System.Windows.Forms.Button();
             this.AssDeselect = new System.Windows.Forms.Button();
             this.AssSelect = new System.Windows.Forms.Button();
-            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,17 +120,17 @@
             this.dataGridViewLO.Size = new System.Drawing.Size(624, 238);
             this.dataGridViewLO.TabIndex = 29;
             // 
-            // button1
+            // OutcomeNumber
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(863, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 36);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Previous Outcome";
-            this.button1.UseVisualStyleBackColor = true;
+            this.OutcomeNumber.FillWeight = 25.38071F;
+            this.OutcomeNumber.HeaderText = "Outcome #";
+            this.OutcomeNumber.Name = "OutcomeNumber";
+            // 
+            // OutcomeDesc
+            // 
+            this.OutcomeDesc.FillWeight = 174.6193F;
+            this.OutcomeDesc.HeaderText = "Outcome Description";
+            this.OutcomeDesc.Name = "OutcomeDesc";
             // 
             // label1
             // 
@@ -268,18 +267,6 @@
             this.AssSelect.UseVisualStyleBackColor = true;
             this.AssSelect.Click += new System.EventHandler(this.AssSelect_Click);
             // 
-            // OutcomeNumber
-            // 
-            this.OutcomeNumber.FillWeight = 25.38071F;
-            this.OutcomeNumber.HeaderText = "Outcome #";
-            this.OutcomeNumber.Name = "OutcomeNumber";
-            // 
-            // OutcomeDesc
-            // 
-            this.OutcomeDesc.FillWeight = 174.6193F;
-            this.OutcomeDesc.HeaderText = "Outcome Description";
-            this.OutcomeDesc.Name = "OutcomeDesc";
-            // 
             // LearningOutcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,7 +284,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewLO);
             this.Controls.Add(this.AssessmentBox);
             this.Controls.Add(this.ABETLearningBox);
@@ -319,7 +305,6 @@
         private System.Windows.Forms.CheckedListBox ABETLearningBox;
         private System.Windows.Forms.CheckedListBox AssessmentBox;
         private System.Windows.Forms.DataGridView dataGridViewLO;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
