@@ -70,7 +70,13 @@ namespace WindowsFormsApplication1
             SqliteDataAccess.SaveClass(item);
             classes = SqliteDataAccess.LoadClass(teacher[0].techer_ID);
 
-            ClassesView.Items.Add(course);
+                ClassesView.Items.Add(course);
+            
+        }
+
+        bool IsInt32(object value)
+        {
+            return value is Int32;
         }
 
         private void removeClass()

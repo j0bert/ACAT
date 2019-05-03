@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
@@ -136,10 +137,18 @@ namespace WindowsFormsApplication1
 
         public static void SaveClass(ClassModel classes)
         {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectingString()))
+            try
             {
-                cnn.Execute("insert into Classes(CRN, className, semester, year, comments, teacher_ID) " +
-                    "values (@CRN, @className, @semester, @year, @comments, @teacher_ID)", classes);
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectingString()))
+                {
+                    cnn.Execute("insert into Classes(CRN, className, semester, year, comments, teacher_ID) " +
+                        "values (@CRN, @className, @semester, @year, @comments, @teacher_ID)", classes);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Incorrect Input. Please Remove Previous Created Class!");
+                
             }
         }
 
