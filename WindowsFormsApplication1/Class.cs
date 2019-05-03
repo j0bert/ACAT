@@ -424,8 +424,6 @@ namespace WindowsFormsApplication1
                         {
                             string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                             string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
-                            if(!File.Exists(destination))
-                            {
                                 using (OpenFileDialog openFileDialog = new OpenFileDialog())
                                 {
                                     openFileDialog.Title = "Select a PDF file";
@@ -444,11 +442,6 @@ namespace WindowsFormsApplication1
                                         assessments[rowVal].highPDF = destination;
                                     }
                                 }
-                            }
-                            else
-                            {
-                                assessments[rowVal].highPDF = destination;
-                            }
                         }
                         else
                         {
@@ -466,8 +459,6 @@ namespace WindowsFormsApplication1
                         {
                             string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                             string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
-                            if (!File.Exists(destination))
-                            {
                                 using (OpenFileDialog openFileDialog = new OpenFileDialog())
                                 {
                                     openFileDialog.Title = "Select a PDF file";
@@ -486,10 +477,6 @@ namespace WindowsFormsApplication1
                                         assessments[rowVal].midPDF = destination;
                                     }
                                 }
-                            } else
-                            {
-                                assessments[rowVal].midPDF = destination;
-                            }
                         }
                         else
                         {
@@ -506,8 +493,7 @@ namespace WindowsFormsApplication1
                         {
                             string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                             string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
-                            if (!File.Exists(destination))
-                            {
+                            
                                 using (OpenFileDialog openFileDialog = new OpenFileDialog())
                                 {
                                     openFileDialog.Title = "Select a PDF file";
@@ -526,10 +512,6 @@ namespace WindowsFormsApplication1
                                         assessments[rowVal].lowPDF = destination;
                                     }
                                 }
-                            } else
-                            {
-                                assessments[rowVal].lowPDF = destination;
-                            }
                         }
                         else
                         {
