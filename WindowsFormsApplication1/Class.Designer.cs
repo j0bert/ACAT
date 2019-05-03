@@ -274,7 +274,7 @@
             this.dataGridViewLO.Name = "dataGridViewLO";
             this.dataGridViewLO.Size = new System.Drawing.Size(243, 150);
             this.dataGridViewLO.TabIndex = 28;
-            this.dataGridViewLO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLO_CellContentClick_1);
+            this.dataGridViewLO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLO_CellContentClick);
             // 
             // OutcomeNumber
             // 
@@ -372,8 +372,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Size = new System.Drawing.Size(1335, 927);
-            this.splitContainer1.SplitterDistance = 639;
+            this.splitContainer1.Size = new System.Drawing.Size(1369, 927);
+            this.splitContainer1.SplitterDistance = 655;
             this.splitContainer1.TabIndex = 39;
             // 
             // ButtonObjectiveUpdate
@@ -600,7 +600,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(1352, 532);
+            this.ClientSize = new System.Drawing.Size(1386, 532);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Class";
