@@ -30,7 +30,9 @@ namespace WindowsFormsApplication1
             this.CRN = CRN;
             this.classes = SqliteDataAccess.LoadClassViaCRN(CRN);
             label2.Text = this.classes[0].className + " Dashboard";
-            
+            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)+"\\PDF";
+            System.IO.Directory.CreateDirectory(directory);
+
             //Strings to allow user to change all colors of something at once. More efficient than Visual Studio's way of doing it individually
             string hexColorBack = "#FFFFFF"; 
             string hexColorSplitContainerHalves = "#57A0BC";
