@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LearningOutcome));
             this.NextButton = new System.Windows.Forms.Button();
             this.MissionOBBox = new System.Windows.Forms.CheckedListBox();
             this.ABETLearningBox = new System.Windows.Forms.CheckedListBox();
             this.AssessmentBox = new System.Windows.Forms.CheckedListBox();
             this.dataGridViewLO = new System.Windows.Forms.DataGridView();
-            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@
             this.AbetSelect = new System.Windows.Forms.Button();
             this.AssDeselect = new System.Windows.Forms.Button();
             this.AssSelect = new System.Windows.Forms.Button();
+            this.OutcomeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutcomeDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,24 +96,30 @@
             this.dataGridViewLO.AllowUserToResizeRows = false;
             this.dataGridViewLO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLO.BackgroundColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewLO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OutcomeNumber,
             this.OutcomeDesc});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLO.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLO.Location = new System.Drawing.Point(21, 71);
             this.dataGridViewLO.Name = "dataGridViewLO";
             this.dataGridViewLO.Size = new System.Drawing.Size(624, 238);
             this.dataGridViewLO.TabIndex = 29;
-            // 
-            // OutcomeNumber
-            // 
-            this.OutcomeNumber.HeaderText = "Outcome #";
-            this.OutcomeNumber.Name = "OutcomeNumber";
-            // 
-            // OutcomeDesc
-            // 
-            this.OutcomeDesc.HeaderText = "Outcome Description";
-            this.OutcomeDesc.Name = "OutcomeDesc";
             // 
             // button1
             // 
@@ -260,6 +268,18 @@
             this.AssSelect.UseVisualStyleBackColor = true;
             this.AssSelect.Click += new System.EventHandler(this.AssSelect_Click);
             // 
+            // OutcomeNumber
+            // 
+            this.OutcomeNumber.FillWeight = 25.38071F;
+            this.OutcomeNumber.HeaderText = "Outcome #";
+            this.OutcomeNumber.Name = "OutcomeNumber";
+            // 
+            // OutcomeDesc
+            // 
+            this.OutcomeDesc.FillWeight = 174.6193F;
+            this.OutcomeDesc.HeaderText = "Outcome Description";
+            this.OutcomeDesc.Name = "OutcomeDesc";
+            // 
             // LearningOutcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,8 +319,6 @@
         private System.Windows.Forms.CheckedListBox ABETLearningBox;
         private System.Windows.Forms.CheckedListBox AssessmentBox;
         private System.Windows.Forms.DataGridView dataGridViewLO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeDesc;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -313,5 +331,7 @@
         private System.Windows.Forms.Button AbetSelect;
         private System.Windows.Forms.Button AssDeselect;
         private System.Windows.Forms.Button AssSelect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OutcomeDesc;
     }
 }

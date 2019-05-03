@@ -335,10 +335,20 @@ namespace WindowsFormsApplication1
                 SqliteDataAccess.SaveAssessment(model);
             }
         }
-
+        //Update Comments
         private void Button1_Click(object sender, EventArgs e)
         {
             SqliteDataAccess.updateComments(CRN, textBox2.Text);
+        }
+        //Push info to ABET Learning Outcome DatagridView
+        private void pushABETLO_Click(object sender, EventArgs e)
+        {
+            dataGridViewABET.CurrentRow.Cells[1].Value = ABETLearningObjDesc_txt.Text;
+        }
+        //Update ABET Learning Outcomes
+        private void ABETLOUpdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
