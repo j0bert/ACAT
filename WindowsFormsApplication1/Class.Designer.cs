@@ -103,7 +103,7 @@
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ForeColor = System.Drawing.Color.White;
-            this.LogoutButton.Location = new System.Drawing.Point(592, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(583, 0);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(88, 34);
             this.LogoutButton.TabIndex = 3;
@@ -126,7 +126,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
-            this.label3.Location = new System.Drawing.Point(4, 665);
+            this.label3.Location = new System.Drawing.Point(0, 665);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 5;
@@ -375,8 +375,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Size = new System.Drawing.Size(1290, 927);
-            this.splitContainer1.SplitterDistance = 605;
+            this.splitContainer1.Size = new System.Drawing.Size(1273, 927);
+            this.splitContainer1.SplitterDistance = 597;
             this.splitContainer1.TabIndex = 39;
             // 
             // ButtonObjectiveUpdate
@@ -590,7 +590,7 @@
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
-            this.HomeButton.Location = new System.Drawing.Point(515, 0);
+            this.HomeButton.Location = new System.Drawing.Point(506, 0);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(77, 34);
             this.HomeButton.TabIndex = 28;
@@ -604,7 +604,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(1290, 929);
+            this.ClientSize = new System.Drawing.Size(1290, 535);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Class";
