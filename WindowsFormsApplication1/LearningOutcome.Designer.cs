@@ -181,9 +181,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1054, 273);
+            this.button3.Location = new System.Drawing.Point(1034, 273);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 36);
+            this.button3.Size = new System.Drawing.Size(98, 36);
             this.button3.TabIndex = 36;
             this.button3.Text = "Export";
             this.button3.UseVisualStyleBackColor = true;
