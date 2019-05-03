@@ -214,7 +214,7 @@
             this.Sync_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sync_Button.ForeColor = System.Drawing.Color.White;
             this.Sync_Button.Image = global::WindowsFormsApplication1.Properties.Resources.Webp_net_resizeimage__2_;
-            this.Sync_Button.Location = new System.Drawing.Point(563, 365);
+            this.Sync_Button.Location = new System.Drawing.Point(650, 345);
             this.Sync_Button.Name = "Sync_Button";
             this.Sync_Button.Size = new System.Drawing.Size(82, 76);
             this.Sync_Button.TabIndex = 29;
