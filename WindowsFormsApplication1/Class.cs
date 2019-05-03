@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -306,10 +308,9 @@ namespace WindowsFormsApplication1
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if(row.Cells[0].Value != null)
-                //if (!string.Equals(row.Cells[0].Value.ToString(), ""))
                 {
                     AssessmentModel model = new AssessmentModel();
-                    model.assessment_ID = row.Index.ToString();
+                    model.assessment_ID = row.Index.ToString() + this.CRN;
                     model.title = row.Cells[0].Value.ToString();
                     model.high = row.Cells[1].Value.ToString();
                     model.mid = row.Cells[2].Value.ToString();
@@ -317,6 +318,11 @@ namespace WindowsFormsApplication1
                     model.average = row.Cells[4].Value.ToString();
                     model.standardDeviation = row.Cells[5].Value.ToString();
                     model.CRN = this.CRN;
+                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                    string fileName = directory + "\\PDF\\" + this.CRN + "_" + model.title + "_";
+                    model.highPDF = exists(fileName + "highPDF.pdf");
+                    model.midPDF = exists(fileName + "midPDF.pdf");
+                    model.lowPDF = exists(fileName + "lowPDF.pdf");
                     assessments.Add(model);
                 } else {
                     System.Diagnostics.Debug.WriteLine("Error");
@@ -388,6 +394,137 @@ namespace WindowsFormsApplication1
                 SqliteDataAccess.SaveMissionObjective(model);
             }
         }
+
+        private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowVal = e.RowIndex;
+            if (rowVal >= 0)
+            {
+                if (assessments[rowVal] == null)
+                {
+                    MessageBox.Show("Please save the assessment before you add a PDF.", "Assessment not saved", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    if (e.ColumnIndex == 1)
+                    {
+                        if (assessments[rowVal].highPDF == null || assessments[rowVal].highPDF == "")
+                        {
+                            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                            {
+                                openFileDialog.Title = "Select a PDF file";
+                                openFileDialog.FileName = "";
+                                openFileDialog.Multiselect = false;
+                                openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
+
+                                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                                {
+                                    string source = openFileDialog.FileName;
+                                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                                    string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
+
+                                    if (!File.Exists(destination))
+                                    {
+                                        File.Copy(source, destination);
+                                    }
+                                    assessments[rowVal].highPDF = destination;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
+                            using (WebBrowser browser = new WebBrowser())
+                            {
+                                browser.Navigate(pdf);
+                            }
+                        }
+                    }
+                    else if (e.ColumnIndex == 2)
+                    {
+                        if (assessments[rowVal].midPDF == null || assessments[rowVal].midPDF == "")
+                        {
+                            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                            {
+                                openFileDialog.Title = "Select a PDF file";
+                                openFileDialog.FileName = "";
+                                openFileDialog.Multiselect = false;
+                                openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
+
+                                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                                {
+                                    string source = openFileDialog.FileName;
+                                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                                    string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
+
+                                    if (!File.Exists(destination))
+                                    {
+                                        File.Copy(source, destination);
+                                    }
+                                    assessments[rowVal].midPDF = destination;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
+                            using (WebBrowser browser = new WebBrowser())
+                            {
+                                browser.Navigate(pdf);
+                            }
+                        }
+                    }
+                    else if (e.ColumnIndex == 3)
+                    {
+                        if (assessments[rowVal].lowPDF == null || assessments[rowVal].lowPDF == "")
+                        {
+                            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                            {
+                                openFileDialog.Title = "Select a PDF file";
+                                openFileDialog.FileName = "";
+                                openFileDialog.Multiselect = false;
+                                openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
+
+                                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                                {
+                                    string source = openFileDialog.FileName;
+                                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                                    string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
+
+                                    if (!File.Exists(destination))
+                                    {
+                                        File.Copy(source, destination);
+                                    }
+                                    assessments[rowVal].lowPDF = destination;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
+                            using (WebBrowser browser = new WebBrowser())
+                            {
+                                browser.Navigate(pdf);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private string exists(string path)
+        {
+            if (File.Exists(path))
+            {
+                return path;
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }
-//dataGridViewLO.Columns.Add("OutcomeDesc", OutcomeDesc_txt.Text); adds a new column altogether. could be useful later

@@ -90,9 +90,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 79);
+            this.label1.Location = new System.Drawing.Point(4, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 25);
+            this.label1.Size = new System.Drawing.Size(261, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Learning Outcomes";
             // 
@@ -103,9 +104,10 @@
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogoutButton.ForeColor = System.Drawing.Color.White;
-            this.LogoutButton.Location = new System.Drawing.Point(583, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(874, 0);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(88, 34);
+            this.LogoutButton.Size = new System.Drawing.Size(132, 52);
             this.LogoutButton.TabIndex = 3;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = false;
@@ -115,9 +117,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 7);
+            this.label2.Location = new System.Drawing.Point(192, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 37);
+            this.label2.Size = new System.Drawing.Size(487, 55);
             this.label2.TabIndex = 4;
             this.label2.Text = "Dashboard (Specific Class)";
             // 
@@ -126,28 +129,31 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F);
-            this.label3.Location = new System.Drawing.Point(0, 665);
+            this.label3.Location = new System.Drawing.Point(-1, 1023);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 23);
+            this.label3.Size = new System.Drawing.Size(136, 36);
             this.label3.TabIndex = 5;
             this.label3.Text = "Comments";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.textBox2.Location = new System.Drawing.Point(8, 694);
+            this.textBox2.Location = new System.Drawing.Point(12, 1068);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(585, 175);
+            this.textBox2.Size = new System.Drawing.Size(876, 267);
             this.textBox2.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(275, 8);
+            this.label4.Location = new System.Drawing.Point(412, 12);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 37);
+            this.label4.Size = new System.Drawing.Size(247, 55);
             this.label4.TabIndex = 7;
             this.label4.Text = "Assessments";
             // 
@@ -157,9 +163,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(494, 870);
+            this.button6.Location = new System.Drawing.Point(741, 1338);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(168, 46);
+            this.button6.Size = new System.Drawing.Size(252, 71);
             this.button6.TabIndex = 19;
             this.button6.Text = "Export Excel";
             this.button6.UseVisualStyleBackColor = false;
@@ -169,9 +176,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 272);
+            this.label8.Location = new System.Drawing.Point(4, 418);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 25);
+            this.label8.Size = new System.Drawing.Size(248, 40);
             this.label8.TabIndex = 25;
             this.label8.Text = "Mission Objectives";
             // 
@@ -204,10 +212,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 106);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 163);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 758);
+            this.dataGridView1.Size = new System.Drawing.Size(964, 1166);
             this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellDoubleClick);
             // 
             // assessmentName
             // 
@@ -271,9 +281,10 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewLO.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewLO.Location = new System.Drawing.Point(8, 104);
+            this.dataGridViewLO.Location = new System.Drawing.Point(12, 160);
+            this.dataGridViewLO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewLO.Name = "dataGridViewLO";
-            this.dataGridViewLO.Size = new System.Drawing.Size(243, 150);
+            this.dataGridViewLO.Size = new System.Drawing.Size(364, 231);
             this.dataGridViewLO.TabIndex = 28;
             this.dataGridViewLO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLO_CellContentClick_1);
             // 
@@ -315,9 +326,10 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewMissionObj.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewMissionObj.Location = new System.Drawing.Point(8, 300);
+            this.dataGridViewMissionObj.Location = new System.Drawing.Point(12, 462);
+            this.dataGridViewMissionObj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewMissionObj.Name = "dataGridViewMissionObj";
-            this.dataGridViewMissionObj.Size = new System.Drawing.Size(243, 150);
+            this.dataGridViewMissionObj.Size = new System.Drawing.Size(364, 231);
             this.dataGridViewMissionObj.TabIndex = 29;
             this.dataGridViewMissionObj.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMissionObj_CellContentClick);
             // 
@@ -338,6 +350,7 @@
             this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -373,8 +386,9 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Size = new System.Drawing.Size(1273, 927);
-            this.splitContainer1.SplitterDistance = 597;
+            this.splitContainer1.Size = new System.Drawing.Size(1909, 1426);
+            this.splitContainer1.SplitterDistance = 895;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 39;
             // 
             // ButtonObjectiveUpdate
@@ -384,9 +398,10 @@
             this.ButtonObjectiveUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonObjectiveUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.ButtonObjectiveUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.ButtonObjectiveUpdate.Location = new System.Drawing.Point(209, 271);
+            this.ButtonObjectiveUpdate.Location = new System.Drawing.Point(314, 417);
+            this.ButtonObjectiveUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ButtonObjectiveUpdate.Name = "ButtonObjectiveUpdate";
-            this.ButtonObjectiveUpdate.Size = new System.Drawing.Size(42, 23);
+            this.ButtonObjectiveUpdate.Size = new System.Drawing.Size(63, 35);
             this.ButtonObjectiveUpdate.TabIndex = 48;
             this.ButtonObjectiveUpdate.UseVisualStyleBackColor = false;
             this.ButtonObjectiveUpdate.Click += new System.EventHandler(this.ButtonObjectiveUpdate_Click);
@@ -398,9 +413,10 @@
             this.ButtonOutcomeUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonOutcomeUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.ButtonOutcomeUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.ButtonOutcomeUpdate.Location = new System.Drawing.Point(209, 75);
+            this.ButtonOutcomeUpdate.Location = new System.Drawing.Point(314, 115);
+            this.ButtonOutcomeUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ButtonOutcomeUpdate.Name = "ButtonOutcomeUpdate";
-            this.ButtonOutcomeUpdate.Size = new System.Drawing.Size(42, 23);
+            this.ButtonOutcomeUpdate.Size = new System.Drawing.Size(63, 35);
             this.ButtonOutcomeUpdate.TabIndex = 47;
             this.ButtonOutcomeUpdate.UseVisualStyleBackColor = false;
             this.ButtonOutcomeUpdate.Click += new System.EventHandler(this.ButtonOutcomeUpdate_Click);
@@ -412,9 +428,10 @@
             this.pushABETLO.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pushABETLO.ForeColor = System.Drawing.Color.Transparent;
             this.pushABETLO.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
-            this.pushABETLO.Location = new System.Drawing.Point(551, 475);
+            this.pushABETLO.Location = new System.Drawing.Point(826, 731);
+            this.pushABETLO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pushABETLO.Name = "pushABETLO";
-            this.pushABETLO.Size = new System.Drawing.Size(42, 23);
+            this.pushABETLO.Size = new System.Drawing.Size(63, 35);
             this.pushABETLO.TabIndex = 46;
             this.pushABETLO.UseVisualStyleBackColor = false;
             this.pushABETLO.Click += new System.EventHandler(this.pushABETLO_Click);
@@ -426,9 +443,10 @@
             this.ABETLOUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ABETLOUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.ABETLOUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.ABETLOUpdate.Location = new System.Drawing.Point(209, 475);
+            this.ABETLOUpdate.Location = new System.Drawing.Point(314, 731);
+            this.ABETLOUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ABETLOUpdate.Name = "ABETLOUpdate";
-            this.ABETLOUpdate.Size = new System.Drawing.Size(42, 23);
+            this.ABETLOUpdate.Size = new System.Drawing.Size(63, 35);
             this.ABETLOUpdate.TabIndex = 45;
             this.ABETLOUpdate.UseVisualStyleBackColor = false;
             this.ABETLOUpdate.Click += new System.EventHandler(this.ABETLOUpdate_Click);
@@ -440,9 +458,10 @@
             this.pushObjDesc.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pushObjDesc.ForeColor = System.Drawing.Color.Transparent;
             this.pushObjDesc.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
-            this.pushObjDesc.Location = new System.Drawing.Point(551, 271);
+            this.pushObjDesc.Location = new System.Drawing.Point(826, 417);
+            this.pushObjDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pushObjDesc.Name = "pushObjDesc";
-            this.pushObjDesc.Size = new System.Drawing.Size(42, 23);
+            this.pushObjDesc.Size = new System.Drawing.Size(63, 35);
             this.pushObjDesc.TabIndex = 44;
             this.pushObjDesc.UseVisualStyleBackColor = false;
             this.pushObjDesc.Click += new System.EventHandler(this.pushObjDesc_Click);
@@ -454,9 +473,10 @@
             this.pushOutcomeDesc.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pushOutcomeDesc.ForeColor = System.Drawing.Color.Transparent;
             this.pushOutcomeDesc.Image = global::WindowsFormsApplication1.Properties.Resources.PushLeft;
-            this.pushOutcomeDesc.Location = new System.Drawing.Point(551, 75);
+            this.pushOutcomeDesc.Location = new System.Drawing.Point(826, 115);
+            this.pushOutcomeDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pushOutcomeDesc.Name = "pushOutcomeDesc";
-            this.pushOutcomeDesc.Size = new System.Drawing.Size(42, 23);
+            this.pushOutcomeDesc.Size = new System.Drawing.Size(63, 35);
             this.pushOutcomeDesc.TabIndex = 43;
             this.pushOutcomeDesc.UseVisualStyleBackColor = false;
             this.pushOutcomeDesc.Click += new System.EventHandler(this.pushOutcomeDesc_Click);
@@ -468,9 +488,10 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.button1.Location = new System.Drawing.Point(551, 665);
+            this.button1.Location = new System.Drawing.Point(826, 1023);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 23);
+            this.button1.Size = new System.Drawing.Size(63, 35);
             this.button1.TabIndex = 42;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -479,9 +500,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 453);
+            this.label9.Location = new System.Drawing.Point(4, 697);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 50);
+            this.label9.Size = new System.Drawing.Size(205, 80);
             this.label9.TabIndex = 40;
             this.label9.Text = "ABET Learning \r\nOutcomes";
             // 
@@ -511,9 +533,10 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewABET.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewABET.Location = new System.Drawing.Point(8, 504);
+            this.dataGridViewABET.Location = new System.Drawing.Point(12, 775);
+            this.dataGridViewABET.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewABET.Name = "dataGridViewABET";
-            this.dataGridViewABET.Size = new System.Drawing.Size(243, 150);
+            this.dataGridViewABET.Size = new System.Drawing.Size(364, 231);
             this.dataGridViewABET.TabIndex = 39;
             this.dataGridViewABET.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewABET_CellContentClick);
             // 
@@ -532,28 +555,31 @@
             // ABETLearningObjDesc_txt
             // 
             this.ABETLearningObjDesc_txt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ABETLearningObjDesc_txt.Location = new System.Drawing.Point(276, 504);
+            this.ABETLearningObjDesc_txt.Location = new System.Drawing.Point(414, 775);
+            this.ABETLearningObjDesc_txt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ABETLearningObjDesc_txt.Multiline = true;
             this.ABETLearningObjDesc_txt.Name = "ABETLearningObjDesc_txt";
-            this.ABETLearningObjDesc_txt.Size = new System.Drawing.Size(317, 150);
+            this.ABETLearningObjDesc_txt.Size = new System.Drawing.Size(474, 229);
             this.ABETLearningObjDesc_txt.TabIndex = 35;
             // 
             // ObjDesc_txt
             // 
             this.ObjDesc_txt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObjDesc_txt.Location = new System.Drawing.Point(276, 300);
+            this.ObjDesc_txt.Location = new System.Drawing.Point(414, 462);
+            this.ObjDesc_txt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ObjDesc_txt.Multiline = true;
             this.ObjDesc_txt.Name = "ObjDesc_txt";
-            this.ObjDesc_txt.Size = new System.Drawing.Size(317, 150);
+            this.ObjDesc_txt.Size = new System.Drawing.Size(474, 229);
             this.ObjDesc_txt.TabIndex = 34;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(271, 79);
+            this.label5.Location = new System.Drawing.Point(406, 122);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 25);
+            this.label5.Size = new System.Drawing.Size(158, 40);
             this.label5.TabIndex = 36;
             this.label5.Text = "Description";
             this.label5.UseWaitCursor = true;
@@ -561,10 +587,11 @@
             // OutcomeDesc_txt
             // 
             this.OutcomeDesc_txt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutcomeDesc_txt.Location = new System.Drawing.Point(276, 106);
+            this.OutcomeDesc_txt.Location = new System.Drawing.Point(414, 163);
+            this.OutcomeDesc_txt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OutcomeDesc_txt.Multiline = true;
             this.OutcomeDesc_txt.Name = "OutcomeDesc_txt";
-            this.OutcomeDesc_txt.Size = new System.Drawing.Size(317, 148);
+            this.OutcomeDesc_txt.Size = new System.Drawing.Size(474, 226);
             this.OutcomeDesc_txt.TabIndex = 33;
             // 
             // buttonAssessmentUpdate
@@ -574,9 +601,10 @@
             this.buttonAssessmentUpdate.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAssessmentUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.buttonAssessmentUpdate.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh;
-            this.buttonAssessmentUpdate.Location = new System.Drawing.Point(620, 77);
+            this.buttonAssessmentUpdate.Location = new System.Drawing.Point(930, 118);
+            this.buttonAssessmentUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAssessmentUpdate.Name = "buttonAssessmentUpdate";
-            this.buttonAssessmentUpdate.Size = new System.Drawing.Size(42, 23);
+            this.buttonAssessmentUpdate.Size = new System.Drawing.Size(63, 35);
             this.buttonAssessmentUpdate.TabIndex = 33;
             this.buttonAssessmentUpdate.UseVisualStyleBackColor = false;
             this.buttonAssessmentUpdate.Click += new System.EventHandler(this.ButtonAssessmentUpdate_Click);
@@ -588,9 +616,10 @@
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.White;
-            this.HomeButton.Location = new System.Drawing.Point(506, 0);
+            this.HomeButton.Location = new System.Drawing.Point(759, 0);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(77, 34);
+            this.HomeButton.Size = new System.Drawing.Size(116, 52);
             this.HomeButton.TabIndex = 28;
             this.HomeButton.Text = "Home";
             this.HomeButton.UseVisualStyleBackColor = false;
@@ -598,13 +627,14 @@
             // 
             // Class
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(1290, 532);
+            this.ClientSize = new System.Drawing.Size(1935, 818);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Class";
             this.Text = "Course Page";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
