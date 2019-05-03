@@ -342,7 +342,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel1.Controls.Add(this.ButtonObjectiveUpdate);
             this.splitContainer1.Panel1.Controls.Add(this.ButtonOutcomeUpdate);
@@ -367,7 +366,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(150)))), ((int)(((byte)(210)))));
             this.splitContainer1.Panel2.Controls.Add(this.buttonAssessmentUpdate);
             this.splitContainer1.Panel2.Controls.Add(this.HomeButton);
