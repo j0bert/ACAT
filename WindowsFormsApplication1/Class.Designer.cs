@@ -522,7 +522,6 @@
             this.ABETLearningObjDesc_txt.Location = new System.Drawing.Point(276, 504);
             this.ABETLearningObjDesc_txt.Multiline = true;
             this.ABETLearningObjDesc_txt.Name = "ABETLearningObjDesc_txt";
-            this.ABETLearningObjDesc_txt.ReadOnly = true;
             this.ABETLearningObjDesc_txt.Size = new System.Drawing.Size(317, 150);
             this.ABETLearningObjDesc_txt.TabIndex = 35;
             // 
