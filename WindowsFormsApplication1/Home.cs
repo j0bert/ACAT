@@ -168,5 +168,13 @@ namespace WindowsFormsApplication1
 
            // sync.Show();
         }
+
+        private void refreshTextBoxes_Click(object sender, EventArgs e)
+        {
+            ClassText.Text = "";
+            CRNText.Text = "";
+            SemesterText.Text = "";
+            yearText.Text = "";
+        }
     }
 }

@@ -43,7 +43,7 @@
             this.yearText = new System.Windows.Forms.TextBox();
             this.Add_Button = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.refreshTextBoxes = new System.Windows.Forms.Button();
             this.Sync_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -194,18 +194,19 @@
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click_1);
             // 
-            // button1
+            // refreshTextBoxes
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(659, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 31);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.refreshTextBoxes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
+            this.refreshTextBoxes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshTextBoxes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshTextBoxes.ForeColor = System.Drawing.Color.White;
+            this.refreshTextBoxes.Location = new System.Drawing.Point(659, 273);
+            this.refreshTextBoxes.Name = "refreshTextBoxes";
+            this.refreshTextBoxes.Size = new System.Drawing.Size(73, 31);
+            this.refreshTextBoxes.TabIndex = 28;
+            this.refreshTextBoxes.Text = "Clear";
+            this.refreshTextBoxes.UseVisualStyleBackColor = false;
+            this.refreshTextBoxes.Click += new System.EventHandler(this.refreshTextBoxes_Click);
             // 
             // Sync_Button
             // 
@@ -227,7 +228,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(160)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(755, 471);
             this.Controls.Add(this.Sync_Button);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.refreshTextBoxes);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.yearText);
             this.Controls.Add(this.yearLabel);
@@ -266,7 +267,7 @@
         private System.Windows.Forms.Label yearLabel;
         private System.Windows.Forms.TextBox yearText;
         private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button refreshTextBoxes;
         private System.Windows.Forms.Button Sync_Button;
     }
 }
