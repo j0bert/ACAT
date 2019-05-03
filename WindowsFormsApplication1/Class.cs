@@ -72,12 +72,12 @@ namespace WindowsFormsApplication1
             //Fill the DataGrids with any information pertaining to the class.
             foreach (LearningOutcomeModel model in outcomes)
             {
-                dataGridViewLO.Rows.Add(model.outcome_ID, model.description_LO);
+                dataGridViewLO.Rows.Add(model.outcome_Number, model.description_LO);
             }
 
             foreach(MissionObjectiveModel model in objectives)
             {
-                dataGridViewMissionObj.Rows.Add(model.objective_ID, model.description_MO);
+                dataGridViewMissionObj.Rows.Add(model.objective_Number, model.description_MO);
             }
 
             foreach (AssessmentModel model in assessments)
@@ -263,7 +263,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     LearningOutcomeModel model = new LearningOutcomeModel();
-                    model.outcome_ID = row.Cells[0].Value.ToString();
+                    model.outcome_ID = CRN+row.Cells[0].Value.ToString();
+                    model.outcome_Number = row.Cells[0].Value.ToString();
                     model.description_LO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     outcomes.Add(model);
@@ -287,7 +288,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     MissionObjectiveModel model = new MissionObjectiveModel();
-                    model.objective_ID = row.Cells[0].Value.ToString();
+                    model.objective_ID = CRN+row.Cells[0].Value.ToString();
+                    model.objective_Number = row.Cells[0].Value.ToString();
                     model.description_MO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     objectives.Add(model);
@@ -361,7 +363,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     LearningOutcomeModel model = new LearningOutcomeModel();
-                    model.outcome_ID = row.Cells[0].Value.ToString();
+                    model.outcome_ID = CRN+row.Cells[0].Value.ToString();
+                    model.outcome_Number = row.Cells[0].Value.ToString();
                     model.description_LO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     outcomes.Add(model);
@@ -383,7 +386,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     MissionObjectiveModel model = new MissionObjectiveModel();
-                    model.objective_ID = row.Cells[0].Value.ToString();
+                    model.objective_ID = CRN+row.Cells[0].Value.ToString();
+                    model.objective_Number = row.Cells[0].Value.ToString();
                     model.description_MO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     objectives.Add(model);
@@ -527,6 +531,11 @@ namespace WindowsFormsApplication1
             {
                 return "";
             }
+        }
+
+        private void Class_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

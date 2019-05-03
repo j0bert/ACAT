@@ -176,5 +176,10 @@ namespace WindowsFormsApplication1
             SemesterText.Text = "";
             yearText.Text = "";
         }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

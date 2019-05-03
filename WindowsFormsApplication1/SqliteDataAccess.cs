@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectingString()))
             {
-                cnn.Execute("insert into MissionObjective(objective_ID, description_MO, CRN) values (@objective_ID, @description_MO, @CRN)", missionObjective);
+                cnn.Execute("insert into MissionObjective(objective_ID, objective_Number, description_MO, CRN) values (@objective_ID, @objective_Number, @description_MO, @CRN)", missionObjective);
             }
         }
 
@@ -103,8 +103,8 @@ namespace WindowsFormsApplication1
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectingString()))
             {
-                cnn.Execute("insert into LearningOutcome(outcome_ID, description_LO, CRN) " +
-                    "values (@outcome_ID, @description_LO, @CRN)", learningOutcome);
+                cnn.Execute("insert into LearningOutcome(outcome_ID, outcome_Number, description_LO, CRN) " +
+                    "values (@outcome_ID, @outcome_Number, @description_LO, @CRN)", learningOutcome);
             }
         }
 
