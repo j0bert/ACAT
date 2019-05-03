@@ -344,6 +344,50 @@ namespace WindowsFormsApplication1
         {
 
         }
+        //Refresh Database for manual entry of Learning Outcomes
+        private void ButtonOutcomeUpdate_Click(object sender, EventArgs e)
+        {
+            outcomes.Clear();
+            foreach (DataGridViewRow row in dataGridViewLO.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    LearningOutcomeModel model = new LearningOutcomeModel();
+                    model.outcome_ID = row.Cells[0].Value.ToString();
+                    model.description_LO = row.Cells[1].Value.ToString();
+                    model.CRN = this.CRN;
+                    outcomes.Add(model);
+                }
+            }
+
+            SqliteDataAccess.DeleteLearningOutcome(CRN);
+            foreach (LearningOutcomeModel model in outcomes)
+            {
+                SqliteDataAccess.SaveLearningOutcome(model);
+            }
+        }
+        //Refresh Database for manual entry of Mission Objectives
+        private void ButtonObjectiveUpdate_Click(object sender, EventArgs e)
+        {
+            objectives.Clear();
+            foreach (DataGridViewRow row in dataGridViewMissionObj.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    MissionObjectiveModel model = new MissionObjectiveModel();
+                    model.objective_ID = row.Cells[0].Value.ToString();
+                    model.description_MO = row.Cells[1].Value.ToString();
+                    model.CRN = this.CRN;
+                    objectives.Add(model);
+                }
+            }
+
+            SqliteDataAccess.DeleteMissionObjective(CRN);
+            foreach (MissionObjectiveModel model in objectives)
+            {
+                SqliteDataAccess.SaveMissionObjective(model);
+            }
+        }
     }
 }
 //dataGridViewLO.Columns.Add("OutcomeDesc", OutcomeDesc_txt.Text); adds a new column altogether. could be useful later
