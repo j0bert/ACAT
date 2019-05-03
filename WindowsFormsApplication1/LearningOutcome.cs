@@ -147,86 +147,92 @@ namespace WindowsFormsApplication1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            int x = 0;
-            int index = 1;
-            int num = 0;
-            int sum = 0;
-            int score = 0;
-            double sqrtroot = 0;
-            for (int i = 0; i < MissionOBBox.CheckedIndices.Count; i++)
+            try
             {
-                MOmap.Add(MissionOBBox.CheckedIndices[i] + 1 + " ");
+                int x = 0;
+                int index = 1;
+                int num = 0;
+                int sum = 0;
+                int score = 0;
+                double sqrtroot = 0;
+                for (int i = 0; i < MissionOBBox.CheckedIndices.Count; i++)
+                {
+                    MOmap.Add(MissionOBBox.CheckedIndices[i] + 1 + " ");
+                }
+                foreach (string s in ABETLearningBox.CheckedItems)
+                {
+                    ABTmap.Add(s);
+                }
+                foreach (string s in AssessmentBox.CheckedItems)
+                {
+                    Assmap.Add(s);
+                }
+                for (int i = 0; i < AssessmentBox.CheckedIndices.Count; i++)
+                {
+                    //gets indices from assessmentbox
+                    AssAverage.Add(AssessmentBox.CheckedIndices[i]);
+                }
+
+                for (int i = 0; i < AssAverage.Count; i++)
+                {
+
+
+                    index = AssAverage[i];
+                    Int32.TryParse(assessments[index].average.ToString(), out x);
+                    Assave.Add(x);
+
+                }
+                for (int i = 0; i < Assave.Count; i++)
+                {
+
+                    score = Assave[i];
+                    sum += score;
+                    num++;
+                }
+               
+
+                string MOresult = string.Join(",", MOmap.ToArray());
+                string ABTresult = string.Join(",", ABTmap.ToArray());
+                string Assmresult = string.Join(",", Assmap.ToArray());
+                string Assmav = string.Join(",", Assave.ToArray());
+                MOarray.Add(MOresult);
+                ABarray.Add(ABTresult);
+                Assarray.Add(Assmresult);
+                Assave2.Add(Assmav);
+                avareage.Add(sum / num);
+                MOmap.Clear();
+                ABTmap.Clear();
+                Assmap.Clear();
+                Assave.Clear();
+                AssAverage.Clear();
+                outcomecount++;
+                dataGridViewLO.Rows[outcomecount].Selected = true;
+                MissionUncheckAllItems();
+                ABETUncheckAllItems();
+                AssUncheckAllItems();
+                for (int i = 0; i < avareage.Count; i++)
+                {
+                    sqrtroot = Math.Sqrt(avareage[i]);
+                }
+                squareroot.Add(sqrtroot);
+
+                if (outcomes.Count - 1 == outcomecount)
+                {
+                    NextButton.Text = "Final Change";
+                }
+                if (outcomes.Count == outcomecount)
+                {
+                    NextButton.Enabled = false;
+                }
+
+
             }
-            foreach (string s in ABETLearningBox.CheckedItems)
+            catch (Exception ex)
             {
-                ABTmap.Add(s);
+                MessageBox.Show("All fields must be entered ");
             }
-            foreach (string s in AssessmentBox.CheckedItems)
-            {
-                Assmap.Add(s);
             }
-            for (int i = 0; i < AssessmentBox.CheckedIndices.Count; i++)
-            {
-                //gets indices from assessmentbox
-                AssAverage.Add(AssessmentBox.CheckedIndices[i]);
-            }
-
-            for (int i = 0; i < AssAverage.Count; i++)
-            {
-
-
-                index = AssAverage[i];
-                Int32.TryParse(assessments[index].average.ToString(), out x);
-                Assave.Add(x);
-
-            }
-            for (int i = 0; i < Assave.Count; i++)
-            {
-
-                score = Assave[i];
-                sum += score;
-                num++;
-            }
-
-
-            string MOresult = string.Join(",", MOmap.ToArray());
-            string ABTresult = string.Join(",", ABTmap.ToArray());
-            string Assmresult = string.Join(",", Assmap.ToArray());
-            string Assmav = string.Join(",", Assave.ToArray());
-            MOarray.Add(MOresult);
-            ABarray.Add(ABTresult);
-            Assarray.Add(Assmresult);
-            Assave2.Add(Assmav);
-            avareage.Add(sum / num);
-            MOmap.Clear();
-            ABTmap.Clear();
-            Assmap.Clear();
-            Assave.Clear();
-            AssAverage.Clear();
-            outcomecount++;
-            dataGridViewLO.Rows[outcomecount].Selected = true;
-            MissionUncheckAllItems();
-            ABETUncheckAllItems();
-            AssUncheckAllItems();
-            for (int i = 0; i < avareage.Count; i++)
-            {
-                sqrtroot = Math.Sqrt(avareage[i]);
-            }
-            squareroot.Add(sqrtroot);
-
-            if (outcomes.Count - 1 == outcomecount)
-            {
-                NextButton.Text = "Final Change";
-            }
-            if (outcomes.Count == outcomecount)
-            {
-                NextButton.Enabled = false;
-            }
-
-
-
-        }
-
+            
         private void button2_Click(object sender, EventArgs e)
         {
 
