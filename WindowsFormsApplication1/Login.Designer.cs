@@ -41,9 +41,10 @@
             // usernameTxt
             // 
             this.usernameTxt.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTxt.Location = new System.Drawing.Point(500, 403);
+            this.usernameTxt.Location = new System.Drawing.Point(750, 620);
+            this.usernameTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(315, 22);
+            this.usernameTxt.Size = new System.Drawing.Size(470, 29);
             this.usernameTxt.TabIndex = 0;
             this.usernameTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernameTxt_KeyDown);
             // 
@@ -51,9 +52,10 @@
             // 
             this.passTxt.BackColor = System.Drawing.Color.White;
             this.passTxt.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passTxt.Location = new System.Drawing.Point(500, 442);
+            this.passTxt.Location = new System.Drawing.Point(750, 680);
+            this.passTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passTxt.Name = "passTxt";
-            this.passTxt.Size = new System.Drawing.Size(315, 22);
+            this.passTxt.Size = new System.Drawing.Size(470, 29);
             this.passTxt.TabIndex = 1;
             this.passTxt.UseSystemPasswordChar = true;
             this.passTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTxt_KeyDown);
@@ -62,9 +64,10 @@
             // 
             this.username.AutoSize = true;
             this.username.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(395, 393);
+            this.username.Location = new System.Drawing.Point(592, 605);
+            this.username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(106, 30);
+            this.username.Size = new System.Drawing.Size(158, 45);
             this.username.TabIndex = 2;
             this.username.Text = "Username";
             // 
@@ -72,9 +75,10 @@
             // 
             this.password.AutoSize = true;
             this.password.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(395, 432);
+            this.password.Location = new System.Drawing.Point(592, 665);
+            this.password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(99, 30);
+            this.password.Size = new System.Drawing.Size(148, 45);
             this.password.TabIndex = 3;
             this.password.Text = "Password";
             // 
@@ -84,9 +88,10 @@
             this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login.ForeColor = System.Drawing.Color.White;
-            this.login.Location = new System.Drawing.Point(740, 490);
+            this.login.Location = new System.Drawing.Point(1110, 754);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(75, 34);
+            this.login.Size = new System.Drawing.Size(112, 52);
             this.login.TabIndex = 4;
             this.login.Text = "Login";
             this.login.UseVisualStyleBackColor = false;
@@ -97,9 +102,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 120F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(120, 115);
+            this.label1.Location = new System.Drawing.Point(180, 177);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(991, 212);
+            this.label1.Size = new System.Drawing.Size(1484, 318);
             this.label1.TabIndex = 5;
             this.label1.Text = "ACAT System";
             // 
@@ -109,9 +115,10 @@
             this.abtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abtButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abtButton.ForeColor = System.Drawing.Color.White;
-            this.abtButton.Location = new System.Drawing.Point(400, 490);
+            this.abtButton.Location = new System.Drawing.Point(600, 754);
+            this.abtButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.abtButton.Name = "abtButton";
-            this.abtButton.Size = new System.Drawing.Size(75, 34);
+            this.abtButton.Size = new System.Drawing.Size(112, 52);
             this.abtButton.TabIndex = 7;
             this.abtButton.Text = "About";
             this.abtButton.UseVisualStyleBackColor = false;
@@ -119,10 +126,10 @@
             // 
             // loginscreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1272, 670);
+            this.ClientSize = new System.Drawing.Size(1908, 1031);
             this.Controls.Add(this.abtButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.login);
@@ -131,8 +138,10 @@
             this.Controls.Add(this.passTxt);
             this.Controls.Add(this.usernameTxt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "loginscreen";
             this.Text = "Login Page";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Loginscreen_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

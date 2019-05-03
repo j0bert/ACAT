@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -72,12 +73,12 @@ namespace WindowsFormsApplication1
             //Fill the DataGrids with any information pertaining to the class.
             foreach (LearningOutcomeModel model in outcomes)
             {
-                dataGridViewLO.Rows.Add(model.outcome_ID, model.description_LO);
+                dataGridViewLO.Rows.Add(model.outcome_Number, model.description_LO);
             }
 
             foreach(MissionObjectiveModel model in objectives)
             {
-                dataGridViewMissionObj.Rows.Add(model.objective_ID, model.description_MO);
+                dataGridViewMissionObj.Rows.Add(model.objective_Number, model.description_MO);
             }
 
             foreach (AssessmentModel model in assessments)
@@ -263,7 +264,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     LearningOutcomeModel model = new LearningOutcomeModel();
-                    model.outcome_ID = row.Cells[0].Value.ToString();
+                    model.outcome_ID = CRN+row.Cells[0].Value.ToString();
+                    model.outcome_Number = row.Cells[0].Value.ToString();
                     model.description_LO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     outcomes.Add(model);
@@ -287,7 +289,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     MissionObjectiveModel model = new MissionObjectiveModel();
-                    model.objective_ID = row.Cells[0].Value.ToString();
+                    model.objective_ID = CRN+row.Cells[0].Value.ToString();
+                    model.objective_Number = row.Cells[0].Value.ToString();
                     model.description_MO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     objectives.Add(model);
@@ -361,7 +364,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     LearningOutcomeModel model = new LearningOutcomeModel();
-                    model.outcome_ID = row.Cells[0].Value.ToString();
+                    model.outcome_ID = CRN+row.Cells[0].Value.ToString();
+                    model.outcome_Number = row.Cells[0].Value.ToString();
                     model.description_LO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     outcomes.Add(model);
@@ -383,7 +387,8 @@ namespace WindowsFormsApplication1
                 if (row.Cells[0].Value != null)
                 {
                     MissionObjectiveModel model = new MissionObjectiveModel();
-                    model.objective_ID = row.Cells[0].Value.ToString();
+                    model.objective_ID = CRN+row.Cells[0].Value.ToString();
+                    model.objective_Number = row.Cells[0].Value.ToString();
                     model.description_MO = row.Cells[1].Value.ToString();
                     model.CRN = this.CRN;
                     objectives.Add(model);
@@ -408,35 +413,40 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    if (e.ColumnIndex == 1)
+                    if(e.ColumnIndex == 0)
+                    {
+                        string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "\\PDF";
+                        Process.Start(@directory);
+                    }
+                    else if (e.ColumnIndex == 1)
                     {
                         if (assessments[rowVal].highPDF == null || assessments[rowVal].highPDF == "")
                         {
-                            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-                            {
-                                openFileDialog.Title = "Select a PDF file";
-                                openFileDialog.FileName = "";
-                                openFileDialog.Multiselect = false;
-                                openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
-
-                                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                            string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
+                                using (OpenFileDialog openFileDialog = new OpenFileDialog())
                                 {
-                                    string source = openFileDialog.FileName;
-                                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                                    string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
+                                    openFileDialog.Title = "Select a PDF file";
+                                    openFileDialog.FileName = "";
+                                    openFileDialog.Multiselect = false;
+                                    openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
 
-                                    if (!File.Exists(destination))
+                                    if (openFileDialog.ShowDialog() == DialogResult.OK)
                                     {
-                                        File.Copy(source, destination);
+                                        string source = openFileDialog.FileName;
+
+                                        if (!File.Exists(destination))
+                                        {
+                                            File.Copy(source, destination);
+                                        }
+                                        assessments[rowVal].highPDF = destination;
                                     }
-                                    assessments[rowVal].highPDF = destination;
                                 }
-                            }
                         }
                         else
                         {
-                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_highPDF.pdf";
+                            string pdf = assessments[rowVal].highPDF;
+                            
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
@@ -447,31 +457,30 @@ namespace WindowsFormsApplication1
                     {
                         if (assessments[rowVal].midPDF == null || assessments[rowVal].midPDF == "")
                         {
-                            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-                            {
-                                openFileDialog.Title = "Select a PDF file";
-                                openFileDialog.FileName = "";
-                                openFileDialog.Multiselect = false;
-                                openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
-
-                                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                            string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
+                                using (OpenFileDialog openFileDialog = new OpenFileDialog())
                                 {
-                                    string source = openFileDialog.FileName;
-                                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                                    string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
+                                    openFileDialog.Title = "Select a PDF file";
+                                    openFileDialog.FileName = "";
+                                    openFileDialog.Multiselect = false;
+                                    openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
 
-                                    if (!File.Exists(destination))
+                                    if (openFileDialog.ShowDialog() == DialogResult.OK)
                                     {
-                                        File.Copy(source, destination);
+                                        string source = openFileDialog.FileName;
+
+                                        if (!File.Exists(destination))
+                                        {
+                                            File.Copy(source, destination);
+                                        }
+                                        assessments[rowVal].midPDF = destination;
                                     }
-                                    assessments[rowVal].midPDF = destination;
                                 }
-                            }
                         }
                         else
                         {
-                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_midPDF.pdf";
+                            string pdf = assessments[rowVal].midPDF;
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
@@ -482,31 +491,31 @@ namespace WindowsFormsApplication1
                     {
                         if (assessments[rowVal].lowPDF == null || assessments[rowVal].lowPDF == "")
                         {
-                            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-                            {
-                                openFileDialog.Title = "Select a PDF file";
-                                openFileDialog.FileName = "";
-                                openFileDialog.Multiselect = false;
-                                openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
-
-                                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                            string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
+                            
+                                using (OpenFileDialog openFileDialog = new OpenFileDialog())
                                 {
-                                    string source = openFileDialog.FileName;
-                                    string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                                    string destination = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
+                                    openFileDialog.Title = "Select a PDF file";
+                                    openFileDialog.FileName = "";
+                                    openFileDialog.Multiselect = false;
+                                    openFileDialog.Filter = "PDF files|*.pdf|All files|*.*";
 
-                                    if (!File.Exists(destination))
+                                    if (openFileDialog.ShowDialog() == DialogResult.OK)
                                     {
-                                        File.Copy(source, destination);
+                                        string source = openFileDialog.FileName;
+
+                                        if (!File.Exists(destination))
+                                        {
+                                            File.Copy(source, destination);
+                                        }
+                                        assessments[rowVal].lowPDF = destination;
                                     }
-                                    assessments[rowVal].lowPDF = destination;
                                 }
-                            }
                         }
                         else
                         {
-                            string directory = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                            string pdf = directory + "\\PDF\\" + this.CRN + "_" + assessments[rowVal].title + "_lowPDF.pdf";
+                            string pdf = assessments[rowVal].lowPDF;
                             using (WebBrowser browser = new WebBrowser())
                             {
                                 browser.Navigate(pdf);
@@ -527,6 +536,12 @@ namespace WindowsFormsApplication1
             {
                 return "";
             }
+        }
+
+
+        private void Class_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

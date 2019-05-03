@@ -211,7 +211,7 @@
             this.MissionDeselect.Name = "MissionDeselect";
             this.MissionDeselect.Size = new System.Drawing.Size(120, 30);
             this.MissionDeselect.TabIndex = 38;
-            this.MissionDeselect.Text = "Deselect ";
+            this.MissionDeselect.Text = "Deselect All";
             this.MissionDeselect.UseVisualStyleBackColor = true;
             this.MissionDeselect.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -224,7 +224,7 @@
             this.ABETDeselect.Name = "ABETDeselect";
             this.ABETDeselect.Size = new System.Drawing.Size(120, 30);
             this.ABETDeselect.TabIndex = 40;
-            this.ABETDeselect.Text = "Deselect ";
+            this.ABETDeselect.Text = "Deselect All";
             this.ABETDeselect.UseVisualStyleBackColor = true;
             this.ABETDeselect.Click += new System.EventHandler(this.ABETDeselect_Click);
             // 
@@ -250,7 +250,7 @@
             this.AssDeselect.Name = "AssDeselect";
             this.AssDeselect.Size = new System.Drawing.Size(120, 30);
             this.AssDeselect.TabIndex = 42;
-            this.AssDeselect.Text = "Deselect ";
+            this.AssDeselect.Text = "Deselect All";
             this.AssDeselect.UseVisualStyleBackColor = true;
             this.AssDeselect.Click += new System.EventHandler(this.AssDeselect_Click);
             // 

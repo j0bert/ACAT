@@ -150,5 +150,10 @@ namespace WindowsFormsApplication1
         {
             new About().Show();
         }
+
+        private void Loginscreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
