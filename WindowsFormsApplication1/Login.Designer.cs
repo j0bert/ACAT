@@ -40,18 +40,20 @@
             // 
             // usernameTxt
             // 
+            this.usernameTxt.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTxt.Location = new System.Drawing.Point(500, 403);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(315, 20);
+            this.usernameTxt.Size = new System.Drawing.Size(315, 22);
             this.usernameTxt.TabIndex = 0;
             this.usernameTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usernameTxt_KeyDown);
             // 
             // passTxt
             // 
             this.passTxt.BackColor = System.Drawing.Color.White;
+            this.passTxt.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passTxt.Location = new System.Drawing.Point(500, 442);
             this.passTxt.Name = "passTxt";
-            this.passTxt.Size = new System.Drawing.Size(315, 20);
+            this.passTxt.Size = new System.Drawing.Size(315, 22);
             this.passTxt.TabIndex = 1;
             this.passTxt.UseSystemPasswordChar = true;
             this.passTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTxt_KeyDown);

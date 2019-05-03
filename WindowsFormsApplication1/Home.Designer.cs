@@ -49,6 +49,7 @@
             // 
             // ClassesView
             // 
+            this.ClassesView.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClassesView.Location = new System.Drawing.Point(12, 165);
             this.ClassesView.Name = "ClassesView";
             this.ClassesView.Size = new System.Drawing.Size(450, 176);
@@ -60,16 +61,18 @@
             // 
             // ClassText
             // 
+            this.ClassText.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClassText.Location = new System.Drawing.Point(588, 201);
             this.ClassText.Name = "ClassText";
-            this.ClassText.Size = new System.Drawing.Size(144, 20);
+            this.ClassText.Size = new System.Drawing.Size(144, 22);
             this.ClassText.TabIndex = 11;
             // 
             // CRNText
             // 
-            this.CRNText.Location = new System.Drawing.Point(588, 179);
+            this.CRNText.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRNText.Location = new System.Drawing.Point(588, 178);
             this.CRNText.Name = "CRNText";
-            this.CRNText.Size = new System.Drawing.Size(144, 20);
+            this.CRNText.Size = new System.Drawing.Size(144, 22);
             this.CRNText.TabIndex = 13;
             // 
             // SemesterLabel
@@ -143,9 +146,10 @@
             // 
             // SemesterText
             // 
+            this.SemesterText.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SemesterText.Location = new System.Drawing.Point(588, 224);
             this.SemesterText.Name = "SemesterText";
-            this.SemesterText.Size = new System.Drawing.Size(144, 20);
+            this.SemesterText.Size = new System.Drawing.Size(144, 22);
             this.SemesterText.TabIndex = 23;
             // 
             // yearLabel
@@ -161,9 +165,10 @@
             // 
             // yearText
             // 
+            this.yearText.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearText.Location = new System.Drawing.Point(588, 247);
             this.yearText.Name = "yearText";
-            this.yearText.Size = new System.Drawing.Size(144, 20);
+            this.yearText.Size = new System.Drawing.Size(144, 22);
             this.yearText.TabIndex = 25;
             // 
             // Add_Button
